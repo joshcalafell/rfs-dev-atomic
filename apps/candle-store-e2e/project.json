@@ -1,0 +1,29 @@
+{
+  "name": "candle-store-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/candle-store-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/candle-store-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "candle-store:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "candle-store:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "candle-store:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["candle-store"]
+}
