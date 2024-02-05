@@ -42,6 +42,11 @@ $font-family-bold: 'Inter', sans-serif;
 $font-size-header: 1.5em;
 $font-size-body: 1.25em;
 
+body {
+	margin: 0;
+	padding: 0;
+}
+
 h1,
 h2,
 h3,
@@ -67,7 +72,7 @@ header {
 nav ul {
 	background: transparent;
 	font-family: 'Inter', cursive;
-  FONT-SIZE: 1rem;
+	font-size: 1rem;
 	font-weight: 400;
 	background: transparent;
 	display: flex;
