@@ -1,10 +1,8 @@
-<nav class="menu-items">
-	<ul class="topnav">
-		<li *ngFor="let item of menuItems">
-			<rfs-dev-atomic-link
-				[path]="item.path"
-				[text]="item.title"
-			></rfs-dev-atomic-link>
-		</li>
-	</ul>
-</nav>
+<ul class="topnav">
+	<li *ngFor="let menuItem of menuItems">
+		<rfs-dev-atomic-link
+			[path]="menuItem.path"
+			[label]="menuItem.label"
+		></rfs-dev-atomic-link>
+	</li>
+</ul>

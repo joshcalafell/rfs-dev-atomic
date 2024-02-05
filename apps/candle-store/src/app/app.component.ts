@@ -12,4 +12,13 @@ import { HeaderComponent } from 'libs/ui-organisms/src'
 })
 export class AppComponent {
 	title = 'CANDLE STORE'
+	menuItems = [
+		{ label: 'Home', path: '/' },
+		{ label: 'Products', path: '/products' },
+		{ label: 'Contact', path: '/contact' },
+		{ label: 'Wishlist', path: '/wishlist' },
+		{ label: 'Orders', path: '/orders' },
+		{ label: 'Cart', path: '/cart' },
+	]
+	isLoggedIn = false
 }

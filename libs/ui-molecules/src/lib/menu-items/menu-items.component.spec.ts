@@ -15,6 +15,20 @@ describe('MenuItemsComponent', () => {
 
 		fixture = TestBed.createComponent(MenuItemsComponent)
 		component = fixture.componentInstance
+		component.menuItems = [
+			{
+				label: 'Home',
+				path: '/',
+			},
+			{
+				label: 'About',
+				path: '/about',
+			},
+			{
+				label: 'Contact',
+				path: '/contact',
+			},
+		]
 		fixture.detectChanges()
 	})
 
