@@ -13,7 +13,7 @@ import { LinkComponent } from 'libs/ui-atoms/src' // TODO: Figure this out...
 	styleUrl: './menu-items.component.scss',
 })
 export class MenuItemsComponent {
-	menuItems //  TODO: STRONG TYPE ME AND FIX ME PLZ
+	menuItems = <unknown>[] //  TODO: STRONG TYPE ME AND FIX ME PLZ
 
 	constructor() {
 		this.menuItems = MENU_ITEMS

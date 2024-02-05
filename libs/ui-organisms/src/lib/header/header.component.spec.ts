@@ -20,4 +20,14 @@ describe('HeaderComponent', () => {
 	it('should create', () => {
 		expect(component).toBeTruthy()
 	})
+
+	it('should render the header', () => {
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelector('rfs-dev-atomic-btn-text')).toBeTruthy()
+	})
+
+	it('should render the menu items', () => {
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelector('rfs-dev-atomic-menu-items')).toBeTruthy()
+	})
 })

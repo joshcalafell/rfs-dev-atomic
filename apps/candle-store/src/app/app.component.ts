@@ -5,7 +5,7 @@ import { HeaderComponent } from 'libs/ui-organisms/src'
 
 @Component({
 	standalone: true,
-	imports: [HeaderComponent, RouterModule, HeaderComponent],
+	imports: [HeaderComponent, RouterModule],
 	selector: 'rfs-dev-atomic-root',
 	templateUrl: './app.component.html',
 	styleUrl: './app.component.scss',

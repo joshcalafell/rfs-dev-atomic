@@ -6,7 +6,7 @@ import { HeaderComponent } from '@rfs-dev-atomic/ui-organisms'
 describe('AppComponent', () => {
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [AppComponent, RouterTestingModule, HeaderComponent],
+			imports: [AppComponent, HeaderComponent, RouterTestingModule],
 		}).compileComponents()
 	})
 
@@ -22,4 +22,33 @@ describe('AppComponent', () => {
 		const app = fixture.componentInstance
 		expect(app.title).toEqual('CANDLE STORE')
 	})
+
+	it('should render title in a h1 tag', () => {
+		const fixture = TestBed.createComponent(AppComponent)
+		fixture.detectChanges()
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelector('h1')?.textContent).toContain('CANDLE STORE')
+	})
+
+	it('should render the header component', () => {
+		const fixture = TestBed.createComponent(AppComponent)
+		fixture.detectChanges()
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelector('rfs-dev-atomic-header')).toBeTruthy()
+	})
+
+	it('should render the router outlet', () => {
+		const fixture = TestBed.createComponent(AppComponent)
+		fixture.detectChanges()
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelector('router-outlet')).toBeTruthy()
+	})
+
+	/*   it('should render the footer component', () => {
+    const fixture = TestBed.createComponent(AppComponent)
+    fixture.detectChanges()
+    const compiled = fixture.nativeElement as HTMLElement
+    expect(compiled.querySelector('rfs-dev-atomic-footer')).toBeTruthy()
+  })
+ */
 })
