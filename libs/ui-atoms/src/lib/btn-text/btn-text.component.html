@@ -1,1 +1,9 @@
-<p>btn-text works!</p>
+<button
+	class="btn-text"
+	[ngClass]="{ 'btn-text--disabled': disabled }"
+	[disabled]="disabled"
+	aria-label="button"
+	(click)="onClickHandler()"
+>
+	{{ text }}
+</button>

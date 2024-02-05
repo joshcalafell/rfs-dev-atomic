@@ -1,10 +1,24 @@
-
-  <header class="header">
-    <div class="logo">
-      <h1>CANDLE STORE</h1>
-    </div>
-    <nav class="nav">
-      <rfs-dev-atomic-menu-items></rfs-dev-atomic-menu-items>
-    </nav>
-  </header>
-
+<header class="header">
+	<div class="logo">
+		<h1>CANDLE STORE</h1>
+	</div>
+	<div class="flex-row-section">
+		<nav class="nav">
+			<rfs-dev-atomic-menu-items></rfs-dev-atomic-menu-items>
+		</nav>
+		<!-- <rfs-dev-atomic-btn-text
+      [text]="'Cart'"
+      (clickEmitter)="onCartClick()"
+      [disabled]="false"
+    ></rfs-dev-atomic-btn-text>
+    <rfs-dev-atomic-btn-text
+      [text]="'Wishlist'"
+      (clickEmitter)="onWishlistClick()"
+      [disabled]="false"
+    ></rfs-dev-atomic-btn-text> -->
+		<rfs-dev-atomic-btn-text
+			[text]="'Login / Signup'"
+			[disabled]="false"
+		></rfs-dev-atomic-btn-text>
+	</div>
+</header>
