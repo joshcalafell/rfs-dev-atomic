@@ -39,7 +39,7 @@ export class BtnTextComponent
 	disabled = false
 
 	@Output()
-	clickEmitter: EventEmitter<null> = new EventEmitter()
+	clickEmitter = new EventEmitter()
 
 	constructor() {
 		console.log('Button Text Component Constructed')

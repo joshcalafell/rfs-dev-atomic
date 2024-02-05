@@ -20,7 +20,7 @@ describe('BtnTextComponent', () => {
 	})
 
 	it('should emit click event', () => {
-		const spy = spyOn(component.clickEmitter, 'emit')
+		const spy = jest.spyOn(component.clickEmitter, 'emit')
 		component.onClickHandler()
 		expect(spy).toHaveBeenCalled()
 	})
