@@ -1,0 +1,112 @@
+/* REMOVE THIS, USE YOUR OWN  */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&family=Monoton&family=Poppins:wght@100;200;400;600&display=swap');
+
+/* STYLES SPECIFIC TO my-footer  */
+.my-footer {
+	width: 100%;
+	position: relative;
+	height: auto;
+	background-color: white;
+}
+.my-footer .col {
+	font-family: 'Inter', Sans-serif;
+	width: 190px;
+	height: auto;
+	float: left;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 0px 20px 20px 20px;
+}
+.my-footer .col h1 {
+	font-family: 'Inter', Sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+	font-size: 12px;
+	line-height: 17px;
+	padding: 20px 0px 16px 16px;
+	color: #232323 !important;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.my-footer .col ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.my-footer .col ul li {
+	color: #333;
+	font-size: 14px;
+	font-family: inherit;
+	font-weight: normal;
+	padding: 5px 0px 5px 0px;
+	cursor: pointer;
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	font-family: 'Inter', Sans-serif;
+}
+.social ul li {
+	display: inline-block;
+	padding-right: 5px !important;
+}
+
+.my-footer .col ul li:hover {
+	color: #ff6666;
+	transition: 0.1s;
+	-webkit-transition: 0.1s;
+	-moz-transition: 0.1s;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.contain {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+@media only screen and (min-width: 1280px) {
+	.contain {
+		width: 1200px;
+		margin: 0 auto;
+	}
+}
+@media only screen and (max-width: 1140px) {
+	.contain {
+		width: 100%;
+		margin: 0 20px;
+	}
+}
+@media only screen and (max-width: 950px) {
+	.my-footer .col {
+		width: 33%;
+	}
+	.my-footer .col h1 {
+		font-size: 14px;
+	}
+	.my-footer .col ul li {
+		font-size: 13px;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.my-footer .col {
+		width: 50%;
+	}
+	.my-footer .col h1 {
+		font-size: 14px;
+	}
+	.my-footer .col ul li {
+		font-size: 13px;
+	}
+}
+@media only screen and (max-width: 340px) {
+	.my-footer .col {
+		width: 100%;
+	}
+}
