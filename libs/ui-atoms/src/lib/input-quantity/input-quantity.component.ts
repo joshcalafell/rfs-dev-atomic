@@ -8,4 +8,6 @@ import { CommonModule } from '@angular/common'
 	templateUrl: './input-quantity.component.html',
 	styleUrl: './input-quantity.component.scss',
 })
-export class InputQuantityComponent {}
+export class InputQuantityComponent {
+	value = 0
+}

@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&display=swap');
+
 header {
+
+  h1 {
+    font-family: 'Inter', sans-serif;
+  }
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

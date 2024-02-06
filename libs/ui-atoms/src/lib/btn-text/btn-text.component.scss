@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&display=swap');
+
 button {
 	background-color: transparent;
 	border: none;
-	color: white;
-	background-color: #ff6666;
-	border: solid 1px transparent;
+	color: #ff6666;
+	border: solid 1px #ff6666;
 	border-radius: 5px;
 	cursor: pointer;
 	font-size: 1rem;
@@ -15,9 +16,11 @@ button {
 	white-space: nowrap;
 	margin-left: 16px;
 	text-decoration: none;
+	font-family: 'Inter', sans-serif;
 
 	&:hover {
-		color: #241f1f;
+		color: white;
+		background-color: #ff6666;
 	}
 
 	&:focus {

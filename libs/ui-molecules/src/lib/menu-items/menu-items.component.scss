@@ -1,1 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&display=swap');
 
+ul {
+	background: transparent;
+	font-family: 'Inter', cursive;
+	font-size: 1rem;
+	font-weight: 400;
+	background: transparent;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+li {
+	font-family: 'Inter', cursive;
+	list-style: none;
+	margin: 0 1rem;
+	&:hover {
+		color: #ff6666;
+	}
+	&:active {
+		color: #ff6666;
+	}
+}

@@ -1,21 +1,25 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ChipComponent } from './chip.component';
+import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { ChipComponent } from './chip.component'
 
 describe('ChipComponent', () => {
-  let component: ChipComponent;
-  let fixture: ComponentFixture<ChipComponent>;
+	let component: ChipComponent
+	let fixture: ComponentFixture<ChipComponent>
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [ChipComponent],
-    }).compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [ChipComponent],
+		}).compileComponents()
 
-    fixture = TestBed.createComponent(ChipComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(ChipComponent)
+		component = fixture.componentInstance
+		fixture.detectChanges()
+	})
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+	it('should create', () => {
+		expect(component).toBeTruthy()
+	})
+
+	it('should have a default value of "Chip" an empty string', () => {
+		expect(component.label).toEqual('Chip')
+	})
+})

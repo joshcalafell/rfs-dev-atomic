@@ -1,94 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&display=swap');
 
 a {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.3s ease;
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	transition: color 0.3s ease;
+	font-family: 'Inter', sans-serif;
 
-
-  &.underline {
-    text-decoration: underline;
-  }
-  &.bold {
-    font-weight: bold;
-  }
-  &.italic {
-    font-style: italic;
-  }
-  &.uppercase {
-    text-transform: uppercase;
-  }
-  &.capitalize {
-    text-transform: capitalize;
-  }
-  &.lowercase {
-    text-transform: lowercase;
-  }
-  &.line-through {
-    text-decoration: line-through;
-  }
-  &.overline {
-    text-decoration: overline;
-  }
-  &.line-through {
-    text-decoration: line-through;
-  }
-  &.none {
-    text-decoration: none;
-  }
-  &.small {
-    font-size: var(--font-size-small);
-  }
-  &.medium {
-    font-size: var(--font-size-medium);
-  }
-  &.large {
-    font-size: var(--font-size-large);
-  }
-  &.x-large {
-    font-size: var(--font-size-x-large);
-  }
-  &.xx-large {
-    font-size: var(--font-size-xx-large);
-  }
-  &.xxx-large {
-    font-size: var(--font-size-xxx-large);
-  }
-  &.bold {
-    font-weight: bold;
-  }
-  &.light {
-    font-weight: 300;
-  }
-  &.normal {
-    font-weight: normal;
-  }
-  &.italic {
-    font-style: italic;
-  }
-  &.uppercase {
-    text-transform: uppercase;
-  }
-  &.capitalize {
-    text-transform: capitalize;
-  }
-  &.lowercase {
-    text-transform: lowercase;
-  }
-  &.line-through {
-    text-decoration: line-through;
-  }
-  &.overline {
-    text-decoration: overline;
-  }
-  &.line-through {
-    text-decoration: line-through;
-  }
-  &.none {
-    text-decoration: none;
-  }
-  &.small {
-    font-size: var(--font-size-small);
-  }
-
+	&.underline {
+		text-decoration: underline;
+	}
+	&.bold {
+		font-weight: bold;
+	}
+	&.italic {
+		font-style: italic;
+	}
+	&.uppercase {
+		text-transform: uppercase;
+	}
+	&.capitalize {
+		text-transform: capitalize;
+	}
+	&.lowercase {
+		text-transform: lowercase;
+	}
+	&.line-through {
+		text-decoration: line-through;
+	}
+	&.overline {
+		text-decoration: overline;
+	}
+	&.line-through {
+		text-decoration: line-through;
+	}
+	&.none {
+		text-decoration: none;
+	}
+	&.small {
+		font-size: var(--font-size-small);
+	}
+	&.medium {
+		font-size: var(--font-size-medium);
+	}
+	&.large {
+		font-size: var(--font-size-large);
+	}
+	&.x-large {
+		font-size: var(--font-size-x-large);
+	}
+	&.xx-large {
+		font-size: var(--font-size-xx-large);
+	}
+	&.xxx-large {
+		font-size: var(--font-size-xxx-large);
+	}
+	&.bold {
+		font-weight: bold;
+	}
+	&.light {
+		font-weight: 300;
+	}
+	&.normal {
+		font-weight: normal;
+	}
+	&.italic {
+		font-style: italic;
+	}
+	&.uppercase {
+		text-transform: uppercase;
+	}
+	&.capitalize {
+		text-transform: capitalize;
+	}
+	&.lowercase {
+		text-transform: lowercase;
+	}
+	&.line-through {
+		text-decoration: line-through;
+	}
+	&.overline {
+		text-decoration: overline;
+	}
+	&.line-through {
+		text-decoration: line-through;
+	}
+	&.none {
+		text-decoration: none;
+	}
+	&.small {
+		font-size: var(--font-size-small);
+	}
 }

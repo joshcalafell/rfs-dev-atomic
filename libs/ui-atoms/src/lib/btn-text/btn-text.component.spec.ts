@@ -30,7 +30,7 @@ describe('BtnTextComponent', () => {
 	})
 
 	it('should have a default value of an empty string', () => {
-		expect(component.text).toEqual('')
+		expect(component.label).toEqual('')
 	})
 
 	it('should have a default value of false for disabled', () => {

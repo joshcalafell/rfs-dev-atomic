@@ -1,1 +1,17 @@
-<p>input-quantity works!</p>
+<div class="qty-input">
+	<button class="qty-count qty-count--minus" data-action="minus" type="button">
+		-
+	</button>
+	<input
+		class="product-qty"
+		type="number"
+		name="product-qty"
+		min="0"
+		max="10"
+		value="1"
+		role="spinbutton"
+	/>
+	<button class="qty-count qty-count--add" data-action="add" type="button">
+		+
+	</button>
+</div>

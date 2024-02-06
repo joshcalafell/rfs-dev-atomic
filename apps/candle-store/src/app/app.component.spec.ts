@@ -44,11 +44,10 @@ describe('AppComponent', () => {
 		expect(compiled.querySelector('router-outlet')).toBeTruthy()
 	})
 
-	/*   it('should render the footer component', () => {
-    const fixture = TestBed.createComponent(AppComponent)
-    fixture.detectChanges()
-    const compiled = fixture.nativeElement as HTMLElement
-    expect(compiled.querySelector('rfs-dev-atomic-footer')).toBeTruthy()
-  })
- */
+	it('should render the footer component', () => {
+		const fixture = TestBed.createComponent(AppComponent)
+		fixture.detectChanges()
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelector('rfs-dev-atomic-footer')).toBeTruthy()
+	})
 })

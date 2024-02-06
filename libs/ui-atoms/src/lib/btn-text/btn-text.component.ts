@@ -30,7 +30,7 @@ export class BtnTextComponent
 		AfterContentChecked
 {
 	@Input()
-	text = ''
+	label = ''
 
 	@Input()
 	type = 'button'

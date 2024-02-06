@@ -1,4 +1,16 @@
-import { Component } from '@angular/core'
+import {
+	AfterContentChecked,
+	AfterContentInit,
+	Component,
+	DoCheck,
+	EventEmitter,
+	Input,
+	OnChanges,
+	OnDestroy,
+	OnInit,
+	Output,
+	SimpleChanges,
+} from '@angular/core'
 import { CommonModule } from '@angular/common'
 
 @Component({
@@ -8,4 +20,57 @@ import { CommonModule } from '@angular/common'
 	templateUrl: './btn-icon.component.html',
 	styleUrl: './btn-icon.component.scss',
 })
-export class BtnIconComponent {}
+export class BtnIconComponent
+	implements
+		OnInit,
+		OnDestroy,
+		OnChanges,
+		DoCheck,
+		AfterContentInit,
+		AfterContentChecked
+{
+	@Input()
+	label = ''
+
+	@Input()
+	type = 'button'
+
+	@Input()
+	disabled = false
+
+	@Output()
+	clickEmitter = new EventEmitter()
+
+	constructor() {
+		console.log('Button Text Component Constructed')
+	}
+
+	ngOnInit() {
+		console.log('Button Text Component')
+	}
+
+	ngOnDestroy() {
+		console.log('Button Text Component Destroyed')
+	}
+
+	ngOnChanges(changes: SimpleChanges) {
+		console.log('Button Text Component Changes', changes)
+	}
+
+	ngDoCheck() {
+		console.log('Button Text Component Do Check')
+	}
+
+	ngAfterContentInit() {
+		console.log('Button Text Component After Content Init')
+	}
+
+	ngAfterContentChecked() {
+		console.log('Button Text Component After Content Checked')
+	}
+
+	onClickHandler() {
+		this.clickEmitter.emit()
+		console.log('Button Text Component Clicked')
+	}
+}

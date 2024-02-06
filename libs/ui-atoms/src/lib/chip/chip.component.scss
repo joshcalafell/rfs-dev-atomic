@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&display=swap');
+
+div.chip {
+	background-color: rgb(255, 102, 102, 0.6);
+	border-color: rgb(255, 102, 102);
+	border: solid 1px;
+	border-radius: 16px;
+	max-width: 100px;
+	padding: 8px 8px;
+	text-align: center;
+	font-family: 'Inter', sans-serif;
+}
