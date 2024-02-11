@@ -1,0 +1,29 @@
+{
+	"name": "inventory-e2e",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"projectType": "application",
+	"sourceRoot": "apps/inventory-e2e/src",
+	"targets": {
+		"e2e": {
+			"executor": "@nx/cypress:cypress",
+			"options": {
+				"cypressConfig": "apps/inventory-e2e/cypress.config.ts",
+				"testingType": "e2e",
+				"devServerTarget": "inventory:serve:development"
+			},
+			"configurations": {
+				"production": {
+					"devServerTarget": "inventory:serve:production"
+				},
+				"ci": {
+					"devServerTarget": "inventory:serve-static"
+				}
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint"
+		}
+	},
+	"tags": [],
+	"implicitDependencies": ["inventory"]
+}

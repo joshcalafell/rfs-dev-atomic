@@ -1,17 +1,6 @@
-import {
-	AfterContentChecked,
-	AfterContentInit,
-	Component,
-	DoCheck,
-	EventEmitter,
-	Input,
-	OnChanges,
-	OnDestroy,
-	OnInit,
-	Output,
-	SimpleChanges,
-} from '@angular/core'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { Event } from '@angular/router'
 
 @Component({
 	selector: 'rfs-dev-atomic-btn-text',
@@ -20,15 +9,7 @@ import { CommonModule } from '@angular/common'
 	templateUrl: './btn-text.component.html',
 	styleUrl: './btn-text.component.scss',
 })
-export class BtnTextComponent
-	implements
-		OnInit,
-		OnDestroy,
-		OnChanges,
-		DoCheck,
-		AfterContentInit,
-		AfterContentChecked
-{
+export class BtnTextComponent {
 	@Input()
 	label = ''
 
@@ -39,38 +20,14 @@ export class BtnTextComponent
 	disabled = false
 
 	@Output()
-	clickEmitter = new EventEmitter()
+	clickEmitter: EventEmitter<void> = new EventEmitter()
 
 	constructor() {
 		console.log('Button Text Component Constructed')
 	}
 
-	ngOnInit() {
-		console.log('Button Text Component')
-	}
-
-	ngOnDestroy() {
-		console.log('Button Text Component Destroyed')
-	}
-
-	ngOnChanges(changes: SimpleChanges) {
-		console.log('Button Text Component Changes', changes)
-	}
-
-	ngDoCheck() {
-		console.log('Button Text Component Do Check')
-	}
-
-	ngAfterContentInit() {
-		console.log('Button Text Component After Content Init')
-	}
-
-	ngAfterContentChecked() {
-		console.log('Button Text Component After Content Checked')
-	}
-
 	onClickHandler() {
+		console.log('Button Clicked')
 		this.clickEmitter.emit()
-		console.log('Button Text Component Clicked')
 	}
 }

@@ -1,26 +1,70 @@
+import { CommonModule } from '@angular/common'
 import { Component } from '@angular/core'
 import { RouterModule } from '@angular/router'
-import { ChipComponent, InputQuantityComponent } from '@rfs-dev-atomic/ui-atoms'
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { ILink } from 'libs/ui-atoms/src/lib/link/link.model'
+
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { FooterComponent, HeaderComponent } from 'libs/ui-organisms/src'
 
 @Component({
 	standalone: true,
-	imports: [HeaderComponent, FooterComponent, RouterModule],
+	imports: [CommonModule, HeaderComponent, FooterComponent, RouterModule],
 	selector: 'rfs-dev-atomic-root',
 	templateUrl: './app.component.html',
 	styleUrl: './app.component.scss',
 })
 export class AppComponent {
 	title = 'CANDLE STORE'
-	image_src = 'https://i.postimg.cc/pLyyV7S8/candles-set-one.jpg'
-	menuItems = [
-		{ label: 'Home', path: '/' },
-		{ label: 'Products', path: '/products' },
-		{ label: 'Contact', path: '/contact' },
-		{ label: 'Wishlist', path: '/wishlist' },
-		{ label: 'Orders', path: '/orders' },
-		{ label: 'Cart', path: '/cart' },
-	]
 	isLoggedIn = false
+	menuItems = <ILink[]>[
+		{
+			label: 'About',
+			path: '/about',
+			target: '_self',
+			rel: '',
+			title: 'About Link',
+			color: 'primary',
+			disabled: false,
+			underline: false,
+			icon: '',
+			alt: '',
+		},
+		{
+			label: 'Products',
+			path: '/products',
+			target: '_self',
+			rel: '',
+			title: 'Products Link',
+			color: 'primary',
+			disabled: false,
+			underline: false,
+			icon: '',
+			alt: '',
+		},
+		{
+			label: 'Contact',
+			path: '/contact',
+			target: '_self',
+			rel: '',
+			title: 'Contact Link',
+			color: 'primary',
+			disabled: false,
+			underline: false,
+			icon: '',
+			alt: '',
+		},
+		{
+			label: 'Cart',
+			path: '/cart',
+			target: '_self',
+			rel: '',
+			title: 'Cart Link',
+			color: 'primary',
+			disabled: false,
+			underline: false,
+			icon: '',
+			alt: '',
+		},
+	]
 }

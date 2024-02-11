@@ -1,8 +1,5 @@
 <ul class="topnav">
 	<li *ngFor="let menuItem of menuItems">
-		<rfs-dev-atomic-link
-			[path]="menuItem.path"
-			[label]="menuItem.label"
-		></rfs-dev-atomic-link>
+		<rfs-dev-atomic-link [link]="menuItem"></rfs-dev-atomic-link>
 	</li>
 </ul>

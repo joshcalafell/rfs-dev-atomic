@@ -2,52 +2,53 @@ import { Route } from '@angular/router'
 
 export const appRoutes: Route[] = [
 	{
-		path: 'home',
-		component: void 0,
-		//loadChildren: () => import('@rfs-dev-atomic/ui-templates').then(m => m.HomeModule),
-	},
-	{
-		path: 'products',
-		component: void 0,
-		//loadChildren: () => import('@rfs-dev-atomic/ui-templates').then(m => m.ProductsModule),
-	},
-	{
-		path: 'cart',
-		component: void 0,
-		//loadChildren: () => import('@rfs-dev-atomic/ui-templates').then(m => m.CartModule),
-	},
-	{
-		path: 'wishlist',
-		component: void 0,
-		//loadChildren: () => import('@rfs-dev-atomic/ui-templates').then(m => m.WishlistModule),
-	},
-	{
-		path: 'inventory',
-		component: void 0,
-		// loadChildren: () => import('@rfs-dev-atomic/ui-templates').then(m => m.InventoryModule),
-	},
-	{
-		path: 'about',
-		component: void 0,
-		// loadChildren: () => import('@rfs-dev-atomic/ui-templates').then(m => m.AboutModule),
-	},
-	{
-		path: 'contact',
-		component: void 0,
-		//loadChildren: () => import('@rfs-dev-atomic/ui-templates').then(m => m.ContactModule),
-	},
-	{
-		path: 'article',
-		component: void 0,
-		//loadChildren: () => import('@rfs-dev-atomic/ui-templates').then(m => m.ArticleModule),
-	},
-	{
 		path: '',
 		redirectTo: 'home',
 		pathMatch: 'full',
 	},
 	{
+		path: 'products',
+		loadComponent: () =>
+			import('@rfs-dev-atomic/products').then((m) => m.ProductsComponent),
+	},
+	{
+		path: 'wishlist',
+		loadComponent: () =>
+			import('@rfs-dev-atomic/wishlist').then((m) => m.WishlistComponent),
+	},
+	{
+		path: 'orders',
+		loadComponent: () =>
+			import('@rfs-dev-atomic/orders').then((m) => m.OrdersComponent),
+	},
+	{
+		path: 'home',
+		loadComponent: () =>
+			import('@rfs-dev-atomic/home').then((m) => m.HomeComponent),
+	},
+	{
+		path: 'about',
+		loadComponent: () =>
+			import('@rfs-dev-atomic/about').then((m) => m.AboutComponent),
+	},
+	{
+		path: 'cart',
+		loadComponent: () =>
+			import('@rfs-dev-atomic/cart').then((m) => m.CartComponent),
+	},
+	{
+		path: 'contact',
+		loadComponent: () =>
+			import('@rfs-dev-atomic/contact').then((m) => m.ContactComponent),
+	},
+	{
+		path: '404',
+		loadComponent: () =>
+			import('@rfs-dev-atomic/not-found').then((m) => m.NotFoundComponent),
+	},
+	{
 		path: '**',
-		redirectTo: 'home',
+		redirectTo: '404',
+		pathMatch: 'full',
 	},
 ]

@@ -15,10 +15,19 @@
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
+			"@rfs-dev-atomic/about": ["libs/about/src/index.ts"],
+			"@rfs-dev-atomic/cart": ["libs/cart/src/index.ts"],
+			"@rfs-dev-atomic/contact": ["libs/contact/src/index.ts"],
+			"@rfs-dev-atomic/home": ["libs/home/src/index.ts"],
+			"@rfs-dev-atomic/not-found": ["libs/not-found/src/index.ts"],
+			"@rfs-dev-atomic/orders": ["libs/orders/src/index.ts"],
+			"@rfs-dev-atomic/products": ["libs/products/src/index.ts"],
+			"@rfs-dev-atomic/shared-ui": ["libs/shared/ui/src/index.ts"],
 			"@rfs-dev-atomic/ui-atoms": ["libs/ui-atoms/src/index.ts"],
 			"@rfs-dev-atomic/ui-molecules": ["libs/ui-molecules/src/index.ts"],
 			"@rfs-dev-atomic/ui-organisms": ["libs/ui-organisms/src/index.ts"],
-			"@rfs-dev-atomic/ui-templates": ["libs/ui-templates/src/index.ts"]
+			"@rfs-dev-atomic/ui-tamplate": ["libs/ui-template/src/index.ts"],
+			"@rfs-dev-atomic/wishlist": ["libs/wishlist/src/index.ts"]
 		}
 	},
 	"exclude": ["node_modules", "tmp"]

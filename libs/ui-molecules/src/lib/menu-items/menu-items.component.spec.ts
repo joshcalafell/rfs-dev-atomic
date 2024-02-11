@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { MenuItemsComponent } from './menu-items.component'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { LinkComponent } from 'libs/ui-atoms/src'
+// eslint-disable-next-line @nx/enforce-module-boundaries
 
 describe('MenuItemsComponent', () => {
 	let component: MenuItemsComponent
@@ -19,14 +20,14 @@ describe('MenuItemsComponent', () => {
 			{
 				label: 'Home',
 				path: '/',
-			},
-			{
-				label: 'About',
-				path: '/about',
-			},
-			{
-				label: 'Contact',
-				path: '/contact',
+				target: '_self',
+				rel: 'noopener noreferrer',
+				title: 'Home Link',
+				color: 'primary',
+				disabled: false,
+				underline: false,
+				icon: '',
+				alt: '',
 			},
 		]
 		fixture.detectChanges()

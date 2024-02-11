@@ -1,6 +1,8 @@
 <header class="header">
-	<div class="logo">
-		<h1>CANDLE STORE</h1>
+	<div class="header-logo">
+		<h1 class="header-title">
+			<a class="header-title-link" routerLink="/">{{ title | uppercase }}</a>
+		</h1>
 	</div>
 	<div class="flex-row-section">
 		<nav class="nav">
@@ -8,18 +10,9 @@
 				[menuItems]="menuItems"
 			></rfs-dev-atomic-menu-items>
 		</nav>
-		<!-- <rfs-dev-atomic-btn-text
-      [text]="'Cart'"
-      (clickEmitter)="onCartClick()"
-      [disabled]="false"
-    ></rfs-dev-atomic-btn-text>
-    <rfs-dev-atomic-btn-text
-      [text]="'Wishlist'"
-      (clickEmitter)="onWishlistClick()"
-      [disabled]="false"
-    ></rfs-dev-atomic-btn-text> -->
 		<rfs-dev-atomic-btn-text
-			[label]="'Login / Signup'"
+			[label]="'Cart'"
+			(clickEmitter)="onCartClick()"
 			[disabled]="false"
 		></rfs-dev-atomic-btn-text>
 	</div>
