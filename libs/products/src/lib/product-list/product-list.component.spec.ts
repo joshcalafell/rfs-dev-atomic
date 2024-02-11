@@ -18,4 +18,8 @@ describe('ProductListComponent', () => {
 	it('should create', () => {
 		expect(component).toBeTruthy()
 	})
+
+	it('should have a list of products', () => {
+		expect(component.products).toBeDefined()
+	})
 })

@@ -1,1 +1,37 @@
-<p>product-list works!</p>
+<div class="product-list" *ngIf="!!products && products?.length > 0">
+	<div *ngFor="let product of products" class="product">
+		<div class="card product-card">
+			<div class="card-content">
+				<div class="flex-between">
+					<div class="card-header">
+						<h2 class="card-title">
+							{{ product.entity.name }}
+						</h2>
+						<div class="chip">{{ product.entity.price | currency }}</div>
+					</div>
+					<p>{{ product.entity.description }}</p>
+					<div class="card-image">
+						<img src="https://i.imgur.com/vL2h90y.jpg" alt="Candle Image" />
+					</div>
+					<div class="card-details">
+						<p>Fragrance: {{ product.fragrance | titlecase }}</p>
+						<p>Material: {{ product.material | titlecase }}</p>
+						<p>Dimensions: {{ product.dimensions }}</p>
+						<p>Duration: {{ product.burnTime | titlecase }}</p>
+					</div>
+					<div class="card-actions">
+						<button class="card-button">Cart</button>
+						<button class="card-button wishlist">Wishlist</button>
+					</div>
+					<div class="card-tags">
+						<span *ngFor="let tag of product.tags">#{{ tag }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div *ngIf="!products || products?.length === 0">
+		<p>No products found</p>
+	</div>
+</div>

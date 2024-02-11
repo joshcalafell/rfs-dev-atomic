@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&family=Monoton&family=Poppins:wght@100;200;400;600&display=swap');
+
+$primary-color: #a164d3;
+$primary-color-border: #aaa1df;
+
+@mixin card-layout {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin card-hover {
+	&:hover {
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	}
+}
+
+@mixin button-hover {
+	&:hover {
+		background-color: $primary-color;
+	}
+}
+
+.product-list {
+	padding: 8px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(356px, 2fr));
+	grid-gap: 20px;
+}
+
+.card {
+	font-family: 'Inter', sans-serif;
+	max-width: 380px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 0px;
+	border-bottom: 1px solid #ccc;
+	h2 {
+		font-size: 1.65em;
+		padding: 0px;
+		margin: 0px;
+	}
+}
+
+.chip {
+	background-color: #f1f1f1;
+	color: #333;
+	padding: 8px 16px;
+	margin-right: 5px;
+	border-radius: 5px;
+}
+
+.card-image img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.card-content {
+	padding: 18px;
+}
+
+.card-title {
+	margin: 0;
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+
+.card-details {
+	font-size: 0.9em;
+	color: #777;
+	margin-bottom: 20px;
+}
+
+.card-actions {
+	margin-bottom: 20px;
+}
+
+.card-button {
+	@include button-hover;
+	width: 100px;
+	background-color: $primary-color;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	&:not(:last-child) {
+		margin-right: 10px;
+	}
+	cursor: pointer;
+	border-radius: 5px;
+	border: solid 2px $primary-color;
+}
+
+.card-button.wishlist {
+	background-color: white;
+	color: #333;
+	border: solid 1px #333;
+}
+
+.card-tags {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.card-tags span {
+	background-color: #f1f1f1;
+	color: #333;
+	padding: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border-radius: 3px;
+}
+
+.card.in-cart {
+	border-color: #007bff;
+	box-shadow: 0 2px 5px rgba(0, 123, 255, 0.5);
+}
+
+.card.in-cart .card-button {
+	background-color: #28a745;
+}
+
+.card.in-cart .card-button.wishlist {
+	background-color: #ffc107;
+}
