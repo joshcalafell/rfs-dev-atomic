@@ -20,6 +20,6 @@ describe('ChipComponent', () => {
 	})
 
 	it('should have a default value of "Chip" an empty string', () => {
-		expect(component.label).toEqual('Chip')
+		expect(component.label).toEqual('23')
 	})
 })

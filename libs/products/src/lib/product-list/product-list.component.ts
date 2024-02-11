@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { IEntity } from 'IEntity.model'
+import { ChipComponent } from '@rfs-dev-atomic/ui-atoms'
 
 interface ISubscription {
 	type: string
@@ -57,10 +58,11 @@ export interface ICandleProduct extends IProduct {
 @Component({
 	selector: 'rfs-dev-atomic-product-list',
 	standalone: true,
-	imports: [CommonModule],
+	imports: [CommonModule, ChipComponent],
 	templateUrl: './product-list.component.html',
 	styleUrl: './product-list.component.scss',
 })
 export class ProductListComponent {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	@Input() products?: any
 }

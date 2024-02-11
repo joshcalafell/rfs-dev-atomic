@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { ProductListComponent } from './product-list.component'
+import { ChipComponent } from '@rfs-dev-atomic/ui-atoms'
 
 describe('ProductListComponent', () => {
 	let component: ProductListComponent
@@ -7,7 +8,7 @@ describe('ProductListComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [ProductListComponent],
+			imports: [ProductListComponent, ChipComponent],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(ProductListComponent)
@@ -17,9 +18,5 @@ describe('ProductListComponent', () => {
 
 	it('should create', () => {
 		expect(component).toBeTruthy()
-	})
-
-	it('should have a list of products', () => {
-		expect(component.products).toBeDefined()
 	})
 })

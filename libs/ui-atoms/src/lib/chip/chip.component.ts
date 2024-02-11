@@ -9,5 +9,6 @@ import { CommonModule } from '@angular/common'
 	styleUrl: './chip.component.scss',
 })
 export class ChipComponent {
-	@Input() label = 'Chip'
+	@Input() label: number | string = '23'
+	@Input() variant?: string = 'price'
 }
