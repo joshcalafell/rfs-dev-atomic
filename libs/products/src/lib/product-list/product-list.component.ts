@@ -1,58 +1,7 @@
 import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { IEntity } from 'IEntity.model'
 import { ChipComponent } from '@rfs-dev-atomic/ui-atoms'
-
-interface ISubscription {
-	type: string
-	entity: IEntity
-	isRecurring: boolean
-}
-
-interface IProduct {
-	entity: IEntity
-	image: string
-	category: string
-	subCategory: string
-	tags: string[]
-	rating: number
-	reviews: number
-	stock: number
-	isOnSale: boolean
-	saleStart: Date
-	saleEnd: Date
-	isFeatured: boolean
-	isTopSeller: boolean
-	isNew: boolean
-	isBestSeller: boolean
-	isSale: boolean
-	isAvailable: boolean
-	isOutOfStock: boolean
-	isComingSoon: boolean
-	isDiscontinued: boolean
-	isLimited: boolean
-	isSoldOut: boolean
-	isBackOrder: boolean
-	isPreOrder: boolean
-	isGift: boolean
-	subscription: ISubscription
-}
-export interface ICandleProduct extends IProduct {
-	product: IProduct
-	fragrance: string
-	color: string
-	size: string
-	burnTime: string
-	scent: string
-	brand: string
-	type: string
-	material: string
-	shape: string
-	weight: string
-	dimensions: string
-	wickType: string
-	wickMaterial: string
-}
+import { ICandleProduct } from '../model/IProduct.model'
 
 // Add 'as ICandleProduct[]' to explicitly type the array as ICandleProduct[]
 @Component({
@@ -64,5 +13,5 @@ export interface ICandleProduct extends IProduct {
 })
 export class ProductListComponent {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	@Input() products?: any
+	@Input() products: ICandleProduct[] = []
 }

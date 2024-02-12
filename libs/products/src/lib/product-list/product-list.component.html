@@ -1,4 +1,4 @@
-<div class="product-list" *ngIf="!!products && products?.length > 0">
+<div class="product-list" *ngIf="products && products?.length">
 	<div *ngFor="let product of products" class="product">
 		<div class="card product-card">
 			<div class="card-content">
@@ -36,6 +36,6 @@
 	</div>
 </div>
 
-<div *ngIf="!products || products?.length === 0">
+<div *ngIf="!products || !products?.length">
 	<p>No products found</p>
 </div>
