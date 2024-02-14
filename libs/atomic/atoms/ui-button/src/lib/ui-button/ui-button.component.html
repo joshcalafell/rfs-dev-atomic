@@ -1,0 +1,20 @@
+<button
+	[ngClass]="{
+		'ui-button--primary': paletteColor === 'primary',
+		'ui-button--secondary': paletteColor === 'secondary',
+		'ui-button--tertiary': paletteColor === 'tertiary',
+		'ui-button--danger': paletteColor === 'danger',
+		'ui-button--warning': paletteColor === 'warning',
+		'ui-button--success': paletteColor === 'success',
+		'ui-button--info': paletteColor === 'info',
+		'ui-button--light': paletteColor === 'light',
+		'ui-button--dark': paletteColor === 'dark',
+		'ui-button--small': size === 'small',
+		'ui-button--medium': size === 'medium',
+		'ui-button--large': size === 'large',
+		'ui-button--disabled': disabled
+	}"
+	[disabled]="disabled"
+>
+	{{ label }}
+</button>

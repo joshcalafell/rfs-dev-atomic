@@ -24,9 +24,28 @@
 			"@rfs-dev-atomic/products": ["libs/products/src/index.ts"],
 			"@rfs-dev-atomic/shared-ui": ["libs/shared/ui/src/index.ts"],
 			"@rfs-dev-atomic/ui-atoms": ["libs/ui-atoms/src/index.ts"],
+			"@rfs-dev-atomic/ui-button": ["libs/atomic/atoms/ui-button/src/index.ts"],
+			"@rfs-dev-atomic/ui-cart": ["libs/atomic/layouts/ui-cart/src/index.ts"],
+			"@rfs-dev-atomic/ui-header": [
+				"libs/atomic/organisms/ui-header/src/index.ts"
+			],
+			"@rfs-dev-atomic/ui-link": ["libs/atomic/atoms/ui-link/src/index.ts"],
 			"@rfs-dev-atomic/ui-molecules": ["libs/ui-molecules/src/index.ts"],
+			"@rfs-dev-atomic/ui-orders": [
+				"libs/atomic/layouts/ui-orders/src/index.ts"
+			],
 			"@rfs-dev-atomic/ui-organisms": ["libs/ui-organisms/src/index.ts"],
+			"@rfs-dev-atomic/ui-product-card": [
+				"libs/atomic/templates/ui-product-card/src/index.ts"
+			],
+			"@rfs-dev-atomic/ui-products": [
+				"libs/atomic/layouts/ui-products/src/index.ts"
+			],
+			"@rfs-dev-atomic/ui-tag": ["libs/atomic/atoms/ui-tag/src/index.ts"],
 			"@rfs-dev-atomic/ui-tamplate": ["libs/ui-template/src/index.ts"],
+			"@rfs-dev-atomic/ui-top-menu": [
+				"libs/atomic/molecules/ui-top-menu/src/index.ts"
+			],
 			"@rfs-dev-atomic/wishlist": ["libs/wishlist/src/index.ts"]
 		}
 	},

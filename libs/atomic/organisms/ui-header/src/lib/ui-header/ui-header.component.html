@@ -1,0 +1,30 @@
+<header class="header">
+	<div class="container">
+		<div class="row">
+			<div class="col-3">
+				<h1>{{ title }}</h1>
+			</div>
+			<nav class="col-6 nav">
+				<ul>
+					<li *ngFor="let link of links" class="nav-item">
+						<a
+							class="nav-link"
+							[routerLink]="link.path"
+							[routerLinkActive]="'active'"
+							>{{ link.label }}</a
+						>
+					</li>
+				</ul>
+			</nav>
+			<div class="col-3 buttons-right">
+				<rfs-dev-atomic-ui-button
+					*ngIf="!user"
+					label="Login"
+					paletteColor="primary"
+					size="medium"
+					[routerLink]="['/login']"
+				></rfs-dev-atomic-ui-button>
+			</div>
+		</div>
+	</div>
+</header>
