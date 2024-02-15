@@ -1,4 +1,12 @@
-<rfs-dev-atomic-product-list
-	class="list"
-	[products]="products"
-></rfs-dev-atomic-product-list>
+<div class="product-list" *ngIf="products && products?.length">
+	<div *ngFor="let product of products" class="product">
+		<rfs-dev-atomic-ui-product-card
+			[product]="product"
+			(addToCart)="addToCart($event)"
+		></rfs-dev-atomic-ui-product-card>
+	</div>
+</div>
+
+<div *ngIf="!products || !products?.length">
+	<p>No products found</p>
+</div>

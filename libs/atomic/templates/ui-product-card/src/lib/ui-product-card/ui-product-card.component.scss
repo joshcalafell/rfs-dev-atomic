@@ -22,13 +22,6 @@ $primary-color-border: #aaa1df;
 	}
 }
 
-.product-list {
-	padding: 8px;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(356px, 2fr));
-	grid-gap: 20px;
-}
-
 .card {
 	font-family: 'Inter', sans-serif;
 	max-width: 380px;

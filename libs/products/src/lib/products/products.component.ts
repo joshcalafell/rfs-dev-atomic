@@ -3,13 +3,13 @@ import { ProductsService } from './products.service'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Component, OnInit, inject } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { ProductListComponent } from '../product-list/product-list.component'
 import { ICandleProduct } from '../model/IProduct.model'
+import { UiProductCardComponent } from '@rfs-dev-atomic/ui-product-card'
 
 @Component({
 	selector: 'rfs-dev-atomic-products',
 	standalone: true,
-	imports: [CommonModule, ProductsComponent, ProductListComponent],
+	imports: [CommonModule, ProductsComponent, UiProductCardComponent],
 	templateUrl: './products.component.html',
 	styleUrl: './products.component.scss',
 })

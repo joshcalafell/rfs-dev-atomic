@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { ProductsComponent } from './products.component'
-import { ProductListComponent } from '../product-list/product-list.component'
+import { UiProductCardComponent } from '@rfs-dev-atomic/ui-product-card'
 
 describe('ProductsComponent', () => {
 	let component: ProductsComponent
@@ -8,7 +8,7 @@ describe('ProductsComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [ProductsComponent, ProductListComponent],
+			imports: [ProductsComponent, UiProductCardComponent],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(ProductsComponent)
