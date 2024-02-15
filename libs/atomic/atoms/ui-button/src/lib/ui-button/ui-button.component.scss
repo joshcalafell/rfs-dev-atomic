@@ -46,8 +46,9 @@ $gray: #6c757d;
 	font-family: 'Inter', sans-serif;
 
 	&--primary {
-		background-color: $primary;
-		color: $white;
+		border: solid 1px $primary;
+		background-color: transparent;
+		color: $primary;
 	}
 	&--secondary {
 		background-color: $secondary;
@@ -89,4 +90,9 @@ $gray: #6c757d;
 		background-color: $disabled;
 		color: $white;
 	}
+}
+
+.ui-button--medium {
+	font-size: 1.5rem;
+	padding: 12px 24px;
 }

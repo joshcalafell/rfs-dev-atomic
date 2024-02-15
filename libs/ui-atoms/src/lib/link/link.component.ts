@@ -1,12 +1,7 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { ILink } from './link.model'
-import {
-	ActivatedRoute,
-	NavigationEnd,
-	Router,
-	RouterModule,
-} from '@angular/router'
+import { ActivatedRoute, Router, RouterModule } from '@angular/router'
 
 @Component({
 	selector: 'rfs-dev-atomic-link',

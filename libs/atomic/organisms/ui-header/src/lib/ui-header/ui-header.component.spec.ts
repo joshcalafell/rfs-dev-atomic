@@ -2,6 +2,7 @@ import { RouterTestingModule } from '@angular/router/testing'
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { UiHeaderComponent } from './ui-header.component'
 import { UiButtonComponent } from '@rfs-dev-atomic/ui-button'
+import { UiTopMenuComponent } from '@rfs-dev-atomic/ui-top-menu'
 
 describe('UiHeaderComponent', () => {
 	let component: UiHeaderComponent
@@ -9,21 +10,26 @@ describe('UiHeaderComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [UiHeaderComponent, UiButtonComponent, RouterTestingModule],
+			imports: [
+				UiHeaderComponent,
+				UiButtonComponent,
+				UiTopMenuComponent,
+				RouterTestingModule,
+			],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(UiHeaderComponent)
 
 		component = fixture.componentInstance
 
-		component.title = 'Inventory'
+		component.title = 'INVENTORY'
 
 		component.user = {
 			name: 'Hal Doe',
 			email: 'my-email@something.com',
 		}
 
-		component.links = [
+		component.menuItems = [
 			{
 				label: 'Home',
 				path: '/',
@@ -50,21 +56,21 @@ describe('UiHeaderComponent', () => {
 	})
 
 	it('should have links', () => {
-		expect(component.links).toBeTruthy()
+		expect(component.menuItems).toBeTruthy()
 	})
 
 	it('should have a link to Home', () => {
-		const link = component.links.find((l) => l.label === 'Home')
+		const link = component.menuItems.find((l) => l.label === 'Home')
 		expect(link).toBeTruthy()
 	})
 
 	it('should have a link to About', () => {
-		const link = component.links.find((l) => l.label === 'About')
+		const link = component.menuItems.find((l) => l.label === 'About')
 		expect(link).toBeTruthy()
 	})
 
 	it('should have a link to Contact', () => {
-		const link = component.links.find((l) => l.label === 'Contact')
+		const link = component.menuItems.find((l) => l.label === 'Contact')
 		expect(link).toBeTruthy()
 	})
 

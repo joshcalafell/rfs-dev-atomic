@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { UiTopMenuComponent } from './ui-top-menu.component'
+import { UiLinkComponent } from '@rfs-dev-atomic/ui-link'
 
 describe('UiTopMenuComponent', () => {
 	let component: UiTopMenuComponent
@@ -7,7 +8,7 @@ describe('UiTopMenuComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [UiTopMenuComponent],
+			imports: [UiTopMenuComponent, UiLinkComponent],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(UiTopMenuComponent)

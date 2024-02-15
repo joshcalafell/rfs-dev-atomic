@@ -7,9 +7,9 @@ import {
 	Output,
 } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { Router, RouterModule } from '@angular/router'
+import { RouterModule } from '@angular/router'
 
-type TPalletteColor =
+type TpalleteColor =
 	| 'primary'
 	| 'secondary'
 	| 'tertiary'
@@ -25,10 +25,10 @@ type TButtonSize = 'small' | 'medium' | 'large'
 
 interface IAtomicUiButton {
 	label: string
-	palletColor: TPalletteColor
+	palleteColor: TpalleteColor
 	disabled: boolean
 	size: 'small' | 'medium' | 'large'
-	path: string
+
 	// 👈🏽 new property
 }
 @Component({
@@ -42,10 +42,9 @@ export class UiButtonComponent implements IAtomicUiButton, OnInit, OnDestroy {
 	@Output() clickEmitter: EventEmitter<void> = new EventEmitter()
 
 	@Input() label!: string
-	@Input() palletColor: TPalletteColor = 'primary'
+	@Input() palleteColor: TpalleteColor = 'primary'
 	@Input() disabled = false
 	@Input() size: TButtonSize = 'medium'
-	@Input() path = ''
 
 	constructor() {
 		console.log('UiButtonComponent')

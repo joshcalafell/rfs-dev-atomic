@@ -1,1 +1,5 @@
-<p>ui-top-menu works!</p>
+<ul class="topnav">
+	<li *ngFor="let menuItem of menuItems">
+		<rfs-dev-atomic-ui-link [link]="menuItem"></rfs-dev-atomic-ui-link>
+	</li>
+</ul>

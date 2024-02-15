@@ -1,9 +1,8 @@
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { ILink } from 'libs/ui-atoms/src/lib/link/link.model'
-import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
 
-import { RouterLink, RouterModule } from '@angular/router'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { LinkComponent } from 'libs/ui-atoms/src' // TODO: Figure this out...
 
@@ -15,5 +14,9 @@ import { LinkComponent } from 'libs/ui-atoms/src' // TODO: Figure this out...
 	styleUrl: './menu-items.component.scss',
 })
 export class MenuItemsComponent {
-	@Input() menuItems?: ILink[] = []
+	@Input() menuItems?: ILink[] = [
+		{ label: 'Home', path: '/' },
+		{ label: 'Products', path: '/products' },
+		{ label: 'Cart', path: '/cart' },
+	] as ILink[]
 }

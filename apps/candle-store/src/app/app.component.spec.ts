@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing'
 import { AppComponent } from './app.component'
 import { RouterTestingModule } from '@angular/router/testing'
-import { HeaderComponent } from '@rfs-dev-atomic/ui-organisms'
+import { UiHeaderComponent } from '@rfs-dev-atomic/ui-header'
 
 describe('AppComponent', () => {
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [AppComponent, HeaderComponent, RouterTestingModule],
+			imports: [AppComponent, UiHeaderComponent, RouterTestingModule],
 		}).compileComponents()
 	})
 
@@ -34,7 +34,7 @@ describe('AppComponent', () => {
 		const fixture = TestBed.createComponent(AppComponent)
 		fixture.detectChanges()
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('rfs-dev-atomic-header')).toBeTruthy()
+		expect(compiled.querySelector('rfs-dev-atomic-ui-header')).toBeTruthy()
 	})
 
 	it('should render the router outlet', () => {

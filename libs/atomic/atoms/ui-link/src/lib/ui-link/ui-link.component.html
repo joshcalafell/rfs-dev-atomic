@@ -1,1 +1,8 @@
-<p>ui-link works!</p>
+<a
+	class="rfs-dev-atomic-link"
+	(click)="$event.preventDefault()"
+	[title]="link.label"
+	[routerLink]="link.path"
+	[routerLinkActive]="'active'"
+	>{{ link.label }}</a
+>
