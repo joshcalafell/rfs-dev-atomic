@@ -25,7 +25,7 @@ export class ProductsComponent implements OnInit {
 		try {
 			this.productsService.mockProductService
 				.getProducts()
-				.subscribe((products) => {
+				.subscribe((products: ICandleProduct[]) => {
 					this.products = products as ICandleProduct[]
 				})
 		} catch (error) {
