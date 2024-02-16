@@ -1,0 +1,37 @@
+<div class="card" *ngIf="product">
+	<div class="card-content">
+		<div class="flex-between">
+			<div class="card-header">
+				<h2 class="card-title">
+					{{ product.entity.name }}
+				</h2>
+
+				<rfs-dev-atomic-ui-chip
+					[label]="product.entity.price + ''"
+					[variant]="'price'"
+				></rfs-dev-atomic-ui-chip>
+
+				<!-- Chip component -->
+			</div>
+			<p>{{ product.entity.description }}</p>
+			<div class="card-image">
+				<img src="https://i.imgur.com/vL2h90y.jpg" alt="Candle Image" />
+			</div>
+			<div class="card-details">
+				<p>Fragrance: {{ product.fragrance | titlecase }}</p>
+				<p>Material: {{ product.material | titlecase }}</p>
+				<p>Dimensions: {{ product.dimensions }}</p>
+				<p>Duration: {{ product.burnTime | titlecase }}</p>
+			</div>
+			<div class="card-actions">
+				<button class="card-button">Cart</button>
+				<button class="card-button wishlist">Wishlist</button>
+			</div>
+			<div class="card-tags">
+				<div *ngFor="let tag of product.tags">
+					<rfs-dev-atomic-ui-tag [tag]="tag"></rfs-dev-atomic-ui-tag>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

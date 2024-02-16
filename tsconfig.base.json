@@ -25,9 +25,45 @@
 			"@rfs-dev-atomic/shared-ui": ["libs/shared/ui/src/index.ts"],
 			"@rfs-dev-atomic/ui-atoms": ["libs/ui-atoms/src/index.ts"],
 			"@rfs-dev-atomic/ui-button": ["libs/atomic/atoms/ui-button/src/index.ts"],
+			"@rfs-dev-atomic/ui-button-row": [
+				"libs/atomic/molecules/ui-button-row/src/index.ts"
+			],
+			"@rfs-dev-atomic/ui-card-cell": [
+				"libs/atomic/molecules/ui-card-cell/src/index.ts"
+			],
+			"@rfs-dev-atomic/ui-card-cell-data": [
+				"libs/atomic/atoms/ui-card-cell-data/src/index.ts"
+			],
+			"@rfs-dev-atomic/ui-card-cell-header": [
+				"libs/atomic/atoms/ui-card-cell-header/src/index.ts"
+			],
+			"@rfs-dev-atomic/ui-card-price": [
+				"libs/atomic/atoms/ui-card-price/src/index.ts"
+			],
+			"@rfs-dev-atomic/ui-card-subtitle": [
+				"libs/atomic/atoms/ui-card-subtitle/src/index.ts"
+			],
+			"@rfs-dev-atomic/ui-card-title": [
+				"libs/atomic/atoms/ui-card-title/src/index.ts"
+			],
 			"@rfs-dev-atomic/ui-cart": ["libs/atomic/layouts/ui-cart/src/index.ts"],
+			"@rfs-dev-atomic/ui-chip": ["libs/atomic/atoms/ui-chip/src/index.ts"],
+			"@rfs-dev-atomic/ui-detail-group": [
+				"libs/atomic/molecules/ui-detail-group/src/index.ts"
+			],
+			"@rfs-dev-atomic/ui-detail-item": [
+				"libs/atomic/atoms/ui-detail-item/src/index.ts"
+			],
+			"@rfs-dev-atomic/ui-hash": ["libs/atomic/atoms/ui-hash/src/index.ts"],
+			"@rfs-dev-atomic/ui-hash-group": [
+				"libs/atomic/molecules/ui-hash-group/src/index.ts"
+			],
 			"@rfs-dev-atomic/ui-header": [
 				"libs/atomic/organisms/ui-header/src/index.ts"
+			],
+			"@rfs-dev-atomic/ui-icon": ["libs/atomic/atoms/ui-icon/src/index.ts"],
+			"@rfs-dev-atomic/ui-icon-button": [
+				"libs/atomic/atoms/ui-icon-button/src/index.ts"
 			],
 			"@rfs-dev-atomic/ui-link": ["libs/atomic/atoms/ui-link/src/index.ts"],
 			"@rfs-dev-atomic/ui-molecules": ["libs/ui-molecules/src/index.ts"],
@@ -36,10 +72,14 @@
 			],
 			"@rfs-dev-atomic/ui-organisms": ["libs/ui-organisms/src/index.ts"],
 			"@rfs-dev-atomic/ui-product-card": [
-				"libs/atomic/templates/ui-product-card/src/index.ts"
+				"libs/atomic/organiss/ui-product-card/src/index.ts"
 			],
 			"@rfs-dev-atomic/ui-products": [
 				"libs/atomic/layouts/ui-products/src/index.ts"
+			],
+			"@rfs-dev-atomic/ui-star": ["libs/atomic/atoms/ui-star/src/index.ts"],
+			"@rfs-dev-atomic/ui-star-group": [
+				"libs/atomic/molecules/ui-star-group/src/index.ts"
 			],
 			"@rfs-dev-atomic/ui-tag": ["libs/atomic/atoms/ui-tag/src/index.ts"],
 			"@rfs-dev-atomic/ui-tamplate": ["libs/ui-template/src/index.ts"],

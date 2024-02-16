@@ -1,0 +1,6 @@
+<div class="ui-chip">
+	<ng-content></ng-content>
+	<span class="ui-chip__close" *ngIf="closable" (click)="remove.emit()">
+		<rfs-dev-atomic-ui-icon [icon]="'Chip'"></rfs-dev-atomic-ui-icon>
+	</span>
+</div>

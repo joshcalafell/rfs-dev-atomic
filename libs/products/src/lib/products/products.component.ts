@@ -1,10 +1,12 @@
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { ProductsService } from './products.service'
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { Component, OnInit, inject } from '@angular/core'
+import { Component, OnDestroy, OnInit, inject } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { ICandleProduct } from '../model/IProduct.model'
-import { UiProductCardComponent } from '@rfs-dev-atomic/ui-product-card'
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { UiProductCardComponent } from 'libs/atomic/organisms/ui-product-card/src'
+import { Observable, catchError, tap } from 'rxjs'
 
 @Component({
 	selector: 'rfs-dev-atomic-products',
@@ -13,26 +15,28 @@ import { UiProductCardComponent } from '@rfs-dev-atomic/ui-product-card'
 	templateUrl: './products.component.html',
 	styleUrl: './products.component.scss',
 })
-export class ProductsComponent implements OnInit {
-	productsService: ProductsService
+export class ProductsComponent {
+	service: ProductsService
 	products: ICandleProduct[] = []
 
-	constructor() {
-		this.productsService = inject(ProductsService)
+	constructor(service: ProductsService) {
+		this.service = service
+		this.getProducts().pipe(
+			tap((products) => {
+				this.products = products
+			}),
+			catchError((error) => {
+				console.log('error', error)
+				return error
+			})
+		)
 	}
 
-	ngOnInit() {
-		try {
-			this.productsService.mockProductService
-				.getProducts()
-				.subscribe((products: ICandleProduct[]) => {
-					this.products = products as ICandleProduct[]
-				})
-		} catch (error) {
-			console.error(error)
-			this.products = []
-		} finally {
-			console.log('Products loaded')
-		}
+	getProducts(): Observable<ICandleProduct[]> {
+		return this.service.mockProductService.getProducts()
+	}
+
+	addToCart(product: ICandleProduct) {
+		this.service.mockProductService.addToCart(product)
 	}
 }

@@ -50,3 +50,5 @@ export interface ICandleProduct extends IProduct {
 	wickType: string
 	wickMaterial: string
 }
+
+export const testCandles = []

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
 
 @Component({
@@ -6,6 +6,11 @@ import { CommonModule } from '@angular/common'
 	standalone: true,
 	imports: [CommonModule],
 	templateUrl: './ui-tag.component.html',
-	styleUrl: './ui-tag.component.css',
+	styleUrl: './ui-tag.component.scss',
 })
-export class UiTagComponent {}
+export class UiTagComponent {
+	@Input() tag = ''
+	constructor() {
+		console.log('UiTagComponent')
+	}
+}

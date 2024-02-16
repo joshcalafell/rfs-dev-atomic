@@ -1,3 +1,4 @@
+import { ICandleProduct } from './../model/IProduct.model'
 import { Injectable } from '@angular/core'
 import { of } from 'rxjs'
 import productsMock from './products.mock'
@@ -11,12 +12,20 @@ export class ProductsService {
 		getProducts() {
 			return of(productsMock)
 		},
+
+		cart: (<never>[]) as ICandleProduct[],
+
+		addToCart(product: ICandleProduct) {
+			this.cart.push(product)
+		},
 	}
 
 	// Mock the GET request for a single Product
 	mockSingleProductService = {
-		getProduct() {
-			return of(productsMock[0])
+		getProductById(id: number) {
+			return of(
+				productsMock.find((product) => product.entity.id === new String(id))
+			) // eslint-disable-line
 		},
 	}
 }

@@ -2,7 +2,7 @@
 	<div *ngFor="let product of products" class="product">
 		<rfs-dev-atomic-ui-product-card
 			[product]="product"
-			(addToCart)="addToCart($event)"
+			(addToCart)="addToCart(product)"
 		></rfs-dev-atomic-ui-product-card>
 	</div>
 </div>
