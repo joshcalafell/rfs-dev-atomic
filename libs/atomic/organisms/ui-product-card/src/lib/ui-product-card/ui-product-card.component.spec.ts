@@ -2,6 +2,10 @@ import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { UiProductCardComponent } from './ui-product-card.component'
 import { UiChipComponent } from '@rfs-dev-atomic/ui-chip'
 import { UiTagComponent } from '@rfs-dev-atomic/ui-tag'
+import { UiButtonRowComponent } from '@rfs-dev-atomic/ui-button-row'
+import { UiDetailGroupComponent } from '@rfs-dev-atomic/ui-detail-group'
+import { UiCardTitleComponent } from '@rfs-dev-atomic/ui-card-title'
+import { UiHashGroupComponent } from '@rfs-dev-atomic/ui-hash-group'
 
 describe('UiProductCardComponent', () => {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -11,7 +15,13 @@ describe('UiProductCardComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [UiProductCardComponent, UiChipComponent, UiTagComponent],
+			imports: [
+				UiCardTitleComponent,
+				UiChipComponent,
+				UiDetailGroupComponent,
+				UiButtonRowComponent,
+				UiHashGroupComponent,
+			],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(UiProductCardComponent)
@@ -26,6 +36,20 @@ describe('UiProductCardComponent', () => {
 				price: 24.99,
 				sku: 'C1',
 			},
+			buttons: [
+				{
+					label: 'Add to Cart',
+					palleteColor: 'primary',
+					disabled: false,
+					size: 'medium',
+				},
+				{
+					label: 'Add to Wishlist',
+					palleteColor: 'secondary',
+					disabled: false,
+					size: 'medium',
+				},
+			],
 			brand: 'RFS',
 			color: 'Brown',
 			material: 'Soy Wax',

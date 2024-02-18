@@ -6,6 +6,6 @@ import { CommonModule } from '@angular/common'
 	standalone: true,
 	imports: [CommonModule],
 	templateUrl: './ui-card-cell.component.html',
-	styleUrl: './ui-card-cell.component.css',
+	styleUrl: './ui-card-cell.component.scss',
 })
 export class UiCardCellComponent {}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
 
 @Component({
@@ -6,6 +6,11 @@ import { CommonModule } from '@angular/common'
 	standalone: true,
 	imports: [CommonModule],
 	templateUrl: './ui-detail-item.component.html',
-	styleUrl: './ui-detail-item.component.css',
+	styleUrl: './ui-detail-item.component.scss',
 })
-export class UiDetailItemComponent {}
+export class UiDetailItemComponent {
+	@Input() item: { label: string; value: string | number } = {
+		label: '',
+		value: '',
+	}
+}

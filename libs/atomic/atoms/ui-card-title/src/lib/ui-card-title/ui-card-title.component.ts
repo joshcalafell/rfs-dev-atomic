@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
 
 @Component({
@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common'
 	standalone: true,
 	imports: [CommonModule],
 	templateUrl: './ui-card-title.component.html',
-	styleUrl: './ui-card-title.component.css',
+	styleUrl: './ui-card-title.component.scss',
 })
-export class UiCardTitleComponent {}
+export class UiCardTitleComponent {
+	@Input() title!: string
+}

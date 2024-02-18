@@ -1,26 +1,53 @@
-$primary: #ff4081;
+$primary: #ff6f61;
 $secondary: #955bd7;
-$tertiary: #ff9c40;
+$tertiary: #fee65f;
+$danger: #ff4d4f;
+$warning: #fee65f;
+$success: #52c41a;
+$info: #1890ff;
 
 .ui-chip {
-	display: inline-flex;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
 	align-items: center;
 	padding: 0.5rem 0.75rem;
 	border-radius: 0.25rem;
-	background-color: $primary;
-	color: white;
 	font-size: 0.875rem;
 	line-height: 1.25rem;
 	margin: 0.25rem;
 	cursor: pointer;
 	transition: background-color 0.2s ease-in-out;
 
-	&__close {
-		margin-left: 0.5rem;
-		cursor: pointer;
+	&--primary {
+		background-color: #333;
+		color: white;
 	}
 
-	&:hover {
+	&--secondary {
 		background-color: $secondary;
+		color: white;
+	}
+
+	&--tertiary {
+		background-color: $tertiary;
+		color: white;
+	}
+
+	&--danger {
+		background-color: $danger;
+	}
+
+	&--warning {
+		background-color: $warning;
+	}
+
+	&--success {
+		background-color: $success;
+	}
+
+	&--info {
+		background-color: $info;
 	}
 }

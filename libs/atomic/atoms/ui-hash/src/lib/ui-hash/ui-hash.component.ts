@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
 
 @Component({
@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common'
 	standalone: true,
 	imports: [CommonModule],
 	templateUrl: './ui-hash.component.html',
-	styleUrl: './ui-hash.component.css',
+	styleUrl: './ui-hash.component.scss',
 })
-export class UiHashComponent {}
+export class UiHashComponent {
+	@Input() hash = ''
+}

@@ -23,13 +23,11 @@ type TpalleteColor =
 
 type TButtonSize = 'small' | 'medium' | 'large'
 
-interface IAtomicUiButton {
+export interface IAtomicUiButton {
 	label: string
 	palleteColor: TpalleteColor
 	disabled: boolean
 	size: 'small' | 'medium' | 'large'
-
-	// 👈🏽 new property
 }
 @Component({
 	selector: 'rfs-dev-atomic-ui-button',
@@ -44,7 +42,7 @@ export class UiButtonComponent implements IAtomicUiButton, OnInit, OnDestroy {
 	@Input() label!: string
 	@Input() palleteColor: TpalleteColor = 'primary'
 	@Input() disabled = false
-	@Input() size: TButtonSize = 'medium'
+	@Input() size: TButtonSize = 'small'
 
 	constructor() {
 		console.log('UiButtonComponent')

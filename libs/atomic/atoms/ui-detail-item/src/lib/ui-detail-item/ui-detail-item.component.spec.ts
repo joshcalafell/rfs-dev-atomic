@@ -12,6 +12,7 @@ describe('UiDetailItemComponent', () => {
 
 		fixture = TestBed.createComponent(UiDetailItemComponent)
 		component = fixture.componentInstance
+		component.item = { label: 'Test', value: 'Test' }
 		fixture.detectChanges()
 	})
 

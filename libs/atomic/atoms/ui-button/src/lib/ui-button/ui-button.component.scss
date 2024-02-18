@@ -15,7 +15,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&display=swap');
 
 $primary: #ff6666;
-$secondary: #6b4cb9;
+$secondary: #333;
 $tertiary: #17a2b8;
 $danger: #dc3545;
 $warning: #ffc107;
@@ -41,58 +41,88 @@ $gray: #6c757d;
 	transition: color 0.15s ease-in-out;
 	user-select: none;
 	white-space: nowrap;
-	margin-left: 16px;
 	text-decoration: none;
 	font-family: 'Inter', sans-serif;
+	margin-right: 16px;
+
+	&:hover {
+		color: $primary;
+	}
+
+	&--medium {
+		font-size: 1rem;
+		padding: 8px 16px;
+	}
+
+	&--small {
+		font-size: 0.75rem;
+		padding: 4px 8px;
+	}
+
+	&--large {
+		font-size: 2rem;
+		padding: 16px 32px;
+	}
 
 	&--primary {
 		border: solid 1px $primary;
 		background-color: transparent;
 		color: $primary;
+		&:hover {
+			background-color: $primary;
+			color: $white;
+		}
 	}
+
 	&--secondary {
-		background-color: $secondary;
-		color: $white;
+		border: solid 1px $secondary;
+		background-color: transparent;
+		color: $secondary;
+		&:hover {
+			background-color: $secondary;
+			color: $white;
+		}
 	}
+
 	&--tertiary {
-		background-color: $tertiary;
-		color: $white;
+		border: solid 1px $tertiary;
+		background-color: transparent;
+		color: $tertiary;
 	}
+
 	&--danger {
 		background-color: $danger;
 		color: $white;
 	}
+
 	&--warning {
 		background-color: $warning;
 		color: $white;
 	}
+
 	&--success {
 		background-color: $success;
 		color: $white;
 	}
+
 	&--info {
 		background-color: $info;
 		color: $white;
 	}
+
 	&--light {
 		background-color: $light;
-		color: $dark;
+		color: $black;
 	}
+
 	&--dark {
 		background-color: $dark;
 		color: $white;
 	}
-	&--link {
-		background-color: transparent;
-		color: $primary;
-	}
+
 	&--disabled {
 		background-color: $disabled;
 		color: $white;
+		cursor: not-allowed;
 	}
-}
-
-.ui-button--medium {
-	font-size: 1.5rem;
-	padding: 12px 24px;
 }

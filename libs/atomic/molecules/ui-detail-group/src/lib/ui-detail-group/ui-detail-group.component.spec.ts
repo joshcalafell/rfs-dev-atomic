@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { UiDetailGroupComponent } from './ui-detail-group.component'
+import { UiDetailItemComponent } from '@rfs-dev-atomic/ui-detail-item'
 
 describe('UiDetailGroupComponent', () => {
 	let component: UiDetailGroupComponent
@@ -7,11 +8,12 @@ describe('UiDetailGroupComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [UiDetailGroupComponent],
+			imports: [UiDetailItemComponent],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(UiDetailGroupComponent)
 		component = fixture.componentInstance
+		component.items = [{ label: 'Test', value: 'Test' }]
 		fixture.detectChanges()
 	})
 

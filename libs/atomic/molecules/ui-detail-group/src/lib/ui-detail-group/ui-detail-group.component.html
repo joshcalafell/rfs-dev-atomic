@@ -1,1 +1,6 @@
-<p>ui-detail-group works!</p>
+<div class="card-details" *ngIf="items">
+	<rfs-dev-atomic-ui-detail-item
+		*ngFor="let item of items; let i = index"
+		[item]="item"
+	></rfs-dev-atomic-ui-detail-item>
+</div>

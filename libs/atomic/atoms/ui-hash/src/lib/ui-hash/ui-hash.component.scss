@@ -1,0 +1,34 @@
+p {
+	padding: 8px 16px;
+	text-align: center;
+}
+
+.hash {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.hash span {
+	background-color: #e9e9e9;
+	color: #333;
+	font-size: 0.85em;
+	padding: 5px 8px;
+	margin-right: 5px;
+	margin-bottom: 8px;
+	border-radius: 3px;
+}
+
+.hash span:hover {
+	background-color: #333;
+	color: white;
+}
+
+.hash span:active {
+	background-color: #333;
+	color: white;
+}
+
+.hash span:focus {
+	background-color: #333;
+	color: white;
+}

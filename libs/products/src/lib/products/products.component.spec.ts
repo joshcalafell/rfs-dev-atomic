@@ -1,3 +1,4 @@
+import { RouterTestingModule } from '@angular/router/testing'
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { ProductsComponent } from './products.component'
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -10,7 +11,7 @@ describe('ProductsComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [ProductsComponent, UiProductCardComponent],
+			imports: [UiProductCardComponent, RouterTestingModule],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(ProductsComponent)

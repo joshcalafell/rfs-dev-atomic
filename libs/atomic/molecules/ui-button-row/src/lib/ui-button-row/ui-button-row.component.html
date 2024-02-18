@@ -1,1 +1,22 @@
-<p>ui-button-row works!</p>
+<div class="button-row">
+	<rfs-dev-atomic-ui-button
+		*ngFor="let button of buttons"
+		[label]="button.label"
+		[palleteColor]="button.palleteColor"
+		[disabled]="button.disabled"
+		[size]="button.size"
+		[ngClass]="[
+			button.palleteColor === 'primary' ? 'primary' : '',
+			button.palleteColor === 'secondary' ? 'secondary' : '',
+			button.palleteColor === 'success' ? 'success' : '',
+			button.palleteColor === 'warning' ? 'warning' : '',
+			button.palleteColor === 'danger' ? 'danger' : '',
+			button.palleteColor === 'info' ? 'info' : '',
+			button.size === 'small' ? 'small' : '',
+			button.size === 'medium' ? 'medium' : '',
+			button.size === 'large' ? 'large' : '',
+			button.disabled ? 'disabled' : ''
+		]"
+	></rfs-dev-atomic-ui-button>
+	]
+</div>

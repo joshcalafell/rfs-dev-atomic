@@ -1,0 +1,18 @@
+@mixin button-row() {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+}
+
+.button-row {
+	@include button-row;
+}
+
+::ng-deep .button-row {
+	@include button-row;
+}

@@ -6,6 +6,23 @@ interface IProductSubscription {
 	isRecurring: boolean
 }
 
+interface IProductButton {
+	label: string
+	palleteColor?:
+		| 'primary'
+		| 'secondary'
+		| 'tertiary'
+		| 'danger'
+		| 'warning'
+		| 'success'
+		| 'info'
+		| 'light'
+		| 'dark'
+		| 'link'
+	disabled?: boolean
+	size?: 'medium' | 'large' | 'small'
+}
+
 interface IProduct {
 	entity: IEntity
 	image: string
@@ -33,6 +50,7 @@ interface IProduct {
 	isPreOrder: boolean
 	isGift: boolean
 	subscription: IProductSubscription
+	buttons: IProductButton[]
 }
 
 export interface ICandleProduct extends IProduct {

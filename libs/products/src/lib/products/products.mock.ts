@@ -1,5 +1,20 @@
 import { ICandleProduct } from '../model/IProduct.model'
 
+const buttons = [
+	{
+		label: 'Cart',
+		palleteColor: 'primary',
+		size: 'medium',
+		disabled: false,
+	},
+	{
+		label: 'Wishlist',
+		palleteColor: 'secondary',
+		size: 'medium',
+		disabled: false,
+	},
+]
+
 export default <ICandleProduct[]>[
 	{
 		entity: {
@@ -9,6 +24,7 @@ export default <ICandleProduct[]>[
 			price: 24.99,
 			sku: 'C1',
 		},
+		buttons,
 		brand: 'RFS',
 		color: 'Brown',
 		material: 'Soy Wax',
@@ -67,8 +83,8 @@ export default <ICandleProduct[]>[
 			price: 24.99,
 			sku: 'C2',
 		},
+		buttons,
 		brand: 'RFS',
-
 		color: 'Brown',
 		material: 'Soy Wax',
 		dimensions: '3.5" x 3.5" x 3.5"',
@@ -128,6 +144,7 @@ export default <ICandleProduct[]>[
 			price: 24.99,
 			sku: 'C3',
 		},
+		buttons,
 		brand: 'RFS',
 		color: 'Green',
 		material: 'Soy Wax',
@@ -167,7 +184,6 @@ export default <ICandleProduct[]>[
 		isGift: false,
 		image:
 			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/eucalyptus-mint-candle.jpg',
-
 		subscription: {
 			type: 'One-Time Purchase',
 			isRecurring: false,
@@ -189,6 +205,7 @@ export default <ICandleProduct[]>[
 			price: 24.99,
 			sku: 'C4',
 		},
+		buttons,
 		brand: 'RFS',
 		color: 'Purple',
 		material: 'Soy Wax',
@@ -249,6 +266,7 @@ export default <ICandleProduct[]>[
 			price: 24.99,
 			sku: 'C5',
 		},
+		buttons,
 		brand: 'RFS',
 		color: 'Yellow',
 		material: 'Soy Wax',
@@ -308,6 +326,7 @@ export default <ICandleProduct[]>[
 			price: 24.99,
 			sku: 'C6',
 		},
+		buttons,
 		brand: 'RFS',
 		color: 'Pink',
 		material: 'Soy Wax',

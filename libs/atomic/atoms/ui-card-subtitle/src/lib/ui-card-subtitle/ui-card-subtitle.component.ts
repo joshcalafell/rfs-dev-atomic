@@ -6,6 +6,6 @@ import { CommonModule } from '@angular/common'
 	standalone: true,
 	imports: [CommonModule],
 	templateUrl: './ui-card-subtitle.component.html',
-	styleUrl: './ui-card-subtitle.component.css',
+	styleUrl: './ui-card-subtitle.component.scss',
 })
 export class UiCardSubtitleComponent {}

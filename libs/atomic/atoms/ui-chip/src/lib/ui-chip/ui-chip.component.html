@@ -1,6 +1,14 @@
-<div class="ui-chip">
-	<ng-content></ng-content>
-	<span class="ui-chip__close" *ngIf="closable" (click)="remove.emit()">
-		<rfs-dev-atomic-ui-icon [icon]="'Chip'"></rfs-dev-atomic-ui-icon>
-	</span>
+<div
+	class="ui-chip"
+	[ngClass]="{
+		'ui-chip--primary': color === 'primary',
+		'ui-chip--secondary': color === 'secondary',
+		'ui-chip--tertiary': color === 'tertiary',
+		'ui-chip--danger': color === 'danger',
+		'ui-chip--warning': color === 'warning',
+		'ui-chip--success': color === 'success',
+
+	}"
+>
+	{{ label.toString() | titlecase }}
 </div>
