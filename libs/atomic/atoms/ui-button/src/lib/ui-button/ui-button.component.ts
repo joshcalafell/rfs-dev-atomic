@@ -42,7 +42,7 @@ export class UiButtonComponent implements IAtomicUiButton, OnInit, OnDestroy {
 	@Input() label!: string
 	@Input() palleteColor: TpalleteColor = 'primary'
 	@Input() disabled = false
-	@Input() size: TButtonSize = 'small'
+	@Input() size: TButtonSize = 'medium'
 
 	constructor() {
 		console.log('UiButtonComponent')
