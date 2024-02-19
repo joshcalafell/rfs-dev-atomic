@@ -49,9 +49,8 @@ $primary-color-border: #aaa1df;
 
 .card {
 	background-color: white;
-	border: 1px solid #ccc;
 	border-radius: 5px;
-	border: solid 1px #777;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .product-description {

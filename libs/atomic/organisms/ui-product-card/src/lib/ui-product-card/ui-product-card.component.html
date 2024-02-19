@@ -7,12 +7,15 @@
 				></rfs-dev-atomic-ui-card-title>
 
 				<rfs-dev-atomic-ui-chip
-					[label]="'$' + product.entity.price"
-					[color]="'secondary'"
+					[label]="
+						product.quantity ? '$' + product.entity.price : 'Out of Stock'
+					"
+					[color]="product.quantity ? 'primary' : 'secondary'"
 				></rfs-dev-atomic-ui-chip>
 				<!-- Chip component -->
 			</div>
 			<div class="product-description">"{{ product.entity.description }}"</div>
+
 			<div class="card-image">
 				<img [src]="cardImage" alt="Candle Image" />
 			</div>
