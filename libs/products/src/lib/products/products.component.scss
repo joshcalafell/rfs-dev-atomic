@@ -1,8 +1,10 @@
 .product-list {
-	padding: 8px 16px;
+	padding: 16px 16px;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(356px, 2fr));
 	grid-gap: 20px;
+	background: #444;
+	margin-top: 16px;
 }
 
 .product-list .product-card {

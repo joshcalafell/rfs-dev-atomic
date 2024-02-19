@@ -27,7 +27,7 @@ $primary-color-border: #aaa1df;
 	background-color: white;
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	border: hsl(from #333 to #ccc);
+	border: solid 1px #777;
 }
 
 .card-header {
@@ -35,7 +35,6 @@ $primary-color-border: #aaa1df;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: 15px 0px;
 }
 
 .card-image img {

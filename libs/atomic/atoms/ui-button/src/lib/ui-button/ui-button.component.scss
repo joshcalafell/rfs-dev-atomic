@@ -32,7 +32,7 @@ $gray: #6c757d;
 .ui-button {
 	background-color: transparent;
 
-	border: solid 2px #333;
+	border: solid 1px #333;
 	cursor: pointer;
 	font-size: 1rem;
 	padding: 8px 16px;
@@ -45,7 +45,7 @@ $gray: #6c757d;
 	font-family: 'Inter', sans-serif;
 	margin-right: 16px;
 	transition: all 0.333s ease-in-out;
-	width: 110px;
+
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -68,39 +68,39 @@ $gray: #6c757d;
 	}
 
 	&--primary {
-		border: solid 2px $primary;
-		background-color: $white;
-		color: $primary;
+		border-color: $primary;
+		background-color: $primary;
+		color: $white;
 
 		animation: 0.666s ease-in-out;
 		&:hover {
-			border-color: $primary;
-			background-color: $primary;
-			color: $white;
+			border: solid 1px $primary;
+			background-color: $white;
+			color: $primary;
 		}
 	}
 
 	&--secondary {
-		border: solid 2px $secondary;
-		background-color: $white;
-		color: $secondary;
+		border-color: $secondary;
+		background-color: $secondary;
+		color: $white;
 		animation: 0.666s ease-in-out;
 		&:hover {
-			border-color: $secondary;
-			background-color: $secondary;
-			color: $white;
+			border: solid 1px $secondary;
+			background-color: $white;
+			color: $secondary;
 		}
 	}
 
 	&--tertiary {
-		border: solid 2px $tertiary;
-		background-color: $tertiary;
-		color: $white;
+		border-color: $tertiary;
+		background-color: transparent;
+		color: $tertiary;
 		animation: 0.666s ease-in-out;
 		&:hover {
-			border-color: $tertiary;
-			background-color: transparent;
-			color: $tertiary;
+			border: solid 1px $tertiary;
+			background-color: $tertiary;
+			color: $white;
 		}
 	}
 

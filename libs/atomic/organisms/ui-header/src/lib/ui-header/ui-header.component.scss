@@ -3,14 +3,14 @@
 header {
 	h1 a {
 		font-family: 'Inter', sans-serif;
-		color: #111;
+		color: white;
 		text-decoration: none;
 	}
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem 2rem;
-	background-color: antiquewhite;
+	background-color: #444;
 	z-index: 100;
 	position: fixed;
 	top: 0;
@@ -33,7 +33,7 @@ header {
 		.nav-item {
 			font-size: 1.2rem;
 			font-weight: 500;
-			color: #333;
+			color: white;
 			cursor: pointer;
 			transition: all 0.3s;
 			&:hover {
