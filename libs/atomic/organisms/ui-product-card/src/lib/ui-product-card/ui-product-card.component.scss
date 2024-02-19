@@ -24,11 +24,10 @@ $primary-color-border: #aaa1df;
 
 .card {
 	font-family: 'Inter', sans-serif;
-	max-width: 380px;
+	background-color: white;
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	margin: 10px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	border: hsl(from #333 to #ccc);
 }
 
 .card-header {
@@ -37,7 +36,6 @@ $primary-color-border: #aaa1df;
 	justify-content: space-between;
 	align-items: center;
 	padding: 15px 0px;
-	border-bottom: 1px solid #ccc;
 }
 
 .card-image img {
@@ -121,4 +119,9 @@ $primary-color-border: #aaa1df;
 
 .card.in-cart .card-button.wishlist {
 	background-color: #ffc107;
+}
+
+.product-description {
+	color: #666;
+	margin-bottom: 16px;
 }

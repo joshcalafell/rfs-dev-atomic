@@ -1,35 +1,83 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core'
+import { UiIconComponent } from '@rfs-dev-atomic/ui-icon'
+import { Component, Input, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import {
 	ActivatedRoute,
+	NavigationEnd,
 	Router,
-	RouterLink,
-	RouterLinkActive,
 	RouterModule,
 } from '@angular/router'
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { ILink } from 'libs/ui-atoms/src/lib/link/link.model'
+
+type IAtomicLinkPaletteColor =
+	| 'primary'
+	| 'secondary'
+	| 'tertiary'
+	| 'danger'
+	| 'success'
+	| 'warning'
+	| 'info'
+	| 'light'
+	| 'dark'
+
+type IAtomicLinkSize = 'small' | 'medium' | 'large'
+export interface IAtomicLink {
+	label: string
+	path: string
+	disabled?: boolean
+	size?: IAtomicLinkSize
+	palleteColor?: IAtomicLinkPaletteColor
+	target: string
+	href: string
+	download: string
+	isActive: boolean
+	rel: string
+	onClick: () => void
+}
 
 @Component({
 	selector: 'rfs-dev-atomic-ui-link',
 	standalone: true,
-	imports: [CommonModule, UiLinkComponent, RouterModule],
+	imports: [CommonModule, RouterModule, UiIconComponent],
 	templateUrl: './ui-link.component.html',
 	styleUrl: './ui-link.component.scss',
 })
-export class UiLinkComponent implements OnInit, OnChanges {
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	@Input() link? = { label: '', path: '' } as any
+export class UiLinkComponent implements OnInit {
+	@Input() link: IAtomicLink = {
+		label: 'Label',
+		path: '',
+		target: '_blank',
+		href: '',
+		download: '',
+		isActive: false,
+		rel: 'noopener noreferrer',
+		onClick: () => {
+			console.log('Link clicked')
+		},
+	}
 
-	isActive = false
+	private _isActive = false
 
-	constructor(private router: Router, private route: ActivatedRoute) {}
+	public get isActive() {
+		return this._isActive
+	}
 
-	ngOnChanges() {
-		console.log(this.link)
+	public set isActive(value) {
+		this._isActive = value
+	}
+
+	constructor(private router: Router, private route: ActivatedRoute) {
+		this.router.events.subscribe((event) => {
+			if (event instanceof NavigationEnd) {
+				this.isActive = event.url === this.link.path
+			}
+		})
 	}
 
 	ngOnInit() {
-		console.log(this.link)
+		this.isActive = this.router.url === this.link.path
+	}
+
+	onClick() {
+		this.link.onClick()
 	}
 }

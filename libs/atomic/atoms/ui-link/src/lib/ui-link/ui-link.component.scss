@@ -3,9 +3,21 @@
 $font-size-small: 0.75rem;
 $font-size-medium: 1rem;
 $font-size-large: 1.25rem;
-$font-size-x-large: 1.5rem;
-$font-size-xx-large: 1.75rem;
-$font-size-xxx-large: 2rem;
+
+$primary-color: #ed5a5a;
+$secondary-color: #333;
+$success-color: #e354d2;
+$danger-color: #dc3545;
+$warning-color: #ffc107;
+$info-color: #17a2b8;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+$disabled-color: #6c757d;
+$enabled-color: #000;
+$white-color: #fff;
+$black-color: #000;
+$gray-color: #6c757d;
+$gray-dark-color: #343a40;
 
 :host {
 	display: block;
@@ -18,84 +30,77 @@ a {
 	transition: color 0.3s ease;
 	font-family: 'Inter', sans-serif;
 	font-weight: 400;
+	transition: all 0.333s ease-in-out;
 
 	&.active {
-		color: #ff6f61;
+		color: $primary-color;
 	}
 
-	&.underline {
-		text-decoration: underline;
-	}
-	&.bold {
-		font-weight: bold;
-	}
-	&.italic {
-		font-style: italic;
-	}
-	&.uppercase {
-		text-transform: uppercase;
-	}
-	&.capitalize {
-		text-transform: capitalize;
-	}
-	&.lowercase {
-		text-transform: lowercase;
-	}
-	&.line-through {
-		text-decoration: line-through;
-	}
-	&.overline {
-		text-decoration: overline;
-	}
-	&.line-through {
-		text-decoration: line-through;
-	}
-	&.none {
-		text-decoration: none;
-	}
 	&.small {
 		font-size: $font-size-small;
 	}
 	&.medium {
 		font-size: $font-size-medium;
 	}
+
 	&.large {
 		font-size: $font-size-large;
 	}
-	&.x-large {
-		font-size: $font-size-x-large;
+
+	&.primary {
+		color: var(--primary-color);
 	}
-	&.xx-large {
-		font-size: $font-size-xx-large;
+
+	&.secondary {
+		color: var(--secondary-color);
 	}
-	&.xxx-large {
-		font-size: $font-size-xxx-large;
+
+	&.success {
+		color: var(--success-color);
 	}
-	&.bold {
-		font-weight: bold;
+
+	&.danger {
+		color: var(--danger-color);
 	}
+
+	&.warning {
+		color: var(--warning-color);
+	}
+
+	&.info {
+		color: var(--info-color);
+	}
+
 	&.light {
-		font-weight: 300;
+		color: var(--light-color);
 	}
-	&.normal {
-		font-weight: normal;
+
+	&.dark {
+		color: var(--dark-color);
 	}
-	&.italic {
-		font-style: italic;
+
+	&.disabled {
+		color: var(--disabled-color);
 	}
-	&.uppercase {
-		text-transform: uppercase;
+
+	&.enabled {
+		color: var(--enabled-color);
 	}
+
 	&.small {
 		font-size: $font-size-small;
 	}
-	&:primary {
-		color: var(--primary-color);
+
+	&.medium {
+		font-size: $font-size-medium;
 	}
-	&:secondary {
-		color: var(--secondary-color);
+
+	&.large {
+		font-size: $font-size-large;
 	}
-	&:success {
-		color: var(--success-color);
+
+	span.ui-link-text {
+		display: inline-block;
+		text-align: center;
 	}
 }

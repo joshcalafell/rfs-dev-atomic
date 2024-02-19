@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&display=swap');
+
+$primary: #ff6666;
+$secondary: #333;
+$tertiary: #17a2b8;
+$danger: #dc3545;
+$warning: #ffc107;
+$success: #28a745;
+$info: #f5de5e;
+$light: #f8f9fa;
+$dark: #343a40;
+$white: #ffffff;
+$disabled: #6c757d;
+$transparent: transparent;
+$black: #000000;
+$gray: #6c757d;
+
+.tag {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	border-radius: 0.25rem;
+	background-color: #f5f5f5;
+	color: #333;
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	vertical-align: baseline;
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.333s ease-in-out;
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	transition: all 0.333s ease-in-out;
+
+	&.primary {
+		background-color: $primary;
+		color: $white;
+	}
+
+	&.secondary {
+		background-color: $secondary;
+		color: $white;
+	}
+
+	&.tertiary {
+		background-color: $tertiary;
+		color: $white;
+	}
+
+	&.danger {
+		background-color: $danger;
+		color: $white;
+	}
+
+	&.warning {
+		background-color: $warning;
+		color: $white;
+	}
+
+	&.success {
+		background-color: $success;
+		color: $white;
+	}
+
+	&.info {
+		background-color: $info;
+		color: $white;
+	}
+
+	&.light {
+		background-color: $light;
+		color: $dark;
+	}
+
+	&.dark {
+		background-color: $dark;
+		color: $white;
+	}
+
+	&.disabled {
+		background-color: $disabled;
+		color: $white;
+	}
+
+	&.transparent {
+		background-color: $transparent;
+		color: $white;
+	}
+
+	&.small {
+		font-size: 0.75rem;
+	}
+
+	&.medium {
+		font-size: 1rem;
+	}
+
+	&.large {
+		font-size: 1.25rem;
+	}
+}

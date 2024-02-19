@@ -1,9 +1,8 @@
 import { RouterTestingModule } from '@angular/router/testing'
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { MenuItemsComponent } from './menu-items.component'
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { LinkComponent } from 'libs/ui-atoms/src'
-// eslint-disable-next-line @nx/enforce-module-boundaries
+import { IAtomicLink, UiLinkComponent } from '@rfs-dev-atomic/ui-link'
+import { isUtf8 } from 'buffer'
 
 describe('MenuItemsComponent', () => {
 	let component: MenuItemsComponent
@@ -11,7 +10,7 @@ describe('MenuItemsComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [MenuItemsComponent, LinkComponent, RouterTestingModule],
+			imports: [MenuItemsComponent, UiLinkComponent, RouterTestingModule],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(MenuItemsComponent)
@@ -19,17 +18,30 @@ describe('MenuItemsComponent', () => {
 		component.menuItems = [
 			{
 				label: 'Home',
-				path: '/',
-				target: '_self',
+				path: '/home',
 				rel: 'noopener noreferrer',
-				title: 'Home Link',
-				color: 'primary',
-				disabled: false,
-				underline: false,
-				icon: '',
-				alt: '',
+				target: '_blank',
+				href: '/home',
+				download: 'home',
+				isActive: false,
+				onClick: () => {
+					console.log('Home')
+				},
+			},
+			{
+				label: 'About',
+				path: '/about',
+				rel: 'noopener noreferrer',
+				target: '_blank',
+				href: '/about',
+				download: 'about',
+				isActive: false,
+				onClick: () => {
+					console.log('About')
+				},
 			},
 		]
+
 		fixture.detectChanges()
 	})
 
@@ -39,6 +51,27 @@ describe('MenuItemsComponent', () => {
 
 	it('should render the menu items', () => {
 		const compiled = fixture.nativeElement as HTMLElement
-		expect(compiled.querySelector('rfs-dev-atomic-link')).toBeTruthy()
+		expect(compiled.querySelector('.topnav .topnav-item')).toBeTruthy()
 	})
+
+	it('should render 2 menu items', () => {
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelectorAll('.topnav-item').length).toBe(2)
+	})
+
+	it('should render the home menu item', () => {
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelectorAll('.topnav-item')[0].textContent).toContain(
+			'Home'
+		)
+	})
+
+	it('should render the about menu item', () => {
+		const compiled = fixture.nativeElement as HTMLElement
+		expect(compiled.querySelectorAll('.topnav-item')[1].textContent).toContain(
+			'About'
+		)
+	})
+
+	isUtf8
 })

@@ -2,13 +2,13 @@ import { ICandleProduct } from '../model/IProduct.model'
 
 const buttons = [
 	{
-		label: 'Cart',
+		label: 'Add to Cart',
 		palleteColor: 'primary',
 		size: 'medium',
 		disabled: false,
 	},
 	{
-		label: 'Wishlist',
+		label: 'Add to Wishlist',
 		palleteColor: 'secondary',
 		size: 'medium',
 		disabled: false,

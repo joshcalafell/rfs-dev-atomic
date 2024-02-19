@@ -44,19 +44,22 @@ $gray: #6c757d;
 	text-decoration: none;
 	font-family: 'Inter', sans-serif;
 	margin-right: 16px;
+	transition: all 0.333s ease-in-out;
 
-	&:hover {
-		color: $primary;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	&--small {
+		font-size: 0.75rem;
+		padding: 4px 8px;
 	}
 
 	&--medium {
 		font-size: 1rem;
 		padding: 8px 16px;
-	}
-
-	&--small {
-		font-size: 0.75rem;
-		padding: 4px 8px;
+		width: 140px;
 	}
 
 	&--large {
@@ -65,29 +68,39 @@ $gray: #6c757d;
 	}
 
 	&--primary {
-		border: solid 1px $primary;
-		background-color: transparent;
-		color: $primary;
+		border: solid 2px $primary;
+		background-color: $primary;
+		color: $white;
+		animation: 0.666s ease-in-out;
 		&:hover {
-			background-color: $primary;
-			color: $white;
+			border-color: $primary;
+			background-color: transparent;
+			color: $primary;
 		}
 	}
 
 	&--secondary {
-		border: solid 1px $secondary;
-		background-color: transparent;
-		color: $secondary;
+		border: solid 2px $secondary;
+		background-color: $secondary;
+		color: $white;
+		animation: 0.666s ease-in-out;
 		&:hover {
-			background-color: $secondary;
-			color: $white;
+			border-color: $secondary;
+			background-color: transparent;
+			color: $secondary;
 		}
 	}
 
 	&--tertiary {
-		border: solid 1px $tertiary;
-		background-color: transparent;
-		color: $tertiary;
+		border: solid 2px $tertiary;
+		background-color: $tertiary;
+		color: $white;
+		animation: 0.666s ease-in-out;
+		&:hover {
+			border-color: $tertiary;
+			background-color: transparent;
+			color: $tertiary;
+		}
 	}
 
 	&--danger {

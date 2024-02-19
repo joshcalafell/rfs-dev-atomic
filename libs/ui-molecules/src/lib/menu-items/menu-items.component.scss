@@ -1,25 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&display=swap');
 
-ul {
-	background: transparent;
-	font-family: 'Inter', cursive;
-	font-size: 1.3rem;
-	font-weight: 400;
-	background: transparent;
+section.menu-items {
 	display: flex;
-	justify-content: flex-start;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	margin-right: 64px;
-}
+	padding: 2rem;
+	background-color: #f8f9fa;
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	color: #333;
+	text-align: center;
+	min-height: 100vh;
 
-li {
-	font-family: 'Inter', cursive;
-	list-style: none;
-	margin: 0 1rem;
-	&:hover {
-		color: #ff6666;
+	h2.menu-title {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
 	}
-	&:active {
-		color: #ff6666;
+
+	ul.topnav {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 1rem;
+
+		li.topnav-item {
+			margin: 0 1rem;
+		}
 	}
 }

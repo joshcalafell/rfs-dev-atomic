@@ -12,13 +12,39 @@ export default meta
 type Story = StoryObj<UiLinkComponent>
 
 export const Primary: Story = {
-	args: {},
+	args: {
+		link: {
+			label: 'Primary',
+			path: '/primary',
+			target: '_blank',
+			href: '/primary',
+			rel: 'noopener noreferrer',
+			download: 'primary',
+			isActive: false,
+			onClick: () => {
+				console.log('Primary')
+			},
+		},
+	},
 }
 
 export const Heading: Story = {
-	args: {},
+	args: {
+		link: {
+			label: 'Heading',
+			path: '/heading',
+			rel: 'noopener noreferrer',
+			target: '_blank',
+			href: '/heading',
+			download: 'heading',
+			isActive: false,
+			onClick: () => {
+				console.log('Heading')
+			},
+		},
+	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		expect(canvas.getByText(/ui-link works!/gi)).toBeTruthy()
+		expect(await canvas.findByText('UiLinkComponent')).toBeVisible()
 	},
 }

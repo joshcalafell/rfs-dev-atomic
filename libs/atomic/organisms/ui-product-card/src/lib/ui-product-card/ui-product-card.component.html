@@ -8,11 +8,11 @@
 
 				<rfs-dev-atomic-ui-chip
 					[label]="'$' + product.entity.price"
-					[color]="product.entity.price > 50 ? 'success' : 'warning'"
+					[color]="'tertiary'"
 				></rfs-dev-atomic-ui-chip>
 				<!-- Chip component -->
 			</div>
-			<p>{{ product.entity.description }}</p>
+			<div class="product-description">{{ product.entity.description }}</div>
 			<div class="card-image">
 				<img src="https://i.imgur.com/vL2h90y.jpg" alt="Candle Image" />
 			</div>

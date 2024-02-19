@@ -1,8 +1,25 @@
 <a
-	class="rfs-dev-atomic-link"
-	(click)="$event.preventDefault()"
-	[title]="link.label"
+	class="ui-link"
+	(click)="onClick()"
 	[routerLink]="link.path"
 	[routerLinkActive]="'active'"
-	>{{ link.label }}</a
+	[routerLinkActiveOptions]="{ exact: true }"
+	[href]="link.href"
+	[target]="link.target"
+	[download]="link.download"
+	[ngClass]="[
+		isActive ? 'active' : '',
+		link.palleteColor === 'primary' ? 'primary' : '',
+		link.palleteColor === 'secondary' ? 'secondary' : '',
+		link.palleteColor === 'success' ? 'success' : '',
+		link.palleteColor === 'warning' ? 'warning' : '',
+		link.palleteColor === 'danger' ? 'danger' : '',
+		link.palleteColor === 'info' ? 'info' : '',
+		link.size === 'small' ? 'small' : '',
+		link.size === 'medium' ? 'medium' : '',
+		link.size === 'large' ? 'large' : '',
+		link.disabled ? 'disabled' : ''
+	]"
 >
+	<span class="ui-link-text">{{ link.label }} </span>
+</a>
