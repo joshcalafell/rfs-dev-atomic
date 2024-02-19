@@ -26,6 +26,8 @@ export class UiProductCardComponent {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	@Input() product = {} as any
 
+	cardImage = 'https://i.imgur.com/vL2h90y.jpg'
+
 	constructor() {
 		console.log('UiProductCardComponent')
 	}
