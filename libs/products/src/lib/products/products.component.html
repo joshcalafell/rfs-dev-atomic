@@ -1,7 +1,7 @@
 <div class="product-list" *ngIf="products && products?.length">
 	<div *ngFor="let product of products" class="product">
 		<rfs-dev-atomic-ui-product-card
-			class="product-cards"
+			class="product-card"
 			[product]="product"
 			(addToCartEmitter)="addToCart(product)"
 		></rfs-dev-atomic-ui-product-card>
