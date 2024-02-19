@@ -18,6 +18,9 @@ li {
 	margin: 0 1rem;
 	&:hover {
 		color: #ff6666;
+		transform: scale3d(1.13, 1.13, 1.13);
+
+		transition: all 0.43s;
 	}
 	&:active {
 		color: #ff6666;

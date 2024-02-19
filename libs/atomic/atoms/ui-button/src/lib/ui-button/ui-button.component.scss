@@ -31,7 +31,6 @@ $gray: #6c757d;
 
 .ui-button {
 	background-color: transparent;
-
 	border: solid 1px #333;
 	cursor: pointer;
 	font-size: 1rem;
@@ -43,9 +42,7 @@ $gray: #6c757d;
 	white-space: nowrap;
 	text-decoration: none;
 	font-family: 'Inter', sans-serif;
-	margin-right: 16px;
 	transition: all 0.333s ease-in-out;
-
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -63,8 +60,14 @@ $gray: #6c757d;
 	}
 
 	&--large {
-		font-size: 2rem;
-		padding: 16px 31px;
+		font-size: 1.23rem;
+		padding: 12px 20px;
+		&:hover {
+			border: none;
+			background-color: $primary;
+			color: $white;
+			padding: 16px 32px;
+		}
 	}
 
 	&--primary {
@@ -74,7 +77,6 @@ $gray: #6c757d;
 
 		animation: 0.666s ease-in-out;
 		&:hover {
-			border: solid 1px $primary;
 			background-color: $white;
 			color: $primary;
 		}

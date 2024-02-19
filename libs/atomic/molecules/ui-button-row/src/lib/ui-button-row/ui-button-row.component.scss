@@ -3,16 +3,24 @@
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+}
+
+:host {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 }
 
-.button-row {
+::ng-deep .ui-button-row {
 	@include button-row;
+	padding: 16px 0px;
+	border-top: solid 1px #666;
+	border-bottom: solid 1px #666;
+	width: 100%;
 }
 
-::ng-deep .button-row {
-	@include button-row;
+.ui-button:not(:last-child) {
+	margin-right: 1rem;
 }

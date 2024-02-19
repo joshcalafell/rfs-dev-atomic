@@ -10,36 +10,65 @@ $primary-color-border: #aaa1df;
 	align-items: center;
 }
 
+@mixin flex-row-start {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
 @mixin card-hover {
 	&:hover {
 		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 	}
 }
 
-@mixin button-hover {
+@mixin button-hover() {
 	&:hover {
 		background-color: $primary-color;
 	}
 }
 
-.card {
-	font-family: 'Inter', sans-serif;
-	background-color: white;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	border: solid 1px #777;
-}
-
-.card-header {
+.flex-row-centered {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 }
 
+.flex-column-centered {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.spacer {
+	width: 24px;
+}
+
+.card {
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	border: solid 1px #777;
+}
+
+.product-description {
+	color: #477;
+	margin-bottom: 16px;
+	font-family: 'Inter', sans-serif;
+	//font-style: italic;
+}
+
+.card-header {
+	@include card-layout;
+	margin-bottom: 8px;
+}
+
 .card-image img {
 	width: 100%;
-	height: 300px;
+	max-height: 350px;
 	object-fit: cover;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -53,34 +82,13 @@ $primary-color-border: #aaa1df;
 	margin: 0;
 	font-size: 1.5em;
 	margin-bottom: 10px;
+	font-family: 'Poppins', sans-serif;
 }
 
-.card-actions {
+.ui-buton-row-container {
 	margin-bottom: 20px;
-}
-
-.card-button {
-	@include button-hover;
-	width: 100px;
-	background-color: white;
-	color: $primary-color;
-	border: solid 1px $primary-color;
-
-	padding: 10px 20px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	&:not(:last-child) {
-		margin-right: 10px;
-	}
-	cursor: pointer;
-	border-radius: 5px;
-	&:hover {
-		border: solid 1px $primary-color;
-		background-color: $primary-color;
-		color: white;
-	}
+	@include flex-row-start;
+	width: 100%;
 }
 
 .card-button.wishlist {
@@ -96,14 +104,14 @@ $primary-color-border: #aaa1df;
 .card-tags {
 	display: flex;
 	flex-wrap: wrap;
+	margin-top: 8px;
 }
 
 .card-tags span {
 	background-color: #f1f1f1;
-	color: #333;
-	padding: 5px;
-	margin-right: 5px;
-	margin-bottom: 5px;
+	color: #434343;
+	padding: 6px;
+	margin: 8px;
 	border-radius: 3px;
 }
 
