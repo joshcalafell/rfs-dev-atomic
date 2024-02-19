@@ -15,7 +15,7 @@ type Story = StoryObj<UiButtonComponent>
 export const PrimarySmall: Story = {
 	args: {
 		label: 'Primary',
-		palletColor: 'primary',
+		palleteColor: 'primary',
 		disabled: false,
 		size: 'small',
 	},
@@ -31,7 +31,7 @@ export const PrimarySmall: Story = {
 export const SecodarySmall: Story = {
 	args: {
 		label: 'Secondary',
-		palletColor: 'secondary',
+		palleteColor: 'secondary',
 		disabled: false,
 		size: 'small',
 	},
@@ -47,7 +47,7 @@ export const SecodarySmall: Story = {
 export const TertiarySmall: Story = {
 	args: {
 		label: 'Tertiary',
-		palletColor: 'tertiary',
+		palleteColor: 'tertiary',
 		disabled: false,
 		size: 'small',
 	},
@@ -63,7 +63,7 @@ export const TertiarySmall: Story = {
 export const InfoSmall: Story = {
 	args: {
 		label: 'Info',
-		palletColor: 'info',
+		palleteColor: 'info',
 		disabled: false,
 		size: 'small',
 	},
@@ -79,7 +79,7 @@ export const InfoSmall: Story = {
 export const DangerSmall: Story = {
 	args: {
 		label: 'Danger',
-		palletColor: 'info',
+		palleteColor: 'info',
 		disabled: false,
 		size: 'small',
 	},
@@ -95,7 +95,7 @@ export const DangerSmall: Story = {
 export const WarningSmall: Story = {
 	args: {
 		label: 'Warning',
-		palletColor: 'warning',
+		palleteColor: 'warning',
 		disabled: false,
 		size: 'small',
 	},
@@ -111,7 +111,7 @@ export const WarningSmall: Story = {
 export const SuccessSmall: Story = {
 	args: {
 		label: 'Success',
-		palletColor: 'success',
+		palleteColor: 'success',
 		disabled: false,
 		size: 'small',
 	},
@@ -127,7 +127,7 @@ export const SuccessSmall: Story = {
 export const LinkSmall: Story = {
 	args: {
 		label: 'Link',
-		palletColor: 'link',
+		palleteColor: 'link',
 		disabled: false,
 		size: 'small',
 	},
@@ -143,7 +143,7 @@ export const LinkSmall: Story = {
 export const DarkSmall: Story = {
 	args: {
 		label: 'Dark',
-		palletColor: 'dark',
+		palleteColor: 'dark',
 		disabled: false,
 		size: 'small',
 	},
@@ -159,7 +159,7 @@ export const DarkSmall: Story = {
 export const LightSmall: Story = {
 	args: {
 		label: 'Light',
-		palletColor: 'light',
+		palleteColor: 'light',
 		disabled: false,
 		size: 'small',
 	},
@@ -175,7 +175,7 @@ export const LightSmall: Story = {
 export const DisabledSmall: Story = {
 	args: {
 		label: 'Disabled',
-		palletColor: 'primary',
+		palleteColor: 'primary',
 		disabled: true,
 		size: 'small',
 	},
@@ -195,7 +195,7 @@ export const DisabledSmall: Story = {
 export const PrimaryMedium: Story = {
 	args: {
 		label: 'Primary',
-		palletColor: 'primary',
+		palleteColor: 'primary',
 		disabled: false,
 		size: 'medium',
 	},
@@ -211,7 +211,7 @@ export const PrimaryMedium: Story = {
 export const SecodaryMedium: Story = {
 	args: {
 		label: 'Secondary',
-		palletColor: 'secondary',
+		palleteColor: 'secondary',
 		disabled: false,
 		size: 'medium',
 	},
@@ -227,7 +227,7 @@ export const SecodaryMedium: Story = {
 export const TertiaryMedium: Story = {
 	args: {
 		label: 'Tertiary',
-		palletColor: 'tertiary',
+		palleteColor: 'tertiary',
 		disabled: false,
 		size: 'medium',
 	},
@@ -243,7 +243,7 @@ export const TertiaryMedium: Story = {
 export const InfoMedium: Story = {
 	args: {
 		label: 'Info',
-		palletColor: 'info',
+		palleteColor: 'info',
 		disabled: false,
 		size: 'medium',
 	},
@@ -259,7 +259,7 @@ export const InfoMedium: Story = {
 export const DangerMedium: Story = {
 	args: {
 		label: 'Danger',
-		palletColor: 'info',
+		palleteColor: 'info',
 		disabled: false,
 		size: 'medium',
 	},
@@ -275,7 +275,7 @@ export const DangerMedium: Story = {
 export const WarningMedium: Story = {
 	args: {
 		label: 'Warning',
-		palletColor: 'warning',
+		palleteColor: 'warning',
 		disabled: false,
 		size: 'medium',
 	},
@@ -291,7 +291,7 @@ export const WarningMedium: Story = {
 export const SuccessMedium: Story = {
 	args: {
 		label: 'Success',
-		palletColor: 'success',
+		palleteColor: 'success',
 		disabled: false,
 		size: 'medium',
 	},
@@ -307,7 +307,7 @@ export const SuccessMedium: Story = {
 export const LinkMedium: Story = {
 	args: {
 		label: 'Link',
-		palletColor: 'link',
+		palleteColor: 'link',
 		disabled: false,
 		size: 'medium',
 	},
@@ -323,7 +323,7 @@ export const LinkMedium: Story = {
 export const DarkMedium: Story = {
 	args: {
 		label: 'Dark',
-		palletColor: 'dark',
+		palleteColor: 'dark',
 		disabled: false,
 		size: 'medium',
 	},
@@ -339,7 +339,7 @@ export const DarkMedium: Story = {
 export const LightMedium: Story = {
 	args: {
 		label: 'Light',
-		palletColor: 'light',
+		palleteColor: 'light',
 		disabled: false,
 		size: 'medium',
 	},
@@ -355,7 +355,7 @@ export const LightMedium: Story = {
 export const DisabledMedium: Story = {
 	args: {
 		label: 'Disabled',
-		palletColor: 'primary',
+		palleteColor: 'primary',
 		disabled: true,
 		size: 'medium',
 	},
@@ -374,7 +374,7 @@ export const DisabledMedium: Story = {
 export const PrimaryLarge: Story = {
 	args: {
 		label: 'Primary',
-		palletColor: 'primary',
+		palleteColor: 'primary',
 		disabled: false,
 		size: 'large',
 	},
@@ -390,7 +390,7 @@ export const PrimaryLarge: Story = {
 export const SecodaryLarge: Story = {
 	args: {
 		label: 'Secondary',
-		palletColor: 'secondary',
+		palleteColor: 'secondary',
 		disabled: false,
 		size: 'large',
 	},
@@ -406,7 +406,7 @@ export const SecodaryLarge: Story = {
 export const TertiaryLarge: Story = {
 	args: {
 		label: 'Tertiary',
-		palletColor: 'tertiary',
+		palleteColor: 'tertiary',
 		disabled: false,
 		size: 'large',
 	},
@@ -422,7 +422,7 @@ export const TertiaryLarge: Story = {
 export const InfoLarge: Story = {
 	args: {
 		label: 'Info',
-		palletColor: 'info',
+		palleteColor: 'info',
 		disabled: false,
 		size: 'large',
 	},
@@ -438,7 +438,7 @@ export const InfoLarge: Story = {
 export const DangerLarge: Story = {
 	args: {
 		label: 'Danger',
-		palletColor: 'info',
+		palleteColor: 'info',
 		disabled: false,
 		size: 'large',
 	},
@@ -454,7 +454,7 @@ export const DangerLarge: Story = {
 export const WarningLarge: Story = {
 	args: {
 		label: 'Warning',
-		palletColor: 'warning',
+		palleteColor: 'warning',
 		disabled: false,
 		size: 'large',
 	},
@@ -470,7 +470,7 @@ export const WarningLarge: Story = {
 export const SuccessLarge: Story = {
 	args: {
 		label: 'Success',
-		palletColor: 'success',
+		palleteColor: 'success',
 		disabled: false,
 		size: 'large',
 	},
@@ -486,7 +486,7 @@ export const SuccessLarge: Story = {
 export const LinkLarge: Story = {
 	args: {
 		label: 'Link',
-		palletColor: 'link',
+		palleteColor: 'link',
 		disabled: false,
 		size: 'large',
 	},
@@ -502,7 +502,7 @@ export const LinkLarge: Story = {
 export const DarkLarge: Story = {
 	args: {
 		label: 'Dark',
-		palletColor: 'dark',
+		palleteColor: 'dark',
 		disabled: false,
 		size: 'large',
 	},
@@ -518,7 +518,7 @@ export const DarkLarge: Story = {
 export const LightLarge: Story = {
 	args: {
 		label: 'Light',
-		palletColor: 'light',
+		palleteColor: 'light',
 		disabled: false,
 		size: 'large',
 	},
@@ -534,7 +534,7 @@ export const LightLarge: Story = {
 export const DisabledLarge: Story = {
 	args: {
 		label: 'Disabled',
-		palletColor: 'primary',
+		palleteColor: 'primary',
 		disabled: true,
 		size: 'large',
 	},
@@ -551,7 +551,7 @@ export const DisabledLarge: Story = {
 export const Heading: Story = {
 	args: {
 		label: 'Heading',
-		palletColor: 'primary',
+		palleteColor: 'primary',
 		disabled: false,
 		size: 'large',
 	},

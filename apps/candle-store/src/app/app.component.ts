@@ -2,8 +2,6 @@ import { CommonModule } from '@angular/common'
 import { Component } from '@angular/core'
 import { RouterModule } from '@angular/router'
 import { UiHeaderComponent } from '@rfs-dev-atomic/ui-header'
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { ILink } from 'libs/ui-atoms/src/lib/link/link.model'
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { FooterComponent } from 'libs/ui-organisms/src'

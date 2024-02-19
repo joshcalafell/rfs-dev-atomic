@@ -38,13 +38,13 @@ describe('UiProductCardComponent', () => {
 			},
 			buttons: [
 				{
-					label: 'Add to Cart',
+					label: 'Cart',
 					palleteColor: 'primary',
 					disabled: false,
 					size: 'medium',
 				},
 				{
-					label: 'Add to Wishlist',
+					label: 'Wishlist',
 					palleteColor: 'secondary',
 					disabled: false,
 					size: 'medium',
