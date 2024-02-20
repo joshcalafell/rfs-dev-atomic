@@ -1,1 +1,12 @@
-<span class="icon">{{ icon }}</span>
+<span
+	class="ui-icon"
+	[ngClass]="{
+		'ui-icon--small': icon.size === 'small',
+		'ui-icon--medium': icon.size === 'medium',
+		'ui-icon--large': icon.size === 'large'
+	}"
+>
+	<ng-container *ngIf="icon.icon === 'star'"> ★ </ng-container>
+
+	<ng-container *ngIf="icon.icon === 'empty-star'"> ☆</ng-container>
+</span>

@@ -6,6 +6,7 @@ import { UiButtonRowComponent } from '@rfs-dev-atomic/ui-button-row'
 import { UiDetailGroupComponent } from '@rfs-dev-atomic/ui-detail-group'
 import { UiCardTitleComponent } from '@rfs-dev-atomic/ui-card-title'
 import { UiHashGroupComponent } from '@rfs-dev-atomic/ui-hash-group'
+import { UiStarComponent } from '@rfs-dev-atomic/ui-star'
 
 describe('UiProductCardComponent', () => {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -21,6 +22,7 @@ describe('UiProductCardComponent', () => {
 				UiDetailGroupComponent,
 				UiButtonRowComponent,
 				UiHashGroupComponent,
+				UiStarComponent,
 			],
 		}).compileComponents()
 

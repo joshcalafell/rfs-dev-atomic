@@ -6,6 +6,7 @@ import { UiCardTitleComponent } from '@rfs-dev-atomic/ui-card-title'
 import { UiChipComponent } from '@rfs-dev-atomic/ui-chip'
 import { UiDetailGroupComponent } from '@rfs-dev-atomic/ui-detail-group'
 import { UiHashGroupComponent } from '@rfs-dev-atomic/ui-hash-group'
+import { UiStarComponent } from '@rfs-dev-atomic/ui-star'
 
 @Component({
 	selector: 'rfs-dev-atomic-ui-product-card',
@@ -17,6 +18,7 @@ import { UiHashGroupComponent } from '@rfs-dev-atomic/ui-hash-group'
 		UiDetailGroupComponent,
 		UiButtonRowComponent,
 		UiHashGroupComponent,
+		UiStarComponent,
 	],
 	templateUrl: './ui-product-card.component.html',
 	styleUrl: './ui-product-card.component.scss',
@@ -58,6 +60,20 @@ export class UiProductCardComponent {
 			{ label: 'Color', value: product.color },
 			{ label: 'Material', value: product.material },
 			{ label: 'Weight', value: product.weight },
+		]
+	}
+
+	getStars(product: any): { icon: string; color: string; size: string }[] {
+		const rounded = Math.ceil(Number(product.rating))
+
+		console.log('rounded', rounded)
+		return [
+			...Array(rounded).fill({ icon: 'star', color: 'black', size: 'small' }),
+			...Array(5 - rounded).fill({
+				icon: 'empty-star',
+				color: 'black',
+				size: 'small',
+			}),
 		]
 	}
 }

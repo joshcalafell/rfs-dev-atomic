@@ -29,6 +29,14 @@ $primary-color-border: #aaa1df;
 	}
 }
 
+.details {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4px;
+}
+
 .flex-row-centered {
 	display: flex;
 	flex-direction: row;
@@ -53,9 +61,18 @@ $primary-color-border: #aaa1df;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
 .product-description {
 	color: #477;
 	margin-bottom: 16px;
+	padding: 4px 4px;
 	font-family: 'Inter', sans-serif;
 	//font-style: italic;
 }
@@ -106,6 +123,22 @@ $primary-color-border: #aaa1df;
 	margin-top: 8px;
 }
 
+.stars {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 4px;
+	margin-top: 0;
+	margin-bottom: 16px;
+	font-family: 'Inter', sans-serif;
+}
+
+.reviews {
+	color: #666;
+	font-size: 0.8rem;
+}
+
 .card-tags span {
 	background-color: #f1f1f1;
 	color: #434343;
@@ -116,5 +149,5 @@ $primary-color-border: #aaa1df;
 
 .product-description {
 	color: #666;
-	margin-bottom: 16px;
+	margin-bottom: 8px;
 }

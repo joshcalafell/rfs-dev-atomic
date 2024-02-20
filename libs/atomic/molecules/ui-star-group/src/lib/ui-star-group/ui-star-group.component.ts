@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
 
 @Component({
@@ -6,6 +6,12 @@ import { CommonModule } from '@angular/common'
 	standalone: true,
 	imports: [CommonModule],
 	templateUrl: './ui-star-group.component.html',
-	styleUrl: './ui-star-group.component.css',
+	styleUrl: './ui-star-group.component.scss',
 })
-export class UiStarGroupComponent {}
+export class UiStarGroupComponent {
+	@Input() rating = 0
+
+	constructor() {
+		console.log('UiStarGroupComponent')
+	}
+}
