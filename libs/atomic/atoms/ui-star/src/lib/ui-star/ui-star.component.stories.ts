@@ -12,13 +12,25 @@ export default meta
 type Story = StoryObj<UiStarComponent>
 
 export const Primary: Story = {
-	args: {},
+	args: {
+		star: {
+			icon: 'star',
+			color: 'black',
+			size: 'medium',
+		},
+	},
 }
 
 export const Heading: Story = {
-	args: {},
+	args: {
+		star: {
+			icon: 'star',
+			color: 'black',
+			size: 'medium',
+		},
+	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
-		expect(canvas.getByText(/ui-star works!/gi)).toBeTruthy()
+		expect(canvas.getByText('UiStarComponent')).toBeTruthy()
 	},
 }

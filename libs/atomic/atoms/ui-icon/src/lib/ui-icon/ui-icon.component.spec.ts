@@ -12,6 +12,11 @@ describe('UiIconComponent', () => {
 
 		fixture = TestBed.createComponent(UiIconComponent)
 		component = fixture.componentInstance
+		component.icon = {
+			icon: 'star',
+			color: 'black',
+			size: 'medium',
+		}
 		fixture.detectChanges()
 	})
 

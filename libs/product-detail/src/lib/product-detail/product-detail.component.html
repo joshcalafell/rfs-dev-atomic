@@ -1,0 +1,24 @@
+<div class="container" *ngIf="product$ | async as product">
+	<h1 class="product-name">Cedarwood & Vanilla</h1>
+	<p class="product-description">
+		A warm, woody scent with a hint of sweetness.
+	</p>
+	<div class="product-image">
+		<img src="https://i.imgur.com/vL2h90y.jpg" alt="Cedarwood & Vanilla" />
+	</div>
+	<div class="product-details">
+		<p class="product-price">$24.99</p>
+		<p class="product-sku">SKU: C1</p>
+		<p class="product-brand">Brand: RFS</p>
+		<p class="product-color">Color: Brown</p>
+		<p class="product-material">Material: Soy Wax</p>
+		<!-- Add more product details here -->
+
+		<!-- Product details here -->
+		<div class="ui-buton-row-container">
+			<rfs-dev-atomic-ui-button-row
+				[buttons]="product.buttons"
+			></rfs-dev-atomic-ui-button-row>
+		</div>
+	</div>
+</div>

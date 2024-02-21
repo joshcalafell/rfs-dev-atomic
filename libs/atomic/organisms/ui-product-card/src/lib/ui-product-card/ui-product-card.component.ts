@@ -44,7 +44,7 @@ export class UiProductCardComponent {
 		return [
 			{ label: 'Scent', value: product.scent },
 			{ label: 'Burn Time', value: product.burnTime },
-			{ label: 'Wick', value: product.wickType },
+			{ label: 'Weight', value: product.weight },
 			{ label: 'Size', value: product.size },
 		]
 	}
@@ -59,7 +59,7 @@ export class UiProductCardComponent {
 			},
 			{ label: 'Color', value: product.color },
 			{ label: 'Material', value: product.material },
-			{ label: 'Weight', value: product.weight },
+			{ label: 'Wick', value: product.wickType },
 		]
 	}
 

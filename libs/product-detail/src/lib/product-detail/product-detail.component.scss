@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&family=Monoton&family=Poppins:wght@100;200;400;600&display=swap');
+
+$primary-color: #a164d3;
+$primary-color-border: #aaa1df;
+
+.container {
+	margin-top: 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 5px;
+	margin: 20px;
+
+	font-family: 'Inter', sans-serif;
+
+	.product-title {
+		font-size: 1.5rem;
+		font-weight: 600;
+		margin-bottom: 8px;
+	}
+
+	.product-detail {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		padding: 20px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		margin: 20px;
+		font-family: 'Inter', sans-serif;
+	}
+
+	.product-price {
+		font-size: 1.25rem;
+		font-weight: 500;
+		color: #ff6666;
+	}
+
+	.product-description {
+		color: #666;
+		margin-bottom: 16px;
+		font-family: 'Inter', sans-serif;
+	}
+
+	.product-button {
+		margin-top: 16px;
+	}
+
+	.product-button-row {
+		display: flex;
+		gap: 8px;
+	}
+
+	.product-image img {
+		max-width: 300px;
+		height: auto;
+	}
+
+	.product-button.wishlist {
+		background-color: white;
+		color: #333;
+		border: solid 1px #333;
+		&:hover {
+			background-color: #333;
+			color: white;
+		}
+	}
+
+	.product-button.cart {
+		background-color: #ff6666;
+		color: white;
+		border: none;
+		&:hover {
+			background-color: white;
+			color: #ff6666;
+		}
+	}
+
+	.product-tags {
+		display: flex;
+		gap: 8px;
+		margin-bottom: 16px;
+		.tag {
+			background-color: #e9e9e9;
+			color: #333;
+			font-family: 'Inter', sans-serif;
+			font-size: 0.85em;
+			padding: 4px 8px;
+			border-radius: 5px;
+		}
+	}
+
+	.product-rating {
+		display: flex;
+		gap: 8px;
+		margin-bottom: 16px;
+		.rating {
+			color: #ff6666;
+		}
+	}
+
+	.product-reviews {
+		display: flex;
+		gap: 8px;
+		margin-bottom: 16px;
+		.review {
+			color: #666;
+		}
+	}
+
+	.product-availability {
+		display: flex;
+		gap: 8px;
+		margin-bottom: 16px;
+		.availability {
+			color: #666;
+		}
+	}
+
+	.product-quantity {
+		display: flex;
+		gap: 8px;
+		margin-bottom: 16px;
+		.quantity {
+			color: #666;
+		}
+	}
+
+	.product-variants {
+		display: flex;
+		gap: 8px;
+		margin-bottom: 16px;
+		.variant {
+			color: #666;
+		}
+	}
+
+	.product-stock {
+		font-size: 0.85rem;
+		font-weight: 500;
+		color: #666;
+	}
+
+	.product-name {
+		font-size: 1.5rem;
+		font-weight: 600;
+		margin-bottom: 8px;
+	}
+}

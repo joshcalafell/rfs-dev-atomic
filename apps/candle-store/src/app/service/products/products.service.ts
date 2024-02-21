@@ -1,4 +1,4 @@
-import { ICandleProduct } from './../model/IProduct.model'
+import { ICandleProduct } from '../model/IProduct.model'
 import { Injectable } from '@angular/core'
 import { of } from 'rxjs'
 import productsMock from './products.mock'
@@ -24,10 +24,7 @@ export class ProductsService {
 	mockSingleProductService = {
 		getProductById(id: number) {
 			return of(
-				productsMock.find((product) => {
-					console.log('product', product)
-					return product.entity.id === new String(id)
-				})
+				productsMock.find((product) => product.entity.id === new String(id))
 			) // eslint-disable-line
 		},
 	}

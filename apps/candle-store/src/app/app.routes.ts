@@ -12,6 +12,13 @@ export const appRoutes: Route[] = [
 			import('@rfs-dev-atomic/products').then((m) => m.ProductsComponent),
 	},
 	{
+		path: 'products/:id',
+		loadComponent: () =>
+			import('@rfs-dev-atomic/product-detail').then(
+				(m) => m.ProductDetailComponent
+			),
+	},
+	{
 		path: 'wishlist',
 		loadComponent: () =>
 			import('@rfs-dev-atomic/wishlist').then((m) => m.WishlistComponent),
