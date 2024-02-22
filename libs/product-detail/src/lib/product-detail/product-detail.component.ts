@@ -5,11 +5,19 @@ import { CommonModule } from '@angular/common'
 import { of } from 'rxjs'
 import { UiStarComponent } from '@rfs-dev-atomic/ui-star'
 import { UiButtonRowComponent } from '@rfs-dev-atomic/ui-button-row'
+import { UiHashGroupComponent } from '@rfs-dev-atomic/ui-hash-group'
+import { UiChipComponent } from '@rfs-dev-atomic/ui-chip'
 
 @Component({
 	selector: 'rfs-dev-atomic-product-detail',
 	standalone: true,
-	imports: [CommonModule, UiButtonRowComponent, UiStarComponent],
+	imports: [
+		CommonModule,
+		UiButtonRowComponent,
+		UiStarComponent,
+		UiHashGroupComponent,
+		UiChipComponent,
+	],
 	templateUrl: './product-detail.component.html',
 	styleUrl: './product-detail.component.scss',
 })

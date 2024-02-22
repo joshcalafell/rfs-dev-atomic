@@ -1,24 +1,56 @@
-<div class="container" *ngIf="product$ | async as product">
-	<h1 class="product-name">Cedarwood & Vanilla</h1>
-	<p class="product-description">
-		A warm, woody scent with a hint of sweetness.
-	</p>
+<div class="product-card" *ngIf="product$ | async as product">
 	<div class="product-image">
-		<img src="https://i.imgur.com/vL2h90y.jpg" alt="Cedarwood & Vanilla" />
+		<img src="{{ product.image }}" alt="{{ product.entity.name }}" />
 	</div>
-	<div class="product-details">
-		<p class="product-price">$24.99</p>
-		<p class="product-sku">SKU: C1</p>
-		<p class="product-brand">Brand: RFS</p>
-		<p class="product-color">Color: Brown</p>
-		<p class="product-material">Material: Soy Wax</p>
-		<!-- Add more product details here -->
-
-		<!-- Product details here -->
+	<div class="product-info">
+		<h2 class="product-name">{{ product.entity.name }}</h2>
+		<p class="product-description">{{ product.entity.description }}</p>
+		<p class="product-price">${{ product.entity.price }}</p>
+		<div class="flex-row stars">
+			<rfs-dev-atomic-ui-star
+				*ngFor="let rating of getStars(product)"
+				[star]="rating"
+			></rfs-dev-atomic-ui-star>
+			<span class="reviews">({{ product.reviews | number }})</span>
+			<div class="see-reviews"><a href="#">See Reviews</a></div>
+		</div>
+		<div class="flex-row">
+			<div class="flex-col product-details">
+				<h3>Details</h3>
+				<p>Brand: {{ product.brand }}</p>
+				<p>Color: {{ product.color }}</p>
+				<p>Material: {{ product.material }}</p>
+				<p>Dimensions: {{ product.dimensions }}</p>
+				<p>Weight: {{ product.weight }}</p>
+			</div>
+			<div class="flex-col product-attributes">
+				<h3>Attributes</h3>
+				<p>Fragrance: {{ product.fragrance }}</p>
+				<p>Size: {{ product.size }}</p>
+				<p>Burn Time: {{ product.burnTime }}</p>
+				<p>Scent: {{ product.scent }}</p>
+				<p>Type: {{ product.type }}</p>
+			</div>
+			<div class="flex-col product-details">
+				<h3>Subsciption</h3>
+				<p>Type: {{ product.subscription.type }}</p>
+				<p>Recurring: {{ product.subscription.isRecurring }}</p>
+				<p>Frequency: {{ product.subscription.frequency }}</p>
+				<p>Sku: {{ product.subscription.entity.sku }}</p>
+				<p>Price: ${{ product.subscription.entity.price }}</p>
+			</div>
+		</div>
 		<div class="ui-buton-row-container">
 			<rfs-dev-atomic-ui-button-row
 				[buttons]="product.buttons"
 			></rfs-dev-atomic-ui-button-row>
+		</div>
+
+		<div class="card-tags" *ngIf="product?.tags">
+			<p>Tags</p>
+			<rfs-dev-atomic-ui-hash-group
+				[hashes]="product.tags"
+			></rfs-dev-atomic-ui-hash-group>
 		</div>
 	</div>
 </div>

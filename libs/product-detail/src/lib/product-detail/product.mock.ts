@@ -60,6 +60,7 @@ export const candleMock = {
 	subscription: {
 		type: 'One-Time Purchase',
 		isRecurring: false,
+		frequency: 'Bi-Weekly',
 		entity: {
 			id: '1',
 			name: 'Cedarwood & Vanilla',
