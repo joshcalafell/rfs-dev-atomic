@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&family=Monoton&family=Poppins:wght@100;200;400;600&display=swap');
 
+$primary: #ff6666;
+$secondary: #333;
+$tertiary: #17a2b8;
+
 .product-card {
+	background: white;
 	display: flex;
 	border-radius: 10px;
-	padding: 20px;
-	margin: 20px auto;
+	padding: 16px;
+	margin: 24px 24px;
 	font-family: 'Inter', sans-serif;
 }
 
@@ -15,6 +20,7 @@
 .product-card .product-image img {
 	width: 100%;
 	height: auto;
+	border: solid 1px #555;
 }
 
 .product-card .product-info {
@@ -39,7 +45,7 @@
 }
 
 .product-card .product-price {
-	color: #e91e63;
+	color: $primary;
 	font-size: 22px;
 	font-weight: bold;
 }

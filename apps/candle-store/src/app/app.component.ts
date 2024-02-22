@@ -12,6 +12,7 @@ import { UiHeaderComponent } from '@rfs-dev-atomic/ui-header'
 	styleUrl: './app.component.scss',
 })
 export class AppComponent {
+	colorScheme = 'dark'
 	title = 'CANDLE STORE'
 	user: { name: string; email: string } = {} as unknown as {
 		name: string

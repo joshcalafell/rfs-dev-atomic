@@ -7,5 +7,14 @@ section img {
 	margin-top: 128px;
 	padding: 8px 8px;
 	// background: repeating-linear-gradient(39deg, #24b7ce, #d73f77 8px);
-	background: antiquewhite;
+}
+
+.container.light {
+	background: white;
+	color: black;
+}
+
+.container.dark {
+	background: black;
+	color: white;
 }
