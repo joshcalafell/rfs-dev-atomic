@@ -50,6 +50,13 @@ $tertiary: #17a2b8;
 	font-weight: bold;
 }
 
+.value-cell {
+	font-family: 'Inter', sans-serif;
+	color: #555;
+	font-size: 0.9rem;
+	border-bottom: solid #909090 1px;
+}
+
 .product-card .product-details,
 .product-card .product-attributes,
 .product-card .product-purchase {

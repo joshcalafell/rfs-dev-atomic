@@ -17,27 +17,63 @@
 		<div class="flex-row">
 			<div class="flex-col product-details">
 				<h3>Details</h3>
-				<p>Brand: {{ product.brand }}</p>
-				<p>Color: {{ product.color }}</p>
-				<p>Material: {{ product.material }}</p>
-				<p>Dimensions: {{ product.dimensions }}</p>
-				<p>Weight: {{ product.weight }}</p>
+				<p>
+					Brand: <span class="value-cell">{{ product.brand }}</span>
+				</p>
+				<p>
+					Color: <span class="value-cell">{{ product.color }}</span>
+				</p>
+				<p>
+					Material: <span class="value-cell">{{ product.material }}</span>
+				</p>
+				<p>
+					Dimensions: <span class="value-cell">{{ product.dimensions }}</span>
+				</p>
+				<p>
+					Weight: <span class="value-cell">{{ product.weight }}</span>
+				</p>
 			</div>
 			<div class="flex-col product-attributes">
 				<h3>Attributes</h3>
-				<p>Fragrance: {{ product.fragrance }}</p>
-				<p>Size: {{ product.size }}</p>
-				<p>Burn Time: {{ product.burnTime }}</p>
-				<p>Scent: {{ product.scent }}</p>
-				<p>Type: {{ product.type }}</p>
+				<p>
+					Fragrance: <span class="value-cell">{{ product.fragrance }}</span>
+				</p>
+				<p>
+					Size: <span class="value-cell">{{ product.size }}</span>
+				</p>
+				<p>
+					Burn Time: <span class="value-cell">{{ product.burnTime }}</span>
+				</p>
+				<p>
+					Scent: <span class="value-cell">{{ product.scent }}</span>
+				</p>
+				<p>
+					Type: <span class="value-cell">{{ product.type }}</span>
+				</p>
 			</div>
 			<div class="flex-col product-details">
 				<h3>Subsciption</h3>
-				<p>Type: {{ product.subscription.type }}</p>
-				<p>Recurring: {{ product.subscription.isRecurring }}</p>
-				<p>Frequency: {{ product.subscription.frequency }}</p>
-				<p>Sku: {{ product.subscription.entity.sku }}</p>
-				<p>Price: ${{ product.subscription.entity.price }}</p>
+				<p>
+					Type: <span class="value-cell">{{ product.subscription.type }}</span>
+				</p>
+				<p>
+					Recurring:
+					<span class="value-cell">{{ product.subscription.isRecurring }}</span>
+				</p>
+				<p>
+					Frequency:
+					<span class="value-cell">{{ product.subscription.frequency }}</span>
+				</p>
+				<p>
+					Sku:
+					<span class="value-cell">{{ product.subscription.entity.sku }}</span>
+				</p>
+				<p>
+					Price:
+					<span class="value-cell"
+						>${{ product.subscription.entity.price }}</span
+					>
+				</p>
 			</div>
 		</div>
 		<div class="ui-buton-row-container">
