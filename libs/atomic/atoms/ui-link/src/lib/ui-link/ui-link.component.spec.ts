@@ -24,7 +24,7 @@ describe('UiLinkComponent', () => {
 			download: 'primary',
 			isActive: false,
 			onClick: () => {
-				console.log('Primary')
+				console.log('Link clicked')
 			},
 		}
 

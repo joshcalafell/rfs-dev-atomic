@@ -1,17 +1,37 @@
-import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { Component, Input, OnInit } from '@angular/core'
+import { UiLinkComponent } from '@rfs-dev-atomic/ui-link'
+import { UiStarComponent } from '@rfs-dev-atomic/ui-star'
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { ICandleProduct } from 'libs/products/src/lib/model/IProduct.model'
 
 @Component({
 	selector: 'rfs-dev-atomic-ui-star-group',
 	standalone: true,
-	imports: [CommonModule],
+	imports: [CommonModule, UiStarComponent, UiLinkComponent],
 	templateUrl: './ui-star-group.component.html',
 	styleUrl: './ui-star-group.component.scss',
 })
-export class UiStarGroupComponent {
-	@Input() rating = 0
+export class UiStarGroupComponent implements OnInit {
+	@Input() product = {} as ICandleProduct
+	stars: { icon: string; color: string; size: string }[] = []
 
-	constructor() {
-		console.log('UiStarGroupComponent')
+	ngOnInit(): void {
+		this.stars = this.getStars(this.product)
+	}
+
+	public getStars(
+		product: ICandleProduct
+	): { icon: string; color: string; size: string }[] {
+		const rounded = Math.ceil(Number(product.rating))
+
+		return [
+			...Array(rounded).fill({ icon: 'star', color: 'black', size: 'small' }),
+			...Array(5 - rounded).fill({
+				icon: 'empty-star',
+				color: 'black',
+				size: 'small',
+			}),
+		]
 	}
 }

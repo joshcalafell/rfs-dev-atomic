@@ -10,7 +10,7 @@
 					[label]="
 						product.quantity ? '$' + product.entity.price : 'Out of Stock'
 					"
-					[color]="product.quantity ? 'primary' : 'secondary'"
+					[color]="product.quantity ? 'tertiary' : 'secondary'"
 				></rfs-dev-atomic-ui-chip>
 				<!-- Chip component -->
 			</div>
@@ -34,12 +34,9 @@
 				</div>
 			</div>
 			<div class="flex-row stars">
-				<rfs-dev-atomic-ui-star
-					*ngFor="let rating of getStars(product)"
-					[star]="rating"
-				></rfs-dev-atomic-ui-star>
-				<span class="reviews">({{ product.reviews | number }})</span>
-				<div class="see-reviews"><a href="#">See Reviews</a></div>
+				<rfs-dev-atomic-ui-star-group
+					[product]="product"
+				></rfs-dev-atomic-ui-star-group>
 			</div>
 			<div class="ui-buton-row-container">
 				<rfs-dev-atomic-ui-button-row

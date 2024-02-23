@@ -1,1 +1,8 @@
-<p>ui-star-group works!</p>
+<div class="stars">
+	<rfs-dev-atomic-ui-star
+		*ngFor="let star of stars"
+		[star]="star"
+	></rfs-dev-atomic-ui-star>
+	<span class="reviews">({{ product.reviews }})</span>
+	<a class="reviews-link" href="#reviews">Write a review</a>
+</div>

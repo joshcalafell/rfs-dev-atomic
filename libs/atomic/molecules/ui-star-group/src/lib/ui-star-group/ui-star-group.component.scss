@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Monoton&family=Poppins:wght@100;200;400;600&display=swap');
+
+$primary: #ff6666;
+$secondary: #333333;
+$tertiary: #17a2b8;
+.stars {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 4px;
+	margin-top: 0;
+	margin-bottom: 16px;
+	font-family: 'Inter', sans-serif;
+}
+
+.reviews-link {
+	color: #17a2b8 !important;
+	font-size: 0.8785rem;
+}

@@ -1,4 +1,4 @@
-/* import { ICandleProduct } from '../model/IProduct.model'
+import { ICandleProduct } from '../model/IProduct.model'
 
 const buttons = [
 	{
@@ -379,4 +379,3 @@ export default <ICandleProduct[]>[
 		},
 	},
 ]
- */

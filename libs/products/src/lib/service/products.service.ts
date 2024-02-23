@@ -1,7 +1,7 @@
-/* import { ICandleProduct } from './../model/IProduct.model'
+import { ICandleProduct } from './../model/IProduct.model'
 import { Injectable } from '@angular/core'
 import { of } from 'rxjs'
-import productsMock from './products.mock'
+import productsMock from './products.mock-data'
 
 @Injectable({
 	providedIn: 'root',
@@ -32,4 +32,3 @@ export class ProductsService {
 		},
 	}
 }
- */

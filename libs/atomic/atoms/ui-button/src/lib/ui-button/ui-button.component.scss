@@ -1,21 +1,7 @@
-/**
-  'ui-button--primary': type === 'primary',
-  'ui-button--secondary': type === 'secondary',
-  'ui-button--tertiary': type === 'tertiary',
-  'ui-button--danger': type === 'danger',
-  'ui-button--warning': type === 'warning',
-  'ui-button--success': type === 'success',
-  'ui-button--info': type === 'info',
-  'ui-button--light': type === 'light',
-  'ui-button--dark': type === 'dark',
-  'ui-button--link': type === 'link',
-  'ui-button--disabled': disabled
-  */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 $primary: #ff6666;
-$secondary: #333;
+$secondary: #333333;
 $tertiary: #17a2b8;
 $danger: #dc3545;
 $warning: #ffc107;
@@ -28,25 +14,28 @@ $disabled: #6c757d;
 $transparent: transparent;
 $black: #000000;
 $gray: #6c757d;
+$font-family: 'Inter', sans-serif;
+$font-weight: 500;
+$padding-button-medium: 8px 16px;
+$button-border: solid 1px $dark;
+$transition: all 0.3s ease-in-out;
+$transparent: transparent;
+
+@mixin font() {
+	font-family: $font-family;
+	font-weight: $font-weight;
+}
 
 .ui-button {
-	background-color: transparent;
-	border: solid 1px #333;
+	@include font();
+	background-color: $transparent;
+	border: $button-border;
 	cursor: pointer;
-	font-size: 1rem;
-	padding: 8px 16px;
-	text-align: left;
-	text-decoration: underline;
-	transition: color 0.15s ease-in-out;
-	user-select: none;
-	white-space: nowrap;
-	text-decoration: none;
-	font-family: 'Inter', sans-serif;
-	transition: all 0.333s ease-in-out;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+	padding: $padding-button-medium;
+	font-family: $font-family;
+	font-weight: 500;
+	transition: $transition;
+	text-align: center;
 
 	&--small {
 		font-size: 0.75rem;
@@ -56,7 +45,7 @@ $gray: #6c757d;
 	&--medium {
 		font-size: 1rem;
 		font-weight: 400;
-		padding: 8px 16px;
+		padding: $padding-button-medium;
 	}
 
 	&--large {
@@ -65,7 +54,7 @@ $gray: #6c757d;
 		&:hover {
 			border: none;
 			background-color: $primary;
-			color: $white;
+			color: $tertiary;
 			padding: 16px 32px;
 		}
 	}
@@ -75,9 +64,9 @@ $gray: #6c757d;
 		background-color: $primary;
 		color: $white;
 
-		animation: 0.666s ease-in-out;
 		&:hover {
-			background-color: $white;
+			border: solid 1px $primary;
+			background-color: $transparent;
 			color: $primary;
 		}
 	}
@@ -86,19 +75,19 @@ $gray: #6c757d;
 		border-color: $secondary;
 		background-color: $secondary;
 		color: $white;
-		animation: 0.666s ease-in-out;
+
 		&:hover {
 			border: solid 1px $secondary;
-			background-color: $white;
+			background-color: $transparent;
 			color: $secondary;
 		}
 	}
 
 	&--tertiary {
-		border-color: $tertiary;
-		background-color: transparent;
+		border: solid 1px $tertiary;
+		background-color: $transparent;
 		color: $tertiary;
-		animation: 0.666s ease-in-out;
+
 		&:hover {
 			border: solid 1px $tertiary;
 			background-color: $tertiary;
@@ -107,38 +96,45 @@ $gray: #6c757d;
 	}
 
 	&--danger {
-		background-color: $danger;
-		color: $white;
+		border-color: $danger;
+		background-color: $transparent;
+		color: $danger;
 	}
 
 	&--warning {
-		background-color: $warning;
-		color: $white;
+		border-color: $warning;
+		background-color: $transparent;
+		color: $warning;
 	}
 
 	&--success {
-		background-color: $success;
-		color: $white;
+		border-color: $success;
+		background-color: $transparent;
+		color: $success;
 	}
 
 	&--info {
-		background-color: $info;
-		color: $white;
+		border-color: $info;
+		background-color: $transparent;
+		color: $info;
 	}
 
 	&--light {
-		background-color: $light;
-		color: $black;
+		border-color: $light;
+		background-color: $transparent;
+		color: $light;
 	}
 
 	&--dark {
-		background-color: $dark;
-		color: $white;
+		border-color: $dark;
+		background-color: $transparent;
+		color: $dark;
 	}
 
 	&--disabled {
-		background-color: $disabled;
-		color: $white;
+		border-color: $disabled;
+		background-color: $transparent;
+		color: $disabled;
 		cursor: not-allowed;
 	}
 }

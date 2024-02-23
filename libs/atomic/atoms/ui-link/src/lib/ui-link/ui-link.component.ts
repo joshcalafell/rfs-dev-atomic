@@ -22,16 +22,17 @@ type IAtomicLinkPaletteColor =
 type IAtomicLinkSize = 'small' | 'medium' | 'large'
 export interface IAtomicLink {
 	label: string
-	path: string
+	path?: string
 	disabled?: boolean
 	size?: IAtomicLinkSize
 	palleteColor?: IAtomicLinkPaletteColor
-	target: string
-	href: string
-	download: string
-	isActive: boolean
-	rel: string
-	onClick: () => void
+	target?: string
+	href?: string
+	download?: string
+	isActive?: boolean
+	color?: string
+	rel?: string
+	onClick?: () => void
 }
 
 @Component({
@@ -47,6 +48,7 @@ export class UiLinkComponent implements OnInit {
 		path: '',
 		target: '_blank',
 		href: '',
+		color: 'black',
 		download: '',
 		isActive: false,
 		rel: 'noopener noreferrer',
@@ -78,6 +80,6 @@ export class UiLinkComponent implements OnInit {
 	}
 
 	onClick() {
-		this.link.onClick()
+		// this.link.onClick()
 	}
 }

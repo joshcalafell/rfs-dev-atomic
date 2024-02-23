@@ -19,9 +19,9 @@ export class AppComponent {
 		email: string
 	}
 	links = [
-		{ label: 'About', path: '/about' },
-		{ label: 'Products', path: '/products' },
-		{ label: 'Orders', path: '/orders' },
-		{ label: 'Cart', path: '/cart' },
+		{ label: 'About', path: '/about', color: 'light' },
+		{ label: 'Products', path: '/products', color: 'light' },
+		{ label: 'Orders', path: '/orders', color: 'light' },
+		{ label: 'Cart', path: '/cart', color: 'light' },
 	]
 }

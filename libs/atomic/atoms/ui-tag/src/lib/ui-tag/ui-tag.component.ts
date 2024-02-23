@@ -10,7 +10,4 @@ import { CommonModule } from '@angular/common'
 })
 export class UiTagComponent {
 	@Input() tag = ''
-	constructor() {
-		console.log('UiTagComponent')
-	}
 }

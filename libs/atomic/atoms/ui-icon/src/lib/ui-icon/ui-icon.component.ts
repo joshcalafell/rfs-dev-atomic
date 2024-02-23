@@ -10,7 +10,4 @@ import { CommonModule } from '@angular/common'
 })
 export class UiIconComponent {
 	@Input() icon!: { icon: string; size: string; color: string }
-	constructor() {
-		console.log('UiIconComponent')
-	}
 }

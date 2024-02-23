@@ -25,7 +25,6 @@ export class ProductsService {
 		getProductById(id: number) {
 			return of(
 				productsMock.find((product) => {
-					console.log('product', product)
 					return product.entity.id === new String(id)
 				})
 			) // eslint-disable-line

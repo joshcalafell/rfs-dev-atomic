@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { UiProductCardComponent } from './ui-product-card.component'
 import { UiChipComponent } from '@rfs-dev-atomic/ui-chip'
-import { UiTagComponent } from '@rfs-dev-atomic/ui-tag'
 import { UiButtonRowComponent } from '@rfs-dev-atomic/ui-button-row'
 import { UiDetailGroupComponent } from '@rfs-dev-atomic/ui-detail-group'
 import { UiCardTitleComponent } from '@rfs-dev-atomic/ui-card-title'
 import { UiHashGroupComponent } from '@rfs-dev-atomic/ui-hash-group'
-import { UiStarComponent } from '@rfs-dev-atomic/ui-star'
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { UiStarGroupComponent } from '@rfs-dev-atomic/ui-star-group'
 
 describe('UiProductCardComponent', () => {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -22,7 +22,7 @@ describe('UiProductCardComponent', () => {
 				UiDetailGroupComponent,
 				UiButtonRowComponent,
 				UiHashGroupComponent,
-				UiStarComponent,
+				UiStarGroupComponent,
 			],
 		}).compileComponents()
 

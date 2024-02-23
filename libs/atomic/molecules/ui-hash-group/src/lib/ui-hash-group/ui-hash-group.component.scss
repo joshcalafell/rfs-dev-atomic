@@ -5,40 +5,40 @@
 
 .hash-group span {
 	background-color: #f1f1f1;
-	color: #333;
+	color: #333333;
 	padding: 6px;
 	margin-right: 6px;
 	border-radius: 3px;
 }
 
 .hash-group span:hover {
-	background-color: #333;
+	background-color: #333333;
 	color: white;
 }
 
 .hash-group span:active {
-	background-color: #333;
+	background-color: #333333;
 	color: white;
 }
 
 .hash-group span:focus {
-	background-color: #333;
+	background-color: #333333;
 	color: white;
 }
 
 .hash-group span.active {
-	background-color: #333;
+	background-color: #333333;
 	color: white;
 }
 
 .hash-group span.active:hover {
 	background-color: #f1f1f1;
-	color: #333;
+	color: #333333;
 }
 
 .hash-group span.active:active {
 	background-color: #f1f1f1;
-	color: #333;
+	color: #333333;
 }
 
 .hash-group__item {

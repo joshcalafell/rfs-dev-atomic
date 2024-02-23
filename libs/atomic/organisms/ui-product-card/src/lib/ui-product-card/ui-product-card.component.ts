@@ -6,7 +6,9 @@ import { UiCardTitleComponent } from '@rfs-dev-atomic/ui-card-title'
 import { UiChipComponent } from '@rfs-dev-atomic/ui-chip'
 import { UiDetailGroupComponent } from '@rfs-dev-atomic/ui-detail-group'
 import { UiHashGroupComponent } from '@rfs-dev-atomic/ui-hash-group'
-import { UiStarComponent } from '@rfs-dev-atomic/ui-star'
+
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { UiStarGroupComponent } from '@rfs-dev-atomic/ui-star-group'
 
 @Component({
 	selector: 'rfs-dev-atomic-ui-product-card',
@@ -18,7 +20,7 @@ import { UiStarComponent } from '@rfs-dev-atomic/ui-star'
 		UiDetailGroupComponent,
 		UiButtonRowComponent,
 		UiHashGroupComponent,
-		UiStarComponent,
+		UiStarGroupComponent,
 	],
 	templateUrl: './ui-product-card.component.html',
 	styleUrl: './ui-product-card.component.scss',
@@ -29,10 +31,6 @@ export class UiProductCardComponent {
 	@Input() product = {} as any
 
 	cardImage = 'https://i.imgur.com/vL2h90y.jpg'
-
-	constructor() {
-		console.log('UiProductCardComponent')
-	}
 
 	addToCart(product: any) {
 		this.addToCartEmitter.emit(product)
@@ -60,20 +58,6 @@ export class UiProductCardComponent {
 			{ label: 'Color', value: product.color },
 			{ label: 'Material', value: product.material },
 			{ label: 'Wick', value: product.wickType },
-		]
-	}
-
-	getStars(product: any): { icon: string; color: string; size: string }[] {
-		const rounded = Math.ceil(Number(product.rating))
-
-		console.log('rounded', rounded)
-		return [
-			...Array(rounded).fill({ icon: 'star', color: 'black', size: 'small' }),
-			...Array(5 - rounded).fill({
-				icon: 'empty-star',
-				color: 'black',
-				size: 'small',
-			}),
 		]
 	}
 }

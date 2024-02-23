@@ -31,12 +31,23 @@ a {
 	font-family: 'Inter', sans-serif;
 	font-weight: 400;
 	transition: all 0.333s ease-in-out;
-	color: white;
+	color: white !important;
 
 	&.active {
-		color: $primary-color;
+		color: $primary-color !important;
 	}
 
+	&.prmary {
+		color: var(--primary-color);
+	}
+
+	&:secondary {
+		color: var(--secondary-color);
+	}
+
+	&.tertiary {
+		color: var(--tertiary-color);
+	}
 	&.small {
 		font-size: $font-size-small;
 	}
