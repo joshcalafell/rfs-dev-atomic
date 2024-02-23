@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common'
 import { Component, Input, OnInit } from '@angular/core'
-import { UiLinkComponent } from '@rfs-dev-atomic/ui-link'
+
 import { UiStarComponent } from '@rfs-dev-atomic/ui-star'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { ICandleProduct } from 'libs/products/src/lib/model/IProduct.model'
@@ -8,7 +8,7 @@ import { ICandleProduct } from 'libs/products/src/lib/model/IProduct.model'
 @Component({
 	selector: 'rfs-dev-atomic-ui-star-group',
 	standalone: true,
-	imports: [CommonModule, UiStarComponent, UiLinkComponent],
+	imports: [CommonModule, UiStarComponent],
 	templateUrl: './ui-star-group.component.html',
 	styleUrl: './ui-star-group.component.scss',
 })
