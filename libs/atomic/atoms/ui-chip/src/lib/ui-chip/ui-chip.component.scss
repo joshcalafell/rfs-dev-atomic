@@ -50,8 +50,10 @@ $gray: #6c757d;
 	text-decoration: none;
 	text-align: center;
 	font-family: 'Inter', sans-serif;
-	&:not(:last-child) {
-		margin-right: 8px;
+
+	&:hover {
+		transition: all 0.3s ease-in-out;
+		transform: scale(1.1);
 	}
 	@include flex-row-center;
 
@@ -66,10 +68,7 @@ $gray: #6c757d;
 		cursor: pointer;
 		user-select: none;
 		border-radius: 0.5rem;
-		transition: all 0.333s ease-in-out;
 	}
-
-	transition: all 0.333s ease-in-out;
 
 	&--small {
 		font-size: 0.75rem;
@@ -91,37 +90,18 @@ $gray: #6c757d;
 		border-color: $primary;
 		background-color: transparent;
 		color: $primary;
-		animation: 0.666s ease-in-out;
-		&:hover {
-			border: solid 2px $primary;
-			background-color: $primary;
-			color: $white;
-		}
 	}
 
 	&--secondary {
 		border-color: $white;
 		background-color: $white;
 		color: #444;
-
-		animation: 0.666s ease-in-out;
-		&:hover {
-			border: solid 2px $tertiary;
-			background-color: $tertiary;
-			color: $white;
-		}
 	}
 
 	&--tertiary {
 		border-color: $tertiary;
 		background-color: transparent;
 		color: $tertiary;
-		animation: 0.666s ease-in-out;
-		&:hover {
-			border: solid 2px $tertiary;
-			background-color: $tertiary;
-			color: $white;
-		}
 	}
 
 	&--danger {
