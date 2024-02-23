@@ -1,20 +1,16 @@
-import { OnInit } from '@angular/core'
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { ProductsService } from './products.service'
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { CommonModule } from '@angular/common'
-import { Component } from '@angular/core'
-import { ICandleProduct } from '../model/IProduct.model'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { UiProductCardComponent } from 'libs/atomic/organisms/ui-product-card/src'
-
-import { Observable } from 'rxjs'
+import { CommonModule } from '@angular/common'
+import { Component, OnInit } from '@angular/core'
 import { RouterModule } from '@angular/router'
+import { Observable } from 'rxjs'
+import { ICandleProduct } from '../model/IProduct.model'
+import { ProductsService } from './products.service'
 
 @Component({
 	selector: 'rfs-dev-atomic-products',
 	standalone: true,
-	imports: [CommonModule, UiProductCardComponent, RouterModule],
+	imports: [CommonModule, RouterModule, UiProductCardComponent],
 	templateUrl: './products.component.html',
 	styleUrl: './products.component.scss',
 })

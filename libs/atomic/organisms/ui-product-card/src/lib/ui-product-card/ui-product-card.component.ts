@@ -6,8 +6,6 @@ import { UiCardTitleComponent } from '@rfs-dev-atomic/ui-card-title'
 import { UiChipComponent } from '@rfs-dev-atomic/ui-chip'
 import { UiDetailGroupComponent } from '@rfs-dev-atomic/ui-detail-group'
 import { UiHashGroupComponent } from '@rfs-dev-atomic/ui-hash-group'
-
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { UiStarGroupComponent } from '@rfs-dev-atomic/ui-star-group'
 
 @Component({

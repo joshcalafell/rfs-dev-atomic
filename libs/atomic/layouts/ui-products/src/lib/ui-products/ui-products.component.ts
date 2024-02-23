@@ -1,6 +1,5 @@
 import { Component } from '@angular/core'
 import { CommonModule } from '@angular/common'
-// eslint-disable-next-line @nx/enforce-module-boundaries
 
 @Component({
 	selector: 'rfs-dev-atomic-ui-products',

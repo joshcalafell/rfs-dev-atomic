@@ -5,13 +5,10 @@ import { UiButtonRowComponent } from '@rfs-dev-atomic/ui-button-row'
 import { UiDetailGroupComponent } from '@rfs-dev-atomic/ui-detail-group'
 import { UiCardTitleComponent } from '@rfs-dev-atomic/ui-card-title'
 import { UiHashGroupComponent } from '@rfs-dev-atomic/ui-hash-group'
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { UiStarGroupComponent } from '@rfs-dev-atomic/ui-star-group'
 
 describe('UiProductCardComponent', () => {
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	let component: UiProductCardComponent
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	let fixture: ComponentFixture<UiProductCardComponent>
 
 	beforeEach(async () => {

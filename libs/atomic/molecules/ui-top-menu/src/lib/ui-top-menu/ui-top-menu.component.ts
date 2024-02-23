@@ -1,7 +1,5 @@
-import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
-//
-// eslint-disable-next-line @nx/enforce-module-boundaries
+import { Component, Input } from '@angular/core'
 
 import { UiLinkComponent } from '@rfs-dev-atomic/ui-link'
 

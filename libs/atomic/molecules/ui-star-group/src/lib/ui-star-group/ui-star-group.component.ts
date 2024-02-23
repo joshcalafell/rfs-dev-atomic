@@ -1,9 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { CommonModule } from '@angular/common'
 import { Component, Input, OnInit } from '@angular/core'
-
 import { UiStarComponent } from '@rfs-dev-atomic/ui-star'
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { ICandleProduct } from 'libs/products/src/lib/model/IProduct.model'
 
 @Component({
 	selector: 'rfs-dev-atomic-ui-star-group',
@@ -13,7 +11,7 @@ import { ICandleProduct } from 'libs/products/src/lib/model/IProduct.model'
 	styleUrl: './ui-star-group.component.scss',
 })
 export class UiStarGroupComponent implements OnInit {
-	@Input() product = {} as ICandleProduct
+	@Input() product: any
 	stars: { icon: string; color: string; size: string }[] = []
 
 	ngOnInit(): void {
@@ -21,7 +19,7 @@ export class UiStarGroupComponent implements OnInit {
 	}
 
 	public getStars(
-		product: ICandleProduct
+		product: any
 	): { icon: string; color: string; size: string }[] {
 		const rounded = Math.ceil(Number(product.rating))
 

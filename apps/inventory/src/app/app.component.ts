@@ -2,12 +2,9 @@ import { UiHeaderComponent } from '@rfs-dev-atomic/ui-header'
 import { Component } from '@angular/core'
 import { RouterModule } from '@angular/router'
 
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { ProductsComponent } from '@rfs-dev-atomic/products'
-
 @Component({
 	standalone: true,
-	imports: [RouterModule, ProductsComponent, UiHeaderComponent],
+	imports: [RouterModule, UiHeaderComponent],
 	selector: 'rfs-dev-atomic-root',
 	templateUrl: './app.component.html',
 	styleUrl: './app.component.scss',
