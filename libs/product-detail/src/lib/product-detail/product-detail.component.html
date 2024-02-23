@@ -6,87 +6,91 @@
 		<h2 class="product-name">{{ product.entity.name }}</h2>
 		<p class="product-description">{{ product.entity.description }}</p>
 		<p class="product-price">${{ product.entity.price }}</p>
-		<div class="flex-row stars">
-			<rfs-dev-atomic-ui-star
-				*ngFor="let rating of getStars(product)"
-				[star]="rating"
-			></rfs-dev-atomic-ui-star>
-			<span class="reviews">({{ product.reviews | number }})</span>
-			<div class="see-reviews"><a href="#">See Reviews</a></div>
-		</div>
-		<div class="flex-row">
-			<div class="flex-col product-details">
-				<h3>Details</h3>
-				<p>
-					Brand: <span class="value-cell">{{ product.brand }}</span>
-				</p>
-				<p>
-					Color: <span class="value-cell">{{ product.color }}</span>
-				</p>
-				<p>
-					Material: <span class="value-cell">{{ product.material }}</span>
-				</p>
-				<p>
-					Dimensions: <span class="value-cell">{{ product.dimensions }}</span>
-				</p>
-				<p>
-					Weight: <span class="value-cell">{{ product.weight }}</span>
-				</p>
+		<div class="stars">
+			<div class="stars">
+				<rfs-dev-atomic-ui-star-group
+					[product]="product$ | async"
+				></rfs-dev-atomic-ui-star-group>
 			</div>
-			<div class="flex-col product-attributes">
-				<h3>Attributes</h3>
-				<p>
-					Fragrance: <span class="value-cell">{{ product.fragrance }}</span>
-				</p>
-				<p>
-					Size: <span class="value-cell">{{ product.size }}</span>
-				</p>
-				<p>
-					Burn Time: <span class="value-cell">{{ product.burnTime }}</span>
-				</p>
-				<p>
-					Scent: <span class="value-cell">{{ product.scent }}</span>
-				</p>
-				<p>
-					Type: <span class="value-cell">{{ product.type }}</span>
-				</p>
+			<div class="flex-row">
+				<div class="flex-col product-details">
+					<h3>Details</h3>
+					<p>
+						Brand: <span class="value-cell">{{ product.brand }}</span>
+					</p>
+					<p>
+						Color: <span class="value-cell">{{ product.color }}</span>
+					</p>
+					<p>
+						Material: <span class="value-cell">{{ product.material }}</span>
+					</p>
+					<p>
+						Dimensions: <span class="value-cell">{{ product.dimensions }}</span>
+					</p>
+					<p>
+						Weight: <span class="value-cell">{{ product.weight }}</span>
+					</p>
+				</div>
+				<div class="flex-col product-attributes">
+					<h3>Attributes</h3>
+					<p>
+						Fragrance: <span class="value-cell">{{ product.fragrance }}</span>
+					</p>
+					<p>
+						Size: <span class="value-cell">{{ product.size }}</span>
+					</p>
+					<p>
+						Burn Time: <span class="value-cell">{{ product.burnTime }}</span>
+					</p>
+					<p>
+						Scent: <span class="value-cell">{{ product.scent }}</span>
+					</p>
+					<p>
+						Type: <span class="value-cell">{{ product.type }}</span>
+					</p>
+				</div>
+				<div class="flex-col product-details">
+					<h3>Subsciption</h3>
+					<p>
+						Type:
+						<span class="value-cell">{{ product.subscription.type }}</span>
+					</p>
+					<p>
+						Recurring:
+						<span class="value-cell">{{
+							product.subscription.isRecurring
+						}}</span>
+					</p>
+					<p>
+						Frequency:
+						<span class="value-cell">{{ product.subscription.frequency }}</span>
+					</p>
+					<p>
+						Sku:
+						<span class="value-cell">{{
+							product.subscription.entity.sku
+						}}</span>
+					</p>
+					<p>
+						Price:
+						<span class="value-cell"
+							>${{ product.subscription.entity.price }}</span
+						>
+					</p>
+				</div>
 			</div>
-			<div class="flex-col product-details">
-				<h3>Subsciption</h3>
-				<p>
-					Type: <span class="value-cell">{{ product.subscription.type }}</span>
-				</p>
-				<p>
-					Recurring:
-					<span class="value-cell">{{ product.subscription.isRecurring }}</span>
-				</p>
-				<p>
-					Frequency:
-					<span class="value-cell">{{ product.subscription.frequency }}</span>
-				</p>
-				<p>
-					Sku:
-					<span class="value-cell">{{ product.subscription.entity.sku }}</span>
-				</p>
-				<p>
-					Price:
-					<span class="value-cell"
-						>${{ product.subscription.entity.price }}</span
-					>
-				</p>
+			<div class="ui-buton-row-container">
+				<rfs-dev-atomic-ui-button-row
+					[buttons]="product.buttons"
+				></rfs-dev-atomic-ui-button-row>
 			</div>
-		</div>
-		<div class="ui-buton-row-container">
-			<rfs-dev-atomic-ui-button-row
-				[buttons]="product.buttons"
-			></rfs-dev-atomic-ui-button-row>
-		</div>
 
-		<div class="card-tags" *ngIf="product?.tags">
-			<p>Tags</p>
-			<rfs-dev-atomic-ui-hash-group
-				[hashes]="product.tags"
-			></rfs-dev-atomic-ui-hash-group>
+			<div class="card-tags" *ngIf="product?.tags">
+				<h3>Tags</h3>
+				<rfs-dev-atomic-ui-hash-group
+					[hashes]="product.tags"
+				></rfs-dev-atomic-ui-hash-group>
+			</div>
 		</div>
 	</div>
 </div>

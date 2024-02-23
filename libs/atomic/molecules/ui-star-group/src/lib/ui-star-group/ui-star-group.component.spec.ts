@@ -72,6 +72,8 @@ describe('UiStarGroupComponent', () => {
 			isBackOrder: false,
 			isPreOrder: false,
 			isGift: false,
+			isWishListed: false,
+			cartQty: 1,
 			image:
 				'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/cedarwood-vanilla-candle.jpg',
 			subscription: {

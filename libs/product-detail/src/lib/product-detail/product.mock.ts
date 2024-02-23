@@ -56,6 +56,8 @@ export const candleMock = {
 	isBackOrder: false,
 	isPreOrder: false,
 	isGift: false,
+	isWishListed: false,
+	cartQty: 1,
 	image: 'https://i.imgur.com/vL2h90y.jpg',
 	subscription: {
 		type: 'One-Time Purchase',

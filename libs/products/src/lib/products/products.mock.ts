@@ -61,6 +61,8 @@ export default <ICandleProduct[]>[
 		isBackOrder: false,
 		isPreOrder: false,
 		isGift: false,
+		isWishListed: true,
+		cartQty: 1,
 		image:
 			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/cedarwood-vanilla-candle.jpg',
 		subscription: {
@@ -97,7 +99,6 @@ export default <ICandleProduct[]>[
 		shape: 'Cylinder',
 		wickType: 'Cotton',
 		wickMaterial: 'Cotton',
-		quantity: 1,
 		category: 'Candles',
 		subCategory: 'Candle',
 		tags: ['Cinnamon', 'Clove', 'Soy Wax', 'Brown', 'Candle'],
@@ -121,6 +122,8 @@ export default <ICandleProduct[]>[
 		isBackOrder: false,
 		isPreOrder: false,
 		isGift: false,
+		isWishListed: false,
+		cartQty: 1,
 		image:
 			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/cinnamon-clove-candle.jpg',
 
@@ -158,7 +161,6 @@ export default <ICandleProduct[]>[
 		shape: 'Cylinder',
 		wickType: 'Cotton',
 		wickMaterial: 'Cotton',
-		quantity: 1,
 		category: 'Candles',
 		subCategory: 'Candle',
 		tags: ['Eucalyptus', 'Mint', 'Soy Wax', 'Green', 'Candle'],
@@ -182,6 +184,8 @@ export default <ICandleProduct[]>[
 		isBackOrder: false,
 		isPreOrder: false,
 		isGift: false,
+		isWishListed: true,
+		cartQty: 3,
 		image:
 			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/eucalyptus-mint-candle.jpg',
 		subscription: {
@@ -219,7 +223,6 @@ export default <ICandleProduct[]>[
 		shape: 'Cylinder',
 		wickType: 'Cotton',
 		wickMaterial: 'Cotton',
-		quantity: 1,
 		category: 'Candles',
 		subCategory: 'Candle',
 		tags: ['Lavender', 'Sage', 'Soy Wax', 'Purple', 'Candle'],
@@ -243,6 +246,8 @@ export default <ICandleProduct[]>[
 		isBackOrder: false,
 		isPreOrder: false,
 		isGift: false,
+		isWishListed: false,
+		cartQty: 1,
 		image:
 			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/lavender-sage-candle.jpg',
 
@@ -280,7 +285,6 @@ export default <ICandleProduct[]>[
 		shape: 'Cylinder',
 		wickType: 'Cotton',
 		wickMaterial: 'Cotton',
-		quantity: 1,
 		category: 'Candles',
 		subCategory: 'Candle',
 		tags: ['Lemongrass', 'Jasmine', 'Soy Wax', 'Yellow', 'Candle'],
@@ -304,6 +308,8 @@ export default <ICandleProduct[]>[
 		isBackOrder: false,
 		isPreOrder: false,
 		isGift: false,
+		isWishListed: false,
+		cartQty: 1,
 		image:
 			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/lemongrass-jasmine-candle.jpg',
 		subscription: {
@@ -340,7 +346,6 @@ export default <ICandleProduct[]>[
 		shape: 'Cylinder',
 		wickType: 'Cotton',
 		wickMaterial: 'Cotton',
-		quantity: 1,
 		category: 'Candles',
 		subCategory: 'Candle',
 		tags: ['Lilac', 'Rose', 'Soy Wax', 'Pink', 'Candle'],
@@ -364,6 +369,8 @@ export default <ICandleProduct[]>[
 		isBackOrder: false,
 		isPreOrder: false,
 		isGift: false,
+		isWishListed: false,
+		cartQty: 1,
 		image:
 			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/lilac-rose-candle.jpg',
 		subscription: {

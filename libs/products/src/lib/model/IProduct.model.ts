@@ -49,6 +49,9 @@ interface IProduct {
 	isBackOrder: boolean
 	isPreOrder: boolean
 	isGift: boolean
+
+	isWishListed: boolean
+	cartQty: number
 	subscription: IProductSubscription
 	buttons: IProductButton[]
 }

@@ -48,6 +48,8 @@ interface IProduct {
 	isSoldOut: boolean
 	isBackOrder: boolean
 	isPreOrder: boolean
+	isWishListed: boolean
+	cartQty: number
 	isGift: boolean
 	subscription: IProductSubscription
 	buttons: IProductButton[]

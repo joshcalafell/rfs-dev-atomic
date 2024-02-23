@@ -21,6 +21,7 @@ export class AppComponent {
 	links = [
 		{ label: 'About', path: '/about', color: 'light' },
 		{ label: 'Products', path: '/products', color: 'light' },
+		{ label: 'Wishlist', path: '/wishlist', color: 'light' },
 		{ label: 'Orders', path: '/orders', color: 'light' },
 		{ label: 'Cart', path: '/cart', color: 'light' },
 	]

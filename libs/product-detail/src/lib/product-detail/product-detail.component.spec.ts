@@ -1,10 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { ProductDetailComponent } from './product-detail.component'
-
-import { UiStarComponent } from '@rfs-dev-atomic/ui-star'
 import { UiButtonRowComponent } from '@rfs-dev-atomic/ui-button-row'
-import { UiHashGroupComponent } from '@rfs-dev-atomic/ui-hash-group'
 import { UiChipComponent } from '@rfs-dev-atomic/ui-chip'
+import { UiHashGroupComponent } from '@rfs-dev-atomic/ui-hash-group'
+import { UiStarGroupComponent } from '@rfs-dev-atomic/ui-star-group'
+import { ProductDetailComponent } from './product-detail.component'
 
 describe('ProductDetailComponent', () => {
 	let component: ProductDetailComponent
@@ -15,7 +14,7 @@ describe('ProductDetailComponent', () => {
 			imports: [
 				ProductDetailComponent,
 				UiButtonRowComponent,
-				UiStarComponent,
+				UiStarGroupComponent,
 				UiHashGroupComponent,
 				UiChipComponent,
 			],

@@ -3,10 +3,11 @@ import { candleMock } from './product.mock'
 import { Component } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { of } from 'rxjs'
-import { UiStarComponent } from '@rfs-dev-atomic/ui-star'
+
 import { UiButtonRowComponent } from '@rfs-dev-atomic/ui-button-row'
 import { UiHashGroupComponent } from '@rfs-dev-atomic/ui-hash-group'
 import { UiChipComponent } from '@rfs-dev-atomic/ui-chip'
+import { UiStarGroupComponent } from '@rfs-dev-atomic/ui-star-group'
 
 @Component({
 	selector: 'rfs-dev-atomic-product-detail',
@@ -14,7 +15,7 @@ import { UiChipComponent } from '@rfs-dev-atomic/ui-chip'
 	imports: [
 		CommonModule,
 		UiButtonRowComponent,
-		UiStarComponent,
+		UiStarGroupComponent,
 		UiHashGroupComponent,
 		UiChipComponent,
 	],
@@ -30,19 +31,5 @@ export class ProductDetailComponent {
 
 	addToCart(product: any) {
 		console.log('product', product)
-	}
-
-	getStars(product: any): { icon: string; color: string; size: string }[] {
-		const rounded = Math.ceil(Number(product.rating))
-
-		console.log('rounded', rounded)
-		return [
-			...Array(rounded).fill({ icon: 'star', color: 'black', size: 'small' }),
-			...Array(5 - rounded).fill({
-				icon: 'empty-star',
-				color: 'black',
-				size: 'small',
-			}),
-		]
 	}
 }
