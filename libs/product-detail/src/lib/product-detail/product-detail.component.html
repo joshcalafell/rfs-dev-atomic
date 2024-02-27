@@ -5,7 +5,7 @@
 	<div class="product-info">
 		<h2 class="product-name">{{ product.entity.name }}</h2>
 		<p class="product-description">{{ product.entity.description }}</p>
-		<p class="product-price">{{ product.entity.price | currency : 'usd' }}</p>
+		<p class="product-price">{{ product.entity.price | currency }}</p>
 		<div class="stars">
 			<div class="stars">
 				<rfs-dev-atomic-ui-star-group
