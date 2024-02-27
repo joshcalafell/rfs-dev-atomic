@@ -8,7 +8,7 @@
 
 				<rfs-dev-atomic-ui-chip
 					[label]="
-						product.quantity ? '$' + product.entity.price : 'Out of Stock'
+						product.stock !== 0 ? '$' + product.entity.price : 'Out of Stock'
 					"
 					[color]="product.quantity ? 'tertiary' : 'secondary'"
 				></rfs-dev-atomic-ui-chip>

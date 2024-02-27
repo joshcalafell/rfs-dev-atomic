@@ -43,7 +43,7 @@ export default <ICandleProduct[]>[
 		tags: ['Cedarwood', 'Vanilla', 'Soy Wax', 'Brown', 'Candle'],
 		rating: 5,
 		reviews: 100,
-		stock: 100,
+		stock: 0,
 		isOnSale: false,
 		saleStart: '',
 		saleEnd: '',
