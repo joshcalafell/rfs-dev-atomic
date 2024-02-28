@@ -72,7 +72,7 @@ $transition-style: 0.4s ease-in-out;
 
 		&:hover {
 			border: solid 1px $primary;
-			background-color: $transparent;
+			background-color: $light;
 			color: $primary;
 		}
 		/*
@@ -89,7 +89,7 @@ $transition-style: 0.4s ease-in-out;
 
 		&:hover {
 			border: solid 1px $secondary;
-			background-color: $transparent;
+			background-color: $light;
 			color: $secondary;
 		}
 	}
@@ -101,7 +101,7 @@ $transition-style: 0.4s ease-in-out;
 
 		&:hover {
 			border: solid 1px $tertiary;
-			background-color: $transparent;
+			background-color: $light;
 			color: $tertiary;
 		}
 	}
@@ -113,7 +113,7 @@ $transition-style: 0.4s ease-in-out;
 
 		&:hover {
 			border: solid 1px $danger;
-			background-color: $transparent;
+			background-color: $light;
 			color: $danger;
 		}
 	}
@@ -161,8 +161,8 @@ $transition-style: 0.4s ease-in-out;
 
 		&:hover {
 			border: solid 1px $dark;
-			background-color: $transparent;
-			color: $light;
+			background-color: $light;
+			color: $dark;
 		}
 	}
 
@@ -173,7 +173,7 @@ $transition-style: 0.4s ease-in-out;
 
 		&:hover {
 			border: solid 1px $dark;
-			background-color: $transparent;
+			background-color: $light;
 			color: $dark;
 		}
 	}
@@ -186,7 +186,7 @@ $transition-style: 0.4s ease-in-out;
 
 		&:hover {
 			border: solid 1px $disabled;
-			background-color: $transparent;
+			background-color: $light;
 			color: $disabled;
 		}
 	}

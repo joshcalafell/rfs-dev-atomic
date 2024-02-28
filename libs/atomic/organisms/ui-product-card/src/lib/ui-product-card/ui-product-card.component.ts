@@ -39,9 +39,10 @@ export class UiProductCardComponent {
 	): { label: string; value: string | number }[] {
 		return [
 			{ label: 'Scent', value: product.scent },
-			{ label: 'Burn Time', value: product.burnTime },
-			{ label: 'Weight', value: product.weight },
-			{ label: 'Size', value: product.size },
+			{
+				label: 'Availability',
+				value: product.quantity ? 'In Stock' : 'Sold Out',
+			},
 		]
 	}
 
@@ -49,10 +50,6 @@ export class UiProductCardComponent {
 		product: any
 	): { label: string; value: string | number }[] {
 		return [
-			{
-				label: 'Availability',
-				value: product.quantity ? 'In Stock' : 'Sold Out',
-			},
 			{ label: 'Color', value: product.color },
 			{ label: 'Material', value: product.material },
 			{ label: 'Wick', value: product.wickType },
