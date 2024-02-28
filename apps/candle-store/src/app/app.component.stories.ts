@@ -16,9 +16,9 @@ export const Primary: Story = {
 		title: 'Candle Store',
 		user: { name: 'Hal Doe', email: '' },
 		links: [
-			{ label: 'Home', path: '/' },
-			{ label: 'Products', path: '/products' },
-			{ label: 'Cart', path: '/cart' },
+			{ label: 'Home', path: '/', color: 'light' },
+			{ label: 'Products', path: '/products', color: 'light' },
+			{ label: 'Cart', path: '/cart', color: 'light' },
 		],
 	},
 }
@@ -28,9 +28,9 @@ export const Heading: Story = {
 		title: 'Candle Store',
 		user: { name: 'Hal Doe', email: '' },
 		links: [
-			{ label: 'Home', path: '/' },
-			{ label: 'Products', path: '/products' },
-			{ label: 'Cart', path: '/cart' },
+			{ label: 'Home', path: '/', color: 'light' },
+			{ label: 'Products', path: '/products', color: 'light' },
+			{ label: 'Cart', path: '/cart', color: 'light' },
 		],
 	},
 	play: async ({ canvasElement }) => {

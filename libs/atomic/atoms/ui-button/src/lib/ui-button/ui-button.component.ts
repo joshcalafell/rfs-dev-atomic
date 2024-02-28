@@ -30,14 +30,15 @@ export interface IAtomicUiButton {
 	styleUrl: './ui-button.component.scss',
 })
 export class UiButtonComponent implements IAtomicUiButton {
-	@Output() clickEmitter: EventEmitter<unknown> = new EventEmitter()
+	@Output() clickEmitter: EventEmitter<MouseEvent> =
+		new EventEmitter<MouseEvent>()
 
 	@Input() label!: string
 	@Input() palleteColor: TpalleteColor = 'primary'
 	@Input() disabled = false
 	@Input() size: TButtonSize = 'medium'
 
-	onClick() {
-		this.clickEmitter.emit()
+	onClick(event: MouseEvent) {
+		this.clickEmitter.emit(event)
 	}
 }

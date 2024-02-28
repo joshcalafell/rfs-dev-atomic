@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common'
 import { Component } from '@angular/core'
-import { RouterModule } from '@angular/router'
+import { ActivatedRoute, RouterModule } from '@angular/router'
 import { UiFooterComponent } from '@rfs-dev-atomic/ui-footer'
 import { UiHeaderComponent } from '@rfs-dev-atomic/ui-header'
 
@@ -18,6 +18,7 @@ export class AppComponent {
 		name: string
 		email: string
 	}
+
 	links = [
 		{ label: 'About', path: '/about', color: 'light' },
 		{ label: 'Products', path: '/products', color: 'light' },

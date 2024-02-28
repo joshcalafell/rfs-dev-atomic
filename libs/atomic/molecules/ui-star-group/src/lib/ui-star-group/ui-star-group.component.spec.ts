@@ -78,7 +78,7 @@ describe('UiStarGroupComponent', () => {
 				'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/cedarwood-vanilla-candle.jpg',
 			subscription: {
 				type: 'One-Time Purchase',
-				isRecurring: false,
+				isRecurring: true,
 				entity: {
 					id: '1',
 					name: 'Cedarwood & Vanilla',

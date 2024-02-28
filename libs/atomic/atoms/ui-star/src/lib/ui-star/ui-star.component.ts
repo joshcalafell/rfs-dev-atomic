@@ -10,5 +10,5 @@ import { UiIconComponent } from '@rfs-dev-atomic/ui-icon'
 	styleUrl: './ui-star.component.scss',
 })
 export class UiStarComponent {
-	@Input() star!: { icon: string; size: string; color: string }
+	@Input() star!: { icon: string; size: string; color?: string | undefined }
 }

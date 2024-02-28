@@ -67,7 +67,7 @@ export default <ICandleProduct[]>[
 			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/cedarwood-vanilla-candle.jpg',
 		subscription: {
 			type: 'One-Time Purchase',
-			isRecurring: false,
+			isRecurring: true,
 			entity: {
 				id: '1',
 				name: 'Cedarwood & Vanilla',
@@ -129,7 +129,7 @@ export default <ICandleProduct[]>[
 
 		subscription: {
 			type: 'One-Time Purchase',
-			isRecurring: false,
+			isRecurring: true,
 			entity: {
 				id: '2',
 				name: 'Cinnamon & Clove',
@@ -190,7 +190,7 @@ export default <ICandleProduct[]>[
 			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/eucalyptus-mint-candle.jpg',
 		subscription: {
 			type: 'One-Time Purchase',
-			isRecurring: false,
+			isRecurring: true,
 			entity: {
 				id: '3',
 				name: 'Eucalyptus & Mint',
@@ -253,7 +253,7 @@ export default <ICandleProduct[]>[
 
 		subscription: {
 			type: 'One-Time Purchase',
-			isRecurring: false,
+			isRecurring: true,
 			entity: {
 				id: '4',
 				name: 'Lavender & Sage',
@@ -314,7 +314,7 @@ export default <ICandleProduct[]>[
 			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/lemongrass-jasmine-candle.jpg',
 		subscription: {
 			type: 'One-Time Purchase',
-			isRecurring: false,
+			isRecurring: true,
 			entity: {
 				id: '6',
 				name: 'Lilac & Rose',
@@ -375,7 +375,7 @@ export default <ICandleProduct[]>[
 			'https://res.cloudinary.com/rfsdev/image/upload/v1631069943/rfsdev/lilac-rose-candle.jpg',
 		subscription: {
 			type: 'One-Time Purchase',
-			isRecurring: false,
+			isRecurring: true,
 			entity: {
 				id: '6',
 				name: 'Lilac & Rose',

@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common'
 	styleUrl: './ui-icon.component.scss',
 })
 export class UiIconComponent {
-	@Input() icon!: { icon: string; size: string; color: string }
+	@Input() icon!: { icon: string; size: string; color?: string | undefined }
 }

@@ -1,5 +1,6 @@
 <button
 	class="ui-button"
+	type="button"
 	[ngClass]="{
 		'ui-button--primary': palleteColor === 'primary',
 		'ui-button--secondary': palleteColor === 'secondary',
@@ -16,6 +17,9 @@
 		'ui-button--disabled': disabled
 	}"
 	[disabled]="disabled"
+	(click)="onClick($event)"
 >
-	<span class="ui-button-text">{{ label }}</span>
+	<span style="vertical-align: middle" class="ui-button-text">
+		{{ label }}&nbsp;
+	</span>
 </button>

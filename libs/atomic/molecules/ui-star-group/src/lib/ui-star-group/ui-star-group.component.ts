@@ -12,7 +12,7 @@ import { UiStarComponent } from '@rfs-dev-atomic/ui-star'
 })
 export class UiStarGroupComponent implements OnInit {
 	@Input() product: any
-	stars: { icon: string; color: string; size: string }[] = []
+	stars: { icon: string; color?: string; size: string }[] = []
 
 	ngOnInit(): void {
 		this.stars = this.getStars(this.product)
@@ -20,7 +20,7 @@ export class UiStarGroupComponent implements OnInit {
 
 	public getStars(
 		product: any
-	): { icon: string; color: string; size: string }[] {
+	): { icon: string; color?: string; size: string }[] {
 		const rounded = Math.ceil(Number(product.rating))
 
 		return [

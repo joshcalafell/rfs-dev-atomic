@@ -61,7 +61,7 @@ export const candleMock = {
 	image: 'https://i.imgur.com/vL2h90y.jpg',
 	subscription: {
 		type: 'One-Time Purchase',
-		isRecurring: false,
+		isRecurring: true,
 		frequency: 'Bi-Weekly',
 		entity: {
 			id: '1',

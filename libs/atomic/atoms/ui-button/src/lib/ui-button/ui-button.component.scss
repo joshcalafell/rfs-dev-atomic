@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
 
 $primary: #ff6666;
 $secondary: #333333;
@@ -11,52 +11,58 @@ $light: #f8f9fa;
 $dark: #343a40;
 $white: #ffffff;
 $disabled: #6c757d;
-$transparent: transparent;
 $black: #000000;
 $gray: #6c757d;
-$font-family: 'Inter', sans-serif;
-$font-weight: 500;
-$padding-button-medium: 8px 16px;
-$button-border: solid 1px $dark;
-$transition: all 0.3s ease-in-out;
 $transparent: transparent;
+
+$font-family: 'Inter', sans-serif;
+$font-weight: 400;
+$font-size-medium: 1rem;
+$font-size-small: 0.75rem;
+$font-size-large: 1.23rem;
+
+$padding-button-small: 4px 8px;
+$padding-button-medium: 8px 16px;
+$padding-button-large: 12px 20px;
+
+$button-border: solid 1px $dark;
+$transition-duration: 0.4s;
+$transition-style: 0.4s ease-in-out;
 
 @mixin font() {
 	font-family: $font-family;
 	font-weight: $font-weight;
 }
 
-.ui-button {
-	@include font();
+@mixin outline-button-base() {
+	transition-duration: $transition-duration;
 	background-color: $transparent;
 	border: $button-border;
 	cursor: pointer;
 	padding: $padding-button-medium;
 	font-family: $font-family;
-	font-weight: 500;
-	transition: $transition;
+	transition-duration: $transition-duration;
 	text-align: center;
+	transition: $transition-style;
+}
+
+.ui-button {
+	@include font();
+	@include outline-button-base();
 
 	&--small {
-		font-size: 0.75rem;
-		padding: 4px 8px;
+		font-size: $font-size-small;
+		padding: $padding-button-small;
 	}
 
 	&--medium {
-		font-size: 1rem;
-		font-weight: 400;
+		font-size: $font-size-medium;
 		padding: $padding-button-medium;
 	}
 
 	&--large {
-		font-size: 1.23rem;
-		padding: 12px 20px;
-		&:hover {
-			border: none;
-			background-color: $primary;
-			color: $tertiary;
-			padding: 16px 32px;
-		}
+		font-size: $font-size-large;
+		padding: $padding-button-large;
 	}
 
 	&--primary {
@@ -69,6 +75,11 @@ $transparent: transparent;
 			background-color: $transparent;
 			color: $primary;
 		}
+		/*
+		.dark-theme {
+			background-color: $dark;
+			color: $white;
+		} */
 	}
 
 	&--secondary {
@@ -84,57 +95,99 @@ $transparent: transparent;
 	}
 
 	&--tertiary {
-		border: solid 1px $tertiary;
-		background-color: $transparent;
-		color: $tertiary;
+		border-color: $tertiary;
+		background-color: $tertiary;
+		color: $white;
 
 		&:hover {
 			border: solid 1px $tertiary;
-			background-color: $tertiary;
-			color: $white;
+			background-color: $transparent;
+			color: $tertiary;
 		}
 	}
 
 	&--danger {
 		border-color: $danger;
-		background-color: $transparent;
-		color: $danger;
+		background-color: $danger;
+		color: $white;
+
+		&:hover {
+			border: solid 1px $danger;
+			background-color: $transparent;
+			color: $danger;
+		}
 	}
 
 	&--warning {
 		border-color: $warning;
-		background-color: $transparent;
-		color: $warning;
+		background-color: $warning;
+		color: $dark;
+
+		&:hover {
+			border: solid 1px $warning;
+			background-color: $transparent;
+			color: $warning;
+		}
 	}
 
 	&--success {
 		border-color: $success;
-		background-color: $transparent;
-		color: $success;
+		background-color: $success;
+		color: $white;
+
+		&:hover {
+			border: solid 1px $success;
+			background-color: $transparent;
+			color: $success;
+		}
 	}
 
 	&--info {
 		border-color: $info;
-		background-color: $transparent;
-		color: $info;
+		background-color: $info;
+		color: $dark;
+
+		&:hover {
+			border: solid 1px $info;
+			background-color: $transparent;
+			color: $info;
+		}
 	}
 
 	&--light {
-		border-color: $light;
-		background-color: $transparent;
-		color: $light;
+		border-color: $dark;
+		background-color: $light;
+		color: $dark;
+
+		&:hover {
+			border: solid 1px $dark;
+			background-color: $transparent;
+			color: $light;
+		}
 	}
 
 	&--dark {
 		border-color: $dark;
-		background-color: $transparent;
-		color: $dark;
+		background-color: $dark;
+		color: $white;
+
+		&:hover {
+			border: solid 1px $dark;
+			background-color: $transparent;
+			color: $dark;
+		}
 	}
 
 	&--disabled {
 		border-color: $disabled;
-		background-color: $transparent;
-		color: $disabled;
-		cursor: not-allowed;
+		background-color: $disabled;
+		color: $white;
+		cursor: not-allowed; // <!!> This is unique to the disabled state
+
+		&:hover {
+			border: solid 1px $disabled;
+			background-color: $transparent;
+			color: $disabled;
+		}
 	}
 }
