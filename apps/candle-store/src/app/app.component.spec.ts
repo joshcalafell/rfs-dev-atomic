@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing'
-import { ActivatedRoute } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
 import { UiFooterComponent } from '@rfs-dev-atomic/ui-footer'
 import { UiHeaderComponent } from '@rfs-dev-atomic/ui-header'
@@ -14,13 +13,6 @@ describe('AppComponent', () => {
 				UiHeaderComponent,
 				UiFooterComponent,
 				RouterTestingModule,
-			],
-			providers: [
-				ActivatedRoute,
-				{
-					provide: ActivatedRoute,
-					useValue: { snapshot: { data: { title: 'CANDLE STORE' } } },
-				},
 			],
 		}).compileComponents()
 	})
