@@ -7,6 +7,10 @@ import productsMock from './products.mock-data'
 	providedIn: 'root',
 })
 export class ProductsService {
+	constructor() {
+		console.log('ProductsService')
+	}
+
 	// Mock the GET request for a list of Products
 	mockProductService = {
 		getProducts() {

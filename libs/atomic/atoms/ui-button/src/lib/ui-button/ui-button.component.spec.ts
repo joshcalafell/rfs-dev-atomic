@@ -1,7 +1,5 @@
-import { RouterTestingModule } from '@angular/router/testing'
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { UiButtonComponent } from './ui-button.component'
-import exp = require('constants')
 
 describe('UiButtonComponent', () => {
 	let component: UiButtonComponent
@@ -9,7 +7,7 @@ describe('UiButtonComponent', () => {
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			imports: [UiButtonComponent, RouterTestingModule],
+			imports: [UiButtonComponent],
 		}).compileComponents()
 
 		fixture = TestBed.createComponent(UiButtonComponent)

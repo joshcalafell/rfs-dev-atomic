@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common'
 import { UiProductCardComponent } from 'libs/atomic/organisms/ui-product-card/src'
 import { Observable } from 'rxjs'
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { ProductsService } from 'libs/products/src/lib/products/products.service'
+import { ProductsService } from 'libs/products/src/lib/service/products.service'
 import { RouterModule } from '@angular/router'
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { ICandleProduct } from 'libs/products/src/lib/model/IProduct.model'

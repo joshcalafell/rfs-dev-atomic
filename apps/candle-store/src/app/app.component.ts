@@ -26,4 +26,14 @@ export class AppComponent {
 		{ label: 'Orders', path: '/orders', color: 'light' },
 		{ label: 'Cart', path: '/cart', color: 'light' },
 	]
+
+	constructor(private route: ActivatedRoute) {
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
+		this.route.queryParams.subscribe((params) => {
+			this.user = {
+				name: 'J Doe', // eslint-disable-line @typescript-eslint/restrict-template-expressions
+				email: 'email@email.com',
+			}
+		})
+	}
 }

@@ -38,10 +38,10 @@ export class UiProductCardComponent {
 		product: any
 	): { label: string; value: string | number }[] {
 		return [
-			{ label: 'Scent', value: product.scent },
+			{ label: 'Fragrance', value: product.scent },
 			{
 				label: 'Availability',
-				value: product.quantity ? 'In Stock' : 'Sold Out',
+				value: product.stock ? 'In Stock' : 'Out of Stock',
 			},
 		]
 	}

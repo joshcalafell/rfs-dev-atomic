@@ -11,6 +11,21 @@ const meta: Meta<UiButtonComponent> = {
 export default meta
 type Story = StoryObj<UiButtonComponent>
 
+export const PrimaryAllButtons: Story = {
+	args: {
+		label: 'Primary',
+		palleteColor: 'primary',
+		disabled: false,
+		size: 'medium',
+	},
+
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+		expect(canvas.getByText(/Primary/gi)).toBeTruthy()
+		expect(canvas.getByText(/Primary/gi)).toHaveClass('ui-button--primary')
+		expect(canvas.getByText(/Primary/gi)).toHaveClass('ui-button--medium')
+	},
+}
 /** Small  */
 export const PrimarySmall: Story = {
 	args: {

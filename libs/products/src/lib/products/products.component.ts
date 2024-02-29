@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core'
 import { RouterModule } from '@angular/router'
 import { Observable } from 'rxjs'
 import { ICandleProduct } from '../model/IProduct.model'
-import { ProductsService } from './products.service'
+import { ProductsService } from '../service/products.service'
 
 @Component({
 	selector: 'rfs-dev-atomic-products',
@@ -23,7 +23,7 @@ export class ProductsComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		this.getProducts().subscribe((products) => {
+		this.getProducts().subscribe((products: ICandleProduct[]) => {
 			this.products = products
 		})
 	}

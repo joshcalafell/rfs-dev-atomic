@@ -1,17 +1,26 @@
 import { TestBed } from '@angular/core/testing'
-import { AppComponent } from './app.component'
+import { ActivatedRoute } from '@angular/router'
 import { RouterTestingModule } from '@angular/router/testing'
-import { UiHeaderComponent } from '@rfs-dev-atomic/ui-header'
 import { UiFooterComponent } from '@rfs-dev-atomic/ui-footer'
+import { UiHeaderComponent } from '@rfs-dev-atomic/ui-header'
+import { AppComponent } from './app.component'
 
 describe('AppComponent', () => {
 	beforeEach(async () => {
+		// { provide: 'BASE_URL', useValue: params.origin + params.baseUrl },
 		await TestBed.configureTestingModule({
 			imports: [
 				AppComponent,
 				UiHeaderComponent,
 				UiFooterComponent,
 				RouterTestingModule,
+			],
+			providers: [
+				ActivatedRoute,
+				{
+					provide: ActivatedRoute,
+					useValue: { snapshot: { data: { title: 'CANDLE STORE' } } },
+				},
 			],
 		}).compileComponents()
 	})

@@ -8,9 +8,9 @@
 
 				<rfs-dev-atomic-ui-chip
 					[label]="
-						product.stock !== 0 ? '$' + product.entity.price : 'Out of Stock'
+						product.stock > 0 ? '$' + product.entity.price : 'Out of Stock'
 					"
-					[color]="product.quantity ? 'tertiary' : 'secondary'"
+					[color]="product.stock > 0 ? 'primary' : 'secondary'"
 				></rfs-dev-atomic-ui-chip>
 				<!-- Chip component -->
 			</div>

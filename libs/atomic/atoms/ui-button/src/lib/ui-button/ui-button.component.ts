@@ -25,7 +25,7 @@ export interface IAtomicUiButton {
 @Component({
 	selector: 'rfs-dev-atomic-ui-button',
 	standalone: true,
-	imports: [CommonModule, RouterModule],
+	imports: [CommonModule],
 	templateUrl: './ui-button.component.html',
 	styleUrl: './ui-button.component.scss',
 })

@@ -1,12 +1,6 @@
-import { UiIconComponent } from '@rfs-dev-atomic/ui-icon'
 import { Component, Input, OnInit } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import {
-	ActivatedRoute,
-	NavigationEnd,
-	Router,
-	RouterModule,
-} from '@angular/router'
+import { NavigationEnd, Router, RouterModule } from '@angular/router'
 
 type IAtomicLinkPaletteColor =
 	| 'primary'
@@ -38,7 +32,7 @@ export interface IAtomicLink {
 @Component({
 	selector: 'rfs-dev-atomic-ui-link',
 	standalone: true,
-	imports: [CommonModule, RouterModule, UiIconComponent],
+	imports: [CommonModule, RouterModule],
 	templateUrl: './ui-link.component.html',
 	styleUrl: './ui-link.component.scss',
 })
@@ -67,7 +61,7 @@ export class UiLinkComponent implements OnInit {
 		this._isActive = value
 	}
 
-	constructor(private router: Router, private route: ActivatedRoute) {
+	constructor(private router: Router) {
 		this.router.events.subscribe((event) => {
 			if (event instanceof NavigationEnd) {
 				this.isActive = event.url === this.link.path

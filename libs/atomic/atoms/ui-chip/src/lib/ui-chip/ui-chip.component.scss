@@ -44,7 +44,7 @@ $gray: #6c757d;
 	padding: 8px 8px;
 	text-align: left;
 	text-decoration: underline;
-	transition: color 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
 	user-select: none;
 	white-space: nowrap;
 	text-decoration: none;
@@ -55,6 +55,7 @@ $gray: #6c757d;
 		transition: all 0.3s ease-in-out;
 		transform: scale(1.1);
 	}
+
 	@include flex-row-center;
 
 	.ui-chip-text {
