@@ -4,20 +4,19 @@ $font-size-small: 0.75rem;
 $font-size-medium: 1rem;
 $font-size-large: 1.25rem;
 
-$primary-color: #f36868;
-$secondary-color: #333;
-$success-color: #e354d2;
-$danger-color: #dc3545;
-$warning-color: #ffc107;
-$info-color: #17a2b8;
-$light-color: #f8f9fa;
-$dark-color: #343a40;
-$disabled-color: #6c757d;
-$enabled-color: #000;
-$white-color: #fff;
-$black-color: #000;
-$gray-color: #6c757d;
-$gray-dark-color: #343a40;
+$primary: #26bfcd;
+$secondary: #333333;
+$tertiary: #ff6666;
+$danger: #dc3545;
+$warning: #ffc107;
+$success: #28a745;
+$info: #5e9df5;
+$light: #f8f9fa;
+$dark: #343a40;
+$white: #ffffff;
+$disabled: #6c757d;
+$black: #000000;
+$gray: #6c757d;
 
 a {
 	color: inherit;
@@ -30,10 +29,10 @@ a {
 	color: white !important;
 
 	&.active {
-		color: $primary-color !important;
+		color: $primary !important;
 	}
 
-	&.prmary {
+	&.primary {
 		color: var(--primary-color);
 	}
 
@@ -44,9 +43,11 @@ a {
 	&.tertiary {
 		color: var(--tertiary-color);
 	}
+
 	&.small {
 		font-size: $font-size-small;
 	}
+
 	&.medium {
 		font-size: $font-size-medium;
 	}
@@ -89,10 +90,6 @@ a {
 
 	&.disabled {
 		color: var(--disabled-color);
-	}
-
-	&.enabled {
-		color: var(--enabled-color);
 	}
 
 	&.small {

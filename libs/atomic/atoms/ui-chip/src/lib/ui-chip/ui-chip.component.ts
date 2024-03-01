@@ -1,10 +1,12 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { UiIconComponent } from '@rfs-dev-atomic/ui-icon'
+
 type IChipVariant = 'price' | 'date' | 'label' | 'status' | 'default' | 'stock'
 export interface IChip {
 	label: string
 	color: 'primary' | 'secondary' | 'tertiary'
+	variant?: IChipVariant
 }
 
 @Component({

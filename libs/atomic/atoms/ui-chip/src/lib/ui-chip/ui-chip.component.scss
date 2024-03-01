@@ -12,20 +12,20 @@
   'ui-button--disabled': disabled
   */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
-$primary: #ff6666;
+// #a164d3
+$primary: #26bfcd;
 $secondary: #333333;
-$tertiary: #17a2b8;
+$tertiary: #ff6666;
 $danger: #dc3545;
 $warning: #ffc107;
 $success: #28a745;
-$info: #f5de5e;
+$info: #5e9df5;
 $light: #f8f9fa;
 $dark: #343a40;
 $white: #ffffff;
 $disabled: #6c757d;
-$transparent: transparent;
 $black: #000000;
 $gray: #6c757d;
 
@@ -36,10 +36,8 @@ $gray: #6c757d;
 }
 
 .ui-chip {
-	background-color: transparent;
-	border: none;
-	border-radius: 0.5e;
-	cursor: pointer;
+	border-radius: 0.775rem;
+	cursor: inherit;
 	font-size: 1rem;
 	padding: 8px 8px;
 	text-align: left;
@@ -51,24 +49,18 @@ $gray: #6c757d;
 	text-align: center;
 	font-family: 'Inter', sans-serif;
 
-	&:hover {
-		transition: all 0.3s ease-in-out;
-		transform: scale(1.1);
-	}
-
 	@include flex-row-center;
 
 	.ui-chip-text {
 		font-size: 1rem;
-		font-weight: 600;
+		font-weight: 500;
 		line-height: 1.5;
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
 		vertical-align: baseline;
-		cursor: pointer;
+		cursor: inherit;
 		user-select: none;
-		border-radius: 0.5rem;
 	}
 
 	&--small {
@@ -88,21 +80,58 @@ $gray: #6c757d;
 	}
 
 	&--primary {
-		border-color: $primary;
-		background-color: transparent;
-		color: $primary;
+		color: scale-color(
+			$color: $primary,
+
+			$saturation: 0%,
+			$lightness: 0%,
+			$alpha: 0.5%
+		);
+		border: solid
+			scale-color(
+				$color: $primary,
+
+				$saturation: 0%,
+				$lightness: 0%,
+				$alpha: 0.5%
+			)
+			1px !important;
 	}
 
 	&--secondary {
-		border-color: $white;
-		background-color: $white;
-		color: #444;
+		color: scale-color(
+			$color: $secondary,
+
+			$saturation: 0%,
+			$lightness: 0%,
+			$alpha: 0.5%
+		);
+		border: scale-color(
+			$color: $secondary,
+
+			$saturation: 0%,
+			$lightness: 100%,
+			$alpha: 1%
+		);
+		border-width: 2px;
 	}
 
 	&--tertiary {
-		border-color: $tertiary;
-		background-color: transparent;
-		color: $tertiary;
+		color: scale-color(
+			$color: $tertiary,
+
+			$saturation: 0%,
+			$lightness: 0%,
+			$alpha: 0.5%
+		);
+		border: scale-color(
+			$color: $tertiary,
+
+			$saturation: 0%,
+			$lightness: 100%,
+			$alpha: 1%
+		);
+		border-width: 2px;
 	}
 
 	&--danger {
@@ -138,6 +167,5 @@ $gray: #6c757d;
 	&--disabled {
 		background-color: $disabled;
 		color: $white;
-		cursor: not-allowed;
 	}
 }
