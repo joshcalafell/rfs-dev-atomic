@@ -27,57 +27,38 @@ $padding-button-medium: 8px 16px;
 $padding-button-large: 12px 20px;
 
 $button-border: solid 1px $dark;
-$transition-duration: 0.4s;
+$transition-duration: 0.3s;
 $transition-style: 0.4s ease-in-out;
+
+$width-base: 200px;
+$padding-right-base: 26px;
+$psuedoclass-offset-base: 20px;
 
 @mixin font() {
 	font-family: $font-family;
 	font-weight: $font-weight;
 }
 
-/*
-
-
-
-@mixin outline-button-base() {
-	transition-duration: $transition-duration;
-	background-color: $transparent;
-	border: $button-border;
-	cursor: pointer;
-	padding: $padding-button-medium;
-	font-family: $font-family;
-	transition-duration: $transition-duration;
-	text-align: center;
-	transition: $transition-style;
-}
-
-.ui-button {
-	@include font();
-	@include outline-button-base();
-
-
-}
- */
-
-.ui-button {
-	@include font();
+@mixin ui-button-base() {
 	display: inline-block;
-	border-radius: 0px;
-	background-color: $primary;
-	border: solid 1px $primary;
-	color: $light;
+	border-radius: 0;
+	background-color: $transparent;
+	border: solid 1px $transparent;
 	text-align: center;
-	font-size: $font-size-medium;
-	padding: $padding-button-medium;
 	transition: all 0.25s;
 	cursor: pointer;
+}
+
+.ui-button {
+	@include font();
+	@include ui-button-base();
 }
 
 .ui-button span {
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
-	transition: 0.25s;
+	transition: $transition-duration;
 }
 
 .ui-button:hover span:after {
@@ -89,57 +70,57 @@ $transition-style: 0.4s ease-in-out;
 	&--small {
 		font-size: $font-size-small;
 		padding: $padding-button-small;
-		width: calc(200px * 0.5);
+		width: calc($width-base * 0.5);
 
 		span:after {
 			content: '\00bb';
 			position: absolute;
 			opacity: 0;
 			top: 0;
-			right: calc(-20px * 0.5);
-			transition: 0.25s;
+			right: calc($psuedoclass-offset-base * 0.5);
+			transition: $transition-duration;
 		}
 
 		&:hover span {
-			padding-right: calc(25px * 0.5);
+			padding-right: calc($padding-right-base * 0.5);
 		}
 	}
 
 	&--medium {
 		font-size: $font-size-medium;
 		padding: $padding-button-medium;
-		width: calc(200px * 0.75);
+		width: calc($width-base * 0.75);
 
 		span:after {
 			content: '\00bb';
 			position: absolute;
 			opacity: 0;
 			top: 0;
-			right: calc(-20px * 0.75);
-			transition: 0.25s;
+			right: calc($psuedoclass-offset-base * 0.75);
+			transition: $transition-duration;
 		}
 
 		&:hover span {
-			padding-right: calc(25px * 0.75);
+			padding-right: calc($padding-right-base * 0.75);
 		}
 	}
 
 	&--large {
 		font-size: $font-size-large;
 		padding: $padding-button-large;
-		width: calc(200px * 1);
+		width: calc($width-base * 1);
 
 		span:after {
 			content: '\00bb';
 			position: absolute;
 			opacity: 0;
 			top: 0;
-			right: calc(-20px * 1);
-			transition: 0.25s;
+			right: calc($psuedoclass-offset-base * 1);
+			transition: $transition-duration;
 		}
 
 		&:hover span {
-			padding-right: calc(25px * 1);
+			padding-right: calc($padding-right-base * 1);
 		}
 	}
 
