@@ -35,6 +35,10 @@ $transition-style: 0.4s ease-in-out;
 	font-weight: $font-weight;
 }
 
+/*
+
+
+
 @mixin outline-button-base() {
 	transition-duration: $transition-duration;
 	background-color: $transparent;
@@ -51,19 +55,92 @@ $transition-style: 0.4s ease-in-out;
 	@include font();
 	@include outline-button-base();
 
+
+}
+ */
+
+.ui-button {
+	@include font();
+	display: inline-block;
+	border-radius: 0px;
+	background-color: $primary;
+	border: solid 1px $primary;
+	color: $light;
+	text-align: center;
+	font-size: $font-size-medium;
+	padding: $padding-button-medium;
+	transition: all 0.25s;
+	cursor: pointer;
+}
+
+.ui-button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.25s;
+}
+
+.ui-button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.ui-button {
 	&--small {
 		font-size: $font-size-small;
 		padding: $padding-button-small;
+		width: calc(200px * 0.5);
+
+		span:after {
+			content: '\00bb';
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			right: calc(-20px * 0.5);
+			transition: 0.25s;
+		}
+
+		&:hover span {
+			padding-right: calc(25px * 0.5);
+		}
 	}
 
 	&--medium {
 		font-size: $font-size-medium;
 		padding: $padding-button-medium;
+		width: calc(200px * 0.75);
+
+		span:after {
+			content: '\00bb';
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			right: calc(-20px * 0.75);
+			transition: 0.25s;
+		}
+
+		&:hover span {
+			padding-right: calc(25px * 0.75);
+		}
 	}
 
 	&--large {
 		font-size: $font-size-large;
 		padding: $padding-button-large;
+		width: calc(200px * 1);
+
+		span:after {
+			content: '\00bb';
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			right: calc(-20px * 1);
+			transition: 0.25s;
+		}
+
+		&:hover span {
+			padding-right: calc(25px * 1);
+		}
 	}
 
 	&--primary {
@@ -76,11 +153,11 @@ $transition-style: 0.4s ease-in-out;
 			background-color: $light;
 			color: $primary;
 		}
-		/*
+
 		.dark-theme {
 			background-color: $dark;
 			color: $white;
-		} */
+		}
 	}
 
 	&--secondary {
