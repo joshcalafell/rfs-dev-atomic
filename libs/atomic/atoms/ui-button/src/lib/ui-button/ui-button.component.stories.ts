@@ -26,6 +26,26 @@ export const PrimaryAllButtons: Story = {
 		expect(canvas.getByText(/Primary/gi)).toHaveClass('ui-button--medium')
 	},
 }
+
+export const PrimaryArrowButtons: Story = {
+	args: {
+		label: 'Primary',
+		palleteColor: 'primary',
+		disabled: false,
+		size: 'medium',
+		type: 'animated-arrow',
+	},
+
+	play: async ({ canvasElement }) => {
+		const canvas = within(canvasElement)
+		expect(canvas.getByText(/Primary/gi)).toBeTruthy()
+		expect(canvas.getByText(/Primary/gi)).toHaveClass('ui-button--primary')
+		expect(canvas.getByText(/Primary/gi)).toHaveClass('ui-button--medium')
+		expect(canvas.getByText(/Primary/gi)).toHaveClass(
+			'ui-button--medium--animated-arrow'
+		)
+	},
+}
 /** Small  */
 export const PrimarySmall: Story = {
 	args: {
