@@ -3,6 +3,7 @@
 	style="vertical-align: middle"
 	type="button"
 	[ngClass]="{
+		'ui-button--animated-arrow': type === 'animated-arrow',
 		'ui-button--primary': palleteColor === 'primary',
 		'ui-button--secondary': palleteColor === 'secondary',
 		'ui-button--tertiary': palleteColor === 'tertiary',
@@ -15,6 +16,12 @@
 		'ui-button--small': size === 'small',
 		'ui-button--medium': size === 'medium',
 		'ui-button--large': size === 'large',
+		'ui-button--small--animated-arrow':
+			size === 'small' && type === 'animated-arrow',
+		'ui-button--medium--animated-arrow':
+			size === 'medium' && type === 'animated-arrow',
+		'ui-button--large--animated-arrow':
+			size === 'large' && type === 'animated-arrow',
 		'ui-button--disabled': disabled
 	}"
 	[disabled]="disabled"

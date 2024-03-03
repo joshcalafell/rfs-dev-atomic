@@ -37,6 +37,7 @@ export class UiButtonComponent implements IAtomicUiButton {
 	@Input() palleteColor: TpalleteColor = 'primary'
 	@Input() disabled = false
 	@Input() size: TButtonSize = 'medium'
+	@Input() type: 'button' | 'animated-arrow' = 'button'
 
 	onClick(event: MouseEvent) {
 		this.clickEmitter.emit(event)

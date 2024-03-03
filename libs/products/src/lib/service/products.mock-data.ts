@@ -6,12 +6,14 @@ const buttons = [
 		palleteColor: 'primary',
 		size: 'medium',
 		disabled: false,
+		type: 'animated-arrow',
 	},
 	{
 		label: 'Wishlist',
 		palleteColor: 'secondary',
 		size: 'medium',
 		disabled: false,
+		type: 'animated-arrow',
 	},
 ]
 

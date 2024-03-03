@@ -28,15 +28,31 @@ $padding-button-large: 12px 20px;
 
 $button-border: solid 1px $dark;
 $transition-duration: 0.3s;
-$transition-style: 0.4s ease-in-out;
+$transition-style: 0.3s ease-in-out;
 
-$width-base: 200px;
-$padding-right-base: 26px;
-$psuedoclass-offset-base: 20px;
+$height-base: 60px;
+$width-base: 210px;
+$padding-right-base: 22px;
+$psuedoclass-offset-base: 18px;
 
 @mixin font() {
 	font-family: $font-family;
 	font-weight: $font-weight;
+}
+
+@mixin arrow-animation($scale: 1) {
+	span:after {
+		content: '\00bb';
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		right: calc(20px * $scale);
+		transition: 0.3s;
+	}
+
+	&:hover span {
+		padding-right: calc(26px * $scale);
+	}
 }
 
 @mixin ui-button-base() {
@@ -54,35 +70,26 @@ $psuedoclass-offset-base: 20px;
 	@include ui-button-base();
 }
 
-.ui-button span {
-	cursor: pointer;
-	display: inline-block;
-	position: relative;
-	transition: $transition-duration;
-}
-
-.ui-button:hover span:after {
-	opacity: 1;
-	right: 0;
-}
-
 .ui-button {
+	span {
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		transition: $transition-duration;
+	}
+
+	&:hover span:after {
+		opacity: 1;
+		right: 0;
+	}
+
 	&--small {
 		font-size: $font-size-small;
 		padding: $padding-button-small;
 		width: calc($width-base * 0.5);
-
-		span:after {
-			content: '\00bb';
-			position: absolute;
-			opacity: 0;
-			top: 0;
-			right: calc($psuedoclass-offset-base * 0.5);
-			transition: $transition-duration;
-		}
-
-		&:hover span {
-			padding-right: calc($padding-right-base * 0.5);
+		height: calc($height-base * 0.5);
+		&--animated-arrow {
+			@include arrow-animation(0.75);
 		}
 	}
 
@@ -90,18 +97,9 @@ $psuedoclass-offset-base: 20px;
 		font-size: $font-size-medium;
 		padding: $padding-button-medium;
 		width: calc($width-base * 0.75);
-
-		span:after {
-			content: '\00bb';
-			position: absolute;
-			opacity: 0;
-			top: 0;
-			right: calc($psuedoclass-offset-base * 0.75);
-			transition: $transition-duration;
-		}
-
-		&:hover span {
-			padding-right: calc($padding-right-base * 0.75);
+		height: calc($height-base * 0.75);
+		&--animated-arrow {
+			@include arrow-animation(0.75);
 		}
 	}
 
@@ -109,18 +107,9 @@ $psuedoclass-offset-base: 20px;
 		font-size: $font-size-large;
 		padding: $padding-button-large;
 		width: calc($width-base * 1);
-
-		span:after {
-			content: '\00bb';
-			position: absolute;
-			opacity: 0;
-			top: 0;
-			right: calc($psuedoclass-offset-base * 1);
-			transition: $transition-duration;
-		}
-
-		&:hover span {
-			padding-right: calc($padding-right-base * 1);
+		height: calc($height-base * 1);
+		&--animated-arrow {
+			@include arrow-animation(0.75);
 		}
 	}
 
