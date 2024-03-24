@@ -1,3 +1,32 @@
-<p>&nbsp;</p>
-<br />
-<br />
+<div class="wrapper mx-auto px-0">
+	<section class="mx-auto py-3 px-0 pl-4 pb-0 padding">
+		<div class="flex flex-row flex-row justify-between align-center">
+			<p class="text-xl font-semibold mb-4 px-0 mx-0">
+				{{
+					items.length +
+						(items.length === 1 ? ' Item in cart' : ' Items in cart')
+				}}
+			</p>
+
+			<p class="text-2xl font-semibold px-0 mx-0">Total: ${{ total }}</p>
+		</div>
+
+		<ul id="list-cart" class="list-cart" aria-label="list-cart">
+			<li *ngFor="let item of items; let i = index" class="list-item">
+				<rfs-dev-atomic-cart-item
+					[item]="item"
+					[index]="i"
+					(removeItemEmitter)="removeItemHandler($event)"
+					(wishlistItemEmitter)="wishlistItemHandler($event)"
+				></rfs-dev-atomic-cart-item>
+			</li>
+		</ul>
+
+		<div
+			*ngIf="items.length === 0"
+			class="text-center text-gray-800 mb-0 text-xl mt-8"
+		>
+			Your cart is empty
+		</div>
+	</section>
+</div>

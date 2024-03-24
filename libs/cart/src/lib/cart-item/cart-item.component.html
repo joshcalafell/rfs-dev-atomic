@@ -1,0 +1,40 @@
+<div
+	class="item-wrapper item flex items-center justify-between border-b px-0 py-2"
+>
+	<div class="flex-row item">
+		<div class="flex-col">
+			<img
+				[src]="'https://i.imgur.com/vL2h90y.jpg'"
+				class="h-14 w-14 object-cover rounded mr-4"
+				width="65"
+			/>
+		</div>
+		&nbsp;&nbsp;
+		<div class="flex-col">
+			<p class="name text-black-800 font-bold text-lg">
+				{{ item.name }}
+			</p>
+			<p class="name text-black-700 text-md">
+				Quantity: {{ item.quantityInCart }}
+			</p>
+			<p class="price text-black-700">
+				{{ item.price | currency }}
+			</p>
+		</div>
+	</div>
+
+	<div class="flex">
+		<rfs-dev-atomic-ui-button
+			[label]="item.quantity === 1 ? 'Remove' : 'Decrease'"
+			(click)="removeItemHandler(item)"
+			[size]="'medium'"
+		></rfs-dev-atomic-ui-button>
+		&nbsp;&nbsp;
+		<rfs-dev-atomic-ui-button
+			(click)="wishlistItemHandler(item)"
+			[label]="'Wishlist'"
+			[palleteColor]="'secondary'"
+			[size]="'medium'"
+		></rfs-dev-atomic-ui-button>
+	</div>
+</div>

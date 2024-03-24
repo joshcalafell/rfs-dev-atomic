@@ -1,0 +1,46 @@
+.item {
+	&:hover {
+		background-color: #f5f5f5;
+	}
+}
+
+.btn-add {
+	background-color: white !important;
+	border: solid 1px #333333;
+}
+
+p {
+	font-family: 'Inter', monospace;
+	margin: 4px 0;
+	padding: 4px;
+}
+
+.item {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+
+	background: #f0f0f0;
+	margin: 16px;
+	padding: 16px;
+}
+
+.item-wrapper {
+	margin-top: 8px;
+	padding: 8px;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex-col {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+}

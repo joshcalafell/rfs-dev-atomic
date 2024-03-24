@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common'
 import { Component } from '@angular/core'
-import { ActivatedRoute, RouterModule } from '@angular/router'
+import { RouterModule } from '@angular/router'
 import { UiFooterComponent } from '@rfs-dev-atomic/ui-footer'
 import { UiHeaderComponent } from '@rfs-dev-atomic/ui-header'
 
